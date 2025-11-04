@@ -1,12 +1,201 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Ouvidoria da Mulher</title>
-  </head>
-  <body>
-    <h1>Ouvidoria da Mulher</h1>
-    <p>Site em construção.</p>
-    <p>Este será um canal de escuta, acolhimento e encaminhamento.</p>
-  </body>
+<head>
+  <meta charset="utf-8">
+  <title>Ouvidoria da Mulher — Site institucional</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Canal institucional de escuta e encaminhamento, com sigilo.">
+  <!-- Remova a linha abaixo quando o site for público -->
+  <meta name="robots" content="noindex,nofollow">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --roxo:#5a2d82;
+      --roxo-escuro:#40205e;
+      --amarelo:#ffd84d;
+      --magenta:#f04e9d;
+      --fundo:#f7f5fb;
+      --card:#ffffff;
+      --texto:#1f2430;
+      --texto-suave:#525866;
+      --borda:#e6e1ee;
+      --radius:.9rem;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0}
+    body{font-family:Inter,system-ui,-apple-system,"Segoe UI",Arial,sans-serif;background:var(--fundo);color:var(--texto);line-height:1.65}
+    /* acessibilidade */
+    .skip-link{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}
+    .skip-link:focus{left:1rem;top:1rem;width:auto;height:auto;background:var(--amarelo);color:#000;padding:.5rem 1rem;border-radius:.5rem;z-index:20}
+    /* topo */
+    .brandbar{background:var(--roxo);color:#fff}
+    .wrap{max-width:1100px;margin:0 auto;padding:0 1.25rem}
+    .brandbar .wrap{display:flex;align-items:center;justify-content:space-between;padding:.9rem 1.25rem;gap:1rem}
+    .brand-name{font-family:Poppins,Inter,sans-serif;font-weight:700;letter-spacing:.4px;text-transform:uppercase}
+    .selo{background:var(--magenta);color:#fff;font-weight:700;padding:.4rem .8rem;border-radius:999px;font-size:.82rem}
+    /* hero */
+    .hero{position:relative;color:#fff;overflow:hidden;background:linear-gradient(180deg,var(--roxo) 0%,var(--roxo-escuro) 100%)}
+    .hero .inner{padding:3.2rem 0 4.4rem}
+    .chamada{display:inline-block;background:rgba(0,0,0,.22);padding:.45rem .9rem;border-radius:999px;font-size:.86rem;margin-bottom:1.1rem}
+    h1{margin:.2rem 0 1rem;font-size:clamp(2rem,3.6vw,2.8rem);line-height:1.2;color:var(--amarelo);letter-spacing:.3px;font-family:Poppins,Inter,sans-serif;font-weight:700;text-wrap:balance}
+    .hero p{max-width:72ch;color:#f7f3ff;margin:.35rem 0 0}
+    .wave{position:absolute;left:0;right:0;bottom:-1px;height:70px}
+    /* botões */
+    .btn{display:inline-block;background:#fff;color:#000;text-decoration:none;font-weight:700;border-radius:.6rem;padding:.7rem 1rem;border:2px solid #fff}
+    .btn.alt{background:transparent;color:#fff;border-color:#fff}
+    .btn.alt:hover{background:rgba(255,255,255,.12)}
+    .cta{display:flex;gap:.6rem;flex-wrap:wrap;margin-top:1rem}
+    /* cards */
+    .section{padding:1.2rem 0 0}
+    .grid{display:grid;gap:1.1rem;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));margin-top:1.1rem}
+    .card{background:var(--card);border:1px solid var(--borda);border-radius:var(--radius);overflow:hidden;box-shadow:0 2px 0 rgba(64,32,94,.03)}
+    .bar{height:10px;background:linear-gradient(90deg,var(--roxo) 0%,var(--magenta) 100%)}
+    .card-inner{padding:1rem 1.1rem 1.2rem}
+    .card h2{font-size:1rem;margin:.1rem 0 .55rem;color:var(--roxo);text-transform:uppercase;letter-spacing:.5px;font-weight:700;font-family:Poppins,Inter,sans-serif}
+    .lista{margin:.35rem 0 0;padding-left:1rem}
+    .lista li{margin:.28rem 0;color:var(--texto-suave)}
+    /* números úteis */
+    .numbers{margin:1.2rem 0 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:.8rem}
+    .num{background:#fff;border:1px solid var(--borda);border-radius:var(--radius);padding:1rem}
+    .num strong{display:block;font-size:1.2rem;color:var(--roxo);margin-bottom:.25rem}
+    .num a{text-decoration:none;color:inherit}
+    .num a:hover{text-decoration:underline}
+    /* formulário placeholder */
+    .form-wrap{background:#fff;border:1px solid var(--borda);border-radius:var(--radius);padding:1rem;margin:1.2rem 0}
+    .form-wrap h3{margin:.2rem 0 .4rem;font-size:1.1rem;color:var(--roxo)}
+    .form-note{font-size:.92rem;color:#6b7280}
+    .embed{margin-top:.6rem}
+    .embed iframe{width:100%;height:900px;border:0}
+    .nota{background:#fff;border:1px dashed var(--borda);padding:1rem;border-radius:.8rem;color:#6b7280;font-size:.92rem;margin-top:.8rem}
+    footer{text-align:center;color:#8b8f9b;font-size:.87rem;padding:2.4rem 1rem 3.2rem}
+    @media (max-width:540px){.brandbar .wrap{flex-direction:column;align-items:flex-start}}
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo principal</a>
+
+  <header class="brandbar" role="banner">
+    <div class="wrap">
+      <div class="brand-name" aria-label="Ouvidoria da Mulher">Ouvidoria da Mulher</div>
+      <div class="selo">Você não está sozinha</div>
+    </div>
+  </header>
+
+  <section class="hero" aria-label="Introdução">
+    <div class="wrap inner">
+      <span class="chamada">Site institucional</span>
+      <h1>Mulher, conheça seus direitos e saiba onde procurar ajuda.</h1>
+      <p>Canal de escuta responsável e encaminhamento. Sua manifestação é tratada com sigilo e respeito.</p>
+      <div class="cta">
+        <a class="btn" href="#formularios">Enviar manifestação</a>
+        <a class="btn alt" href="#servicos">Ver serviços e informações</a>
+      </div>
+    </div>
+    <svg class="wave" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0,32L80,26.7C160,21,320,11,480,26.7C640,43,800,85,960,96C1120,107,1280,85,1360,74.7L1440,64L1440,160L1360,160C1280,160,1120,160,960,160C800,160,640,160,480,160C320,160,160,160,80,160L0,160Z" fill="#f7f5fb"></path>
+    </svg>
+  </section>
+
+  <main id="conteudo" class="wrap">
+    <section id="servicos" class="section" aria-label="Serviços e informações">
+      <div class="grid">
+        <article class="card">
+          <div class="bar" aria-hidden="true"></div>
+          <div class="card-inner">
+            <h2>Acolhimento Psicológico</h2>
+            <ul class="lista">
+              <li>Escuta qualificada e orientação inicial.</li>
+              <li>Encaminhamento à rede de apoio quando necessário.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="bar" aria-hidden="true"></div>
+          <div class="card-inner">
+            <h2>Apoio Jurídico</h2>
+            <ul class="lista">
+              <li>Informações sobre medidas protetivas e direitos.</li>
+              <li>Orientações para registro e preservação de provas.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="bar" aria-hidden="true"></div>
+          <div class="card-inner">
+            <h2>Abrigamento</h2>
+            <ul class="lista">
+              <li>Informações sobre abrigos e serviços protetivos.</li>
+              <li>Critérios de acesso e encaminhamento responsável.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="bar" aria-hidden="true"></div>
+          <div class="card-inner">
+            <h2>Conheça seus direitos</h2>
+            <ul class="lista">
+              <li>Lei Maria da Penha e crimes de violência contra a mulher.</li>
+              <li>Atendimento integral e multidisciplinar garantidos.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="bar" aria-hidden="true"></div>
+          <div class="card-inner">
+            <h2>Onde denunciar?</h2>
+            <ul class="lista">
+              <li>Delegacias especializadas e canais emergenciais.</li>
+              <li>Atendimento 24h e horários comerciais.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="bar" aria-hidden="true"></div>
+          <div class="card-inner">
+            <h2>Saúde em casos de violência sexual</h2>
+            <ul class="lista">
+              <li>Unidades de referência e fluxos de atendimento.</li>
+              <li>Direitos de profilaxia e acompanhamento.</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+
+      <div class="numbers" aria-label="Canais rápidos">
+        <div class="num"><strong>Emergência: 190</strong><span>Polícia Militar</span></div>
+        <div class="num"><strong>Central 180</strong><span>Direitos da Mulher</span></div>
+        <div class="num"><strong>Delegacia da Mulher (DEAM)</strong><span>Procure a unidade mais próxima</span></div>
+      </div>
+
+      <div class="nota" role="note">
+        Em situação de risco imediato, ligue <strong>190</strong>. Para orientação, disque <strong>180</strong>.
+        Este site tem caráter informativo e institucional.
+      </div>
+    </section>
+
+    <section id="formularios" class="section" aria-label="Formulário de manifestação">
+      <div class="form-wrap">
+        <h3>Enviar manifestação</h3>
+        <p class="form-note">
+          Sua mensagem será tratada com sigilo. Não compartilhe dados sensíveis além do necessário.
+          <br>Quando o formulário oficial estiver pronto, ele aparecerá aqui.
+        </p>
+        <!-- Quando tiver o formulário (Google Forms/Tally), cole o embed aqui -->
+        <!-- <div class="embed"><iframe src="https://docs.google.com/forms/d/e/SEU_ID/viewform?embedded=true" loading="lazy">Carregando…</iframe></div> -->
+      </div>
+    </section>
+  </main>
+
+  <footer role="contentinfo">
+    Ouvidoria da Mulher — Câmara Municipal de Goiânia. ·
+    <a href="#formularios">Enviar manifestação</a> ·
+    <a href="#servicos">Serviços</a>
+  </footer>
+</body>
 </html>
