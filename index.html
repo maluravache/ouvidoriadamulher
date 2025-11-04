@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ouvidoria da Mulher — Acolhedor</title>
+<style>
+:root{
+  --roxo:#4B2E83;
+  --amarelo:#FFD800;
+  --magenta:#E83283;
+  --texto:#2b2450;
+  --bg:#f7f7fb;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial, Helvetica, sans-serif;background:var(--bg);color:var(--texto);}
+a{color:var(--roxo)}
+.wrap{max-width:1080px;margin:0 auto;padding:24px}
+h1,h2{margin:0 0 12px}
+.hero{padding:32px 0}
+.grid{display:grid;gap:16px}
+.cards{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.card{background:#fff;border-radius:12px;padding:18px;box-shadow:0 6px 22px rgba(0,0,0,.06)}
+.badge{display:inline-block;background:var(--amarelo);color:var(--roxo);padding:6px 10px;border-radius:999px;font-weight:700}
+.cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:14px}
+.btn{background:var(--magenta);border:none;color:#fff;padding:10px 14px;border-radius:10px;font-weight:700;text-decoration:none;display:inline-block}
+.btn.sec{background:var(--roxo)}
+footer{background:var(--roxo);color:#fff;margin-top:32px}
+footer a{color:#fff;text-decoration:underline}
+.bloco-amarelo{background:var(--amarelo);color:var(--roxo);border-radius:12px;padding:16px;font-weight:700}
+.subtle{opacity:.85}
+.qr-place{border:2px dashed var(--magenta);padding:16px;border-radius:10px;text-align:center;font-size:12px}
+.selos{display:flex;gap:16px;align-items:center;justify-content:center;flex-wrap:wrap;margin-top:8px}
+.selo{width:80px;height:48px;border:2px dashed #fff;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:12px;opacity:.9}
+.forms-frame{width:100%;min-height:520px;border:0;border-radius:12px;box-shadow:0 6px 22px rgba(0,0,0,.06)}
+.todo{background:#fff3cd;border:1px solid #ffe69c;color:#856404;border-radius:10px;padding:10px 12px;margin-top:8px;font-size:13px}
+.topbar{padding:10px 0}
+.nav a{color:#fff;text-decoration:none;font-weight:700;margin-right:16px}
+.header-institucional{background:var(--roxo);color:#fff}
+.nav-institucional{background:var(--magenta);}
+.header-acolhedor{background:linear-gradient(90deg,var(--roxo),var(--magenta));color:#fff}
+</style>
+</head>
+<body>
+
+<header class="header-acolhedor">
+  <div class="wrap">
+    <div class="brand" style="display:flex;align-items:center;gap:16px;justify-content:center;flex-wrap:wrap">
+      <img src="logo-ouvidoria.png" alt="Logo Ouvidoria (placeholder)" style="height:72px">
+      <div>
+        <h1>Ouvidoria da Mulher</h1>
+        <div class="selos">
+          <div class="selo">Câmara</div>
+          <div class="selo">AAVA</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<section class="wrap hero">
+  <span class="badge">Acolhimento e orientação</span>
+  <p class="subtle">Layout acolhedor e humanizado (cores e tom do panfleto).</p>
+</section>
+
+<section class="wrap" id="canais">
+  <h2>Canais de acolhimento</h2>
+  <div class="card">
+    <p><strong>WhatsApp:</strong> (62) 98222-2434 • <strong>Instagram:</strong> @ouvidoriadamulher • <strong>E-mail:</strong> ouvidoriadamulhercamara@gmail.com</p>
+    <p><strong>Endereço:</strong> Sala de Acolhimento na Câmara Municipal de Goiânia — Av. Goiás, 2001, Setor Central.</p>
+  </div>
+</section>
+
+<section class="wrap">
+  <h2>Entenda o problema</h2>
+  <div class="card">
+    <p>As mulheres compõem um grupo social bastante atingido por variadas formas de violência em virtude de relações desiguais historicamente construídas. A violência afeta a saúde e dignidade delas e de seus dependentes, e prejudica o desenvolvimento socioeconômico do país.</p>
+    <p>O lar ainda é o local mais perigoso para a mulher, que está sujeita à violência doméstica, física, psicológica, patrimonial, sexual e moral, praticada, em sua maioria, por pessoas com quem mantém ou manteve uma relação familiar ou afetiva.</p>
+  </div>
+  <div class="bloco-amarelo">
+    Brasil bate recordes vexatórios quando o assunto é violência contra as mulheres.
+    <ul>
+      <li>1 brasileira sofre estupro a cada 6 minutos</li>
+      <li>4 brasileiras são mortas por razões de gênero a cada dia</li>
+      <li>Mais de 48 mil brasileiras foram assassinadas em uma década</li>
+    </ul>
+  </div>
+</section>
+
+<section class="wrap" id="servicos">
+  <h2>Serviços</h2>
+  <div class="grid cards">
+    <div class="card">
+      <h3>Acolhimento Psicológico</h3>
+      <p><strong>Ouvidoria da Mulher</strong> — Câmara Municipal de Goiânia</p>
+      <p><strong>Endereço:</strong> Av. Goiás, 2001 — Setor Central</p>
+      <p><strong>Horário:</strong> Segunda a sexta, de 8h às 18h</p>
+      <p><strong>WhatsApp:</strong> (62) 98222-2434 • <strong>Instagram:</strong> @ouvidoriadamulher</p>
+    </div>
+
+    <div class="card">
+      <h3>Apoio Jurídico (NUDEM)</h3>
+      <p>Defensoria Pública do Estado de Goiás — Núcleo Especializado de Defesa e Promoção dos Direitos da Mulher.</p>
+      <p class="todo">Preencher exatamente como no panfleto: unidade (ex.: Unidade Sul), endereço, horário e telefone/WhatsApp.</p>
+    </div>
+
+    <div class="card">
+      <h3>Conselhos Tutelares</h3>
+      <p class="todo">Inserir endereço, horário e contato conforme panfleto.</p>
+    </div>
+
+    <div class="card">
+      <h3>Abrigamento</h3>
+      <ul>
+        <li><strong>Casa de Acolhida Cidadã I</strong> — <span class="todo">inserir descrição, público e telefone do panfleto</span></li>
+        <li><strong>Casa de Acolhida Cidadã II</strong> — <span class="todo">inserir endereço, público e telefone do panfleto</span></li>
+        <li><strong>Casa Abrigo Sempre Viva</strong> — <span class="todo">inserir critérios e telefone do panfleto</span></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>CEVAM — Centro de Valorização da Mulher</h3>
+      <p class="todo">Inserir endereço completo e telefones (2 números) conforme o panfleto.</p>
+    </div>
+  </div>
+</section>
+
+<section class="wrap" id="direitos">
+  <h2>Conheça seus direitos</h2>
+  <div class="card">
+    <ul>
+      <li><strong>Lei Maria da Penha (11.340/2006)</strong> — medidas protetivas e enfrentamento à violência doméstica.</li>
+      <li><strong>Lei nº 12.845/2013</strong> — garante atendimento integral e multidisciplinar à pessoa em situação de violência sexual.</li>
+    </ul>
+    <div class="grid cards">
+      <div class="qr-place">QR Code 1 — link para leis e cartilhas (substituir imagem)</div>
+      <div class="qr-place">QR Code 2 — link para materiais oficiais (substituir imagem)</div>
+    </div>
+  </div>
+</section>
+
+<section class="wrap" id="saude">
+  <h2>Atendimento em Saúde (Casos de Violência Sexual)</h2>
+  <div class="card">
+    <ul>
+      <li><strong>HEMU — Hospital Estadual da Mulher Dr. Jurandir do Nascimento</strong> — <span class="todo">completar endereço, horário e fluxo do panfleto</span></li>
+      <li><strong>HECAD — Hospital Estadual da Criança e do Adolescente</strong> — <span class="todo">completar detalhes do panfleto</span></li>
+    </ul>
+    <div class="qr-place">QR Code — fluxo de atendimento (substituir pela imagem do panfleto)</div>
+  </div>
+</section>
+
+<section class="wrap" id="denuncia">
+  <h2>Onde denunciar?</h2>
+  <div class="card">
+    <ul>
+      <li><strong>DEAM (Plantão 24h)</strong> — <span class="todo">colocar endereço, telefone e e-mail exatamente como no panfleto</span></li>
+      <li><strong>2ª DEAM (Horário comercial)</strong> — <span class="todo">endereço/telefone conforme panfleto</span></li>
+      <li><strong>DEAM Estadual (Horário comercial)</strong> — <span class="todo">endereço/telefone conforme panfleto</span></li>
+      <li><strong>DPCA</strong> — <span class="todo">endereço/telefone conforme panfleto</span></li>
+      <li><strong>Emergência 190</strong> • <strong>Disque 180</strong></li>
+    </ul>
+  </div>
+</section>
+
+<section class="wrap" id="butique">
+  <h2>Butique Solidária</h2>
+  <div class="card">
+    <p>Projeto em parceria com o mandato da vereadora Aava Santiago e rede local para acolher mulheres em situação de violência, com doações de roupas, calçados, itens de higiene e brinquedos.</p>
+    <h4>Pontos de coleta</h4>
+    <ul>
+      <li><strong>Câmara Municipal de Goiânia</strong> — Sala de Acolhimento da Ouvidoria da Mulher — Seg. a sex., 8h às 17h — Av. Goiás, 2001, St. Central — (62) 98222-2434</li>
+      <li><strong>Clube de Costura (Mega Moda Shopping)</strong> — Seg. a qui., 8h às 18h; sex. e sáb., 7h às 18h — Av. Contorno, 165, Setor Norte Ferroviário — (62) 98599-0009</li>
+      <li><strong>Orquidário Goiás (Jardim América)</strong> — Seg. a sex., 9h às 17h30; sáb., 8h30 às 12h — Rua C-149, 1050 — (62) 3251-3100</li>
+      <li><strong>Sempre Bella (Setor Sul)</strong> — Seg. a sex., 9h às 18h; sáb., 8h às 12h30 — Rua 122, 139, Qd 42-A, Lt 46 — (62) 99496-0122</li>
+    </ul>
+  </div>
+</section>
+
+<section class="wrap" id="formularios">
+  <h2>Envie sua manifestação</h2>
+  <div class="card">
+    <p>Você pode enviar seu relato de forma rápida e segura.</p>
+    <div class="cta">
+      <a class="btn" href="formulario.html" target="_blank" rel="noopener">Abrir formulário em nova aba</a>
+      <a class="btn sec" href="https://forms.gle/SEU_FORM" target="_blank" rel="noopener">Google Forms (link)</a>
+    </div>
+    <div class="qr-place">Se quiser embutir o Google Forms, cole aqui o iframe oficial.</div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p><strong>Ouvidoria da Mulher — Câmara Municipal de Goiânia</strong></p>
+    <p>📍 Av. Goiás, 2001 — Setor Central • 💬 WhatsApp (62) 98222-2434 • ✉️ ouvidoriadamulhercamara@gmail.com • <a href="#">@ouvidoriadamulher</a></p>
+    <p class="subtle">Cores oficiais aproximadas: roxo {ROXO}, amarelo {AMARELO}, magenta {MAGENTA}.</p>
+  </div>
+</footer>
+
+</body>
+</html>
