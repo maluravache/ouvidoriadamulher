@@ -1,90 +1,100 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Ouvidoria da Mulher – Câmara Municipal de Goiânia</title>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Ouvidoria da Mulher – Câmara Municipal de Goiânia</title>
 
-  <!-- Favicon: várias tags para garantir troca em cache -->
-  <link rel="icon" type="image/png" href="favicon.png">
-  <link rel="shortcut icon" type="image/png" href="favicon.png">
-  <link rel="apple-touch-icon" href="favicon.png">
-  <meta name="theme-color" content="#6b2a5a"/>
+<!-- (Favicon fica para depois) -->
+<meta name="theme-color" content="#6b2a5a"/>
+<meta name="description" content="Acolhimento psicológico, apoio jurídico e encaminhamentos. Você não está sozinha. Seg–Sex, 8h–18h.">
 
-  <meta name="description" content="Acolhimento psicológico, apoio jurídico e encaminhamentos. Você não está sozinha. Seg–Sex, 8h–18h.">
+<!-- Ícones PB -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
 
-  <!-- Ícones PB -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+<style>
+  :root{
+    /* Paleta alinhada ao Insta: roxos + amarelo de destaque */
+    --rox-1:#521f46; /* profundo */
+    --rox-2:#6b2a5a; /* primário */
+    --rox-3:#7e3666; /* gradiente */
+    --amarelo:#FFD134; /* destaque */
+    --bg:#ffffff; --txt:#1b1b1b;
+    --cinza:#5f6368; --linha:#ececec;
+    --r:18px; --shadow:0 8px 28px rgba(0,0,0,.06)
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;background:var(--bg);color:var(--txt);
+    font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial}
+  a{color:inherit;text-decoration:none}
+  .container{max-width:1160px;margin:0 auto;padding:0 20px}
 
-  <style>
-    :root{
-      --rox-1:#521f46; --rox-2:#6b2a5a; --rox-3:#7e3666;
-      --amarelo:#ffd134;
-      --txt:#1b1b1b; --cinza:#5f6368; --linha:#ececec;
-      --bg:#fff; --card:#fff; --r:18px; --shadow:0 8px 28px rgba(0,0,0,.06)
-    }
-    *{box-sizing:border-box}
-    html,body{margin:0;background:var(--bg);color:var(--txt);
-      font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial}
-    a{color:inherit;text-decoration:none}
-    .container{max-width:1160px;margin:0 auto;padding:0 20px}
+  /* HEADER */
+  header{position:sticky;top:0;z-index:40;background:#fff;border-bottom:1px solid var(--linha)}
+  .bar{display:flex;align-items:center;gap:24px;padding:14px 0}
+  .brand img{height:46px}
+  nav{margin-left:auto;display:flex;gap:16px;flex-wrap:wrap}
+  nav a{padding:8px 10px;border-radius:10px;color:#555}
+  .cta{background:var(--rox-1);color:#fff;padding:10px 16px;border-radius:999px;font-weight:600}
 
-    /* HEADER */
-    header{position:sticky;top:0;z-index:40;background:#fff;border-bottom:1px solid var(--linha)}
-    .bar{display:flex;align-items:center;gap:24px;padding:14px 0}
-    .brand img{height:46px}
-    nav{margin-left:auto;display:flex;gap:16px;flex-wrap:wrap}
-    nav a{padding:8px 10px;border-radius:10px;color:#555}
-    .cta{background:var(--rox-1);color:#fff;padding:10px 16px;border-radius:999px;font-weight:600}
+  /* FITA AMARELA fina (identidade) */
+  .fita{height:8px;background:var(--amarelo)}
 
-    /* HERO LIMPO (banner roxo) */
-    .hero{background:linear-gradient(90deg,var(--rox-2),var(--rox-3));color:#fff}
-    .hero-inner{display:grid;grid-template-columns:80px 1fr;gap:16px;align-items:center;padding:28px 0}
-    .hero .logo-round{width:80px;height:80px;border-radius:50%;object-fit:contain;background:#ffffff22;padding:10px}
-    .hero h1{margin:0;font-size:28px}
-    .hero p{margin:2px 0 0;opacity:.92}
-    .sub{opacity:.9;font-size:14px;margin-top:4px}
+  /* HERO (banner roxo incrementado) */
+  .hero{background:linear-gradient(90deg,var(--rox-2),var(--rox-3));color:#fff}
+  .hero-inner{display:grid;grid-template-columns:92px 1fr auto;gap:18px;align-items:center;padding:28px 0}
+  .hero .logo-round{width:92px;height:92px;border-radius:50%;object-fit:contain;background:#ffffff22;padding:10px}
+  .hero h1{margin:0;font-size:32px;letter-spacing:.2px}
+  .hero .sub{margin:6px 0 0;opacity:.92}
+  .selo{background:var(--amarelo);color:#3a2a00;
+        padding:10px 14px;border-radius:999px;font-weight:800;box-shadow:0 6px 18px rgba(0,0,0,.12)}
+  .selo i{margin-right:8px}
 
-    /* Seções & cards */
-    section{padding:28px 0}
-    .grid{display:grid;gap:18px;grid-template-columns:repeat(12,1fr)}
-    .card{grid-column:span 12;background:var(--card);border:1px solid var(--linha);border-radius:var(--r);box-shadow:var(--shadow);padding:18px}
-    .card h2{margin:0 0 10px;color:var(--rox-1);font-size:20px}
-    .mini{color:var(--cinza);font-size:14px}
-    .list{display:grid;gap:12px}
-    .row{display:grid;gap:6px}
-    .pill{display:inline-flex;align-items:center;gap:10px;padding:10px 14px;background:var(--rox-1);color:#fff;border-radius:999px;font-weight:600}
-    .pill i{font-size:18px}
-    .chips{display:flex;gap:8px;flex-wrap:wrap}
-    .chip{border:1px solid var(--linha);padding:8px 10px;border-radius:999px}
+  /* Seções & cards */
+  section{padding:28px 0}
+  .grid{display:grid;gap:18px;grid-template-columns:repeat(12,1fr)}
+  .card{grid-column:span 12;background:#fff;border:1px solid var(--linha);
+        border-radius:var(--r);box-shadow:var(--shadow);padding:18px}
+  .card h2{margin:0 0 10px;color:var(--rox-1);font-size:20px}
+  .mini{color:var(--cinza);font-size:14px}
+  .list{display:grid;gap:12px}
+  .row{display:grid;gap:6px}
 
-    .map{border:0;width:100%;height:320px;border-radius:14px}
+  .pill{display:inline-flex;align-items:center;gap:10px;padding:10px 14px;background:var(--rox-1);
+        color:#fff;border-radius:999px;font-weight:700}
+  .pill.am{background:var(--amarelo);color:#3a2a00}
+  .chips{display:flex;gap:8px;flex-wrap:wrap}
+  .chip{border:1px solid var(--linha);padding:8px 10px;border-radius:999px}
 
-    /* details/summary para leis */
-    details{border:1px solid var(--linha);border-radius:12px;padding:12px}
-    summary{cursor:pointer;font-weight:700;color:var(--rox-1)}
-    details+details{margin-top:10px}
+  .map{border:0;width:100%;height:320px;border-radius:14px}
 
-    /* Responsivo */
-    @media(min-width:900px){
-      .span-4{grid-column:span 4}
-      .span-6{grid-column:span 6}
-    }
+  /* details/summary – Leis */
+  details{border:1px solid var(--linha);border-radius:12px;padding:12px}
+  summary{cursor:pointer;font-weight:800;color:var(--rox-1)}
+  details+details{margin-top:10px}
 
-    /* Botões flutuantes */
-    .waf{position:fixed;right:16px;bottom:18px;z-index:70}
-    .waf a{display:flex;align-items:center;gap:10px;background:#25d366;color:#083c17;
-      padding:12px 14px;border-radius:999px;font-weight:700;box-shadow:0 10px 26px rgba(0,0,0,.18)}
-    .panic{position:fixed;left:16px;bottom:18px;z-index:70}
-    .panic a{display:flex;align-items:center;gap:8px;background:#000;color:#fff;
-      padding:10px 12px;border-radius:999px;font-weight:700;box-shadow:0 10px 26px rgba(0,0,0,.18)}
-    .panic i{color:#fff}
+  /* Grids responsivos */
+  @media(min-width:900px){
+    .span-4{grid-column:span 4}
+    .span-5{grid-column:span 5}
+    .span-6{grid-column:span 6}
+    .span-7{grid-column:span 7}
+  }
 
-    /* Footer */
-    footer{border-top:1px solid var(--linha);padding:28px 0;color:var(--cinza)}
-    .supports{display:flex;gap:24px;align-items:center;flex-wrap:wrap}
-    .slot{width:120px;height:42px;background:#f6f6f6;border:1px dashed #ccc;border-radius:10px}
-  </style>
+  /* Botões flutuantes */
+  .waf{position:fixed;right:16px;bottom:18px;z-index:70}
+  .waf a{display:flex;align-items:center;gap:10px;background:#25d366;color:#083c17;
+    padding:12px 14px;border-radius:999px;font-weight:800;box-shadow:0 10px 26px rgba(0,0,0,.18)}
+  .panic{position:fixed;left:16px;bottom:18px;z-index:70}
+  .panic a{display:flex;align-items:center;gap:8px;background:#000;color:#fff;
+    padding:10px 12px;border-radius:999px;font-weight:800;box-shadow:0 10px 26px rgba(0,0,0,.18)}
+  .panic i{color:#fff}
+
+  /* Footer */
+  footer{border-top:1px solid var(--linha);padding:28px 0;color:var(--cinza)}
+  .supports{display:flex;gap:24px;align-items:center;flex-wrap:wrap}
+  .slot{width:120px;height:42px;background:#f6f6f6;border:1px dashed #ccc;border-radius:10px}
+</style>
 </head>
 <body>
 
@@ -104,17 +114,18 @@
         <a class="cta" href="https://wa.me/5562982222434" target="_blank" rel="noopener">Pedir ajuda</a>
       </nav>
     </div>
+    <div class="fita" aria-hidden="true"></div>
   </header>
 
-  <!-- HERO ROXO LIMPO -->
+  <!-- HERO (banner roxo com selo amarelo) -->
   <section class="hero">
     <div class="container hero-inner">
       <img class="logo-round" src="logo-simbolo-white.png" alt="Símbolo Ouvidoria da Mulher">
       <div>
         <h1>Ouvidoria da Mulher</h1>
-        <p>Câmara Municipal de Goiânia</p>
-        <div class="sub">Espaço de acolhimento, orientação e encaminhamento. Você não está sozinha.</div>
+        <div class="sub">Câmara Municipal de Goiânia • Espaço de acolhimento, orientação e encaminhamento</div>
       </div>
+      <div class="selo"><i class="bi bi-heart-fill"></i>Você não está sozinha</div>
     </div>
   </section>
 
@@ -125,24 +136,26 @@
       <article class="card">
         <h2>Quem somos</h2>
         <p class="mini">
-          A Ouvidoria da Mulher é um canal público que integra poder público e sociedade civil para defesa dos direitos das mulheres
-          e enfrentamento à violência doméstica, familiar e de gênero. Atuamos com acolhimento psicológico, apoio jurídico,
-          encaminhamentos e ações educativas.
+          A Ouvidoria da Mulher é um canal da Câmara Municipal de Goiânia criado para integrar poder público e sociedade civil
+          na defesa dos direitos das mulheres e no enfrentamento à violência doméstica, familiar e de gênero. Atuamos com
+          acolhimento psicológico, apoio jurídico, encaminhamentos e ações educativas.
         </p>
       </article>
     </section>
 
-    <!-- SERVIÇOS PRINCIPAIS -->
+    <!-- SERVIÇOS (panfleto completo) -->
     <section id="servicos">
       <div class="grid">
+
         <article class="card span-4">
           <h2>Acolhimento psicológico</h2>
           <div class="list">
             <div class="row">
               <div><strong>Ouvidoria da Mulher</strong></div>
+              <div class="mini"><i class="bi bi-geo-alt"></i> Câmara Municipal de Goiânia, Av. Goiás, 2001, Setor Central</div>
               <div class="mini"><i class="bi bi-clock"></i> Seg–Sex, 8h–18h</div>
-              <div class="mini"><i class="bi bi-telephone"></i> (62) 98222-2434 (WhatsApp)</div>
-              <div class="mini"><i class="bi bi-geo-alt"></i> Câmara Municipal — Av. Goiás, 2001</div>
+              <div class="mini"><i class="bi bi-whatsapp"></i> (62) 98222-2434</div>
+              <div class="mini"><i class="bi bi-instagram"></i> @ouvidoriadamulher</div>
             </div>
           </div>
         </article>
@@ -151,16 +164,16 @@
           <h2>Apoio jurídico</h2>
           <div class="list">
             <div class="row">
-              <div><strong>Defensoria/NUDEM</strong></div>
-              <div class="mini"><i class="bi bi-geo-alt"></i> Av. Cora Coralina, St. Sul (Unidade Sul)</div>
+              <div><strong>Defensoria Pública – NUDEM</strong></div>
+              <div class="mini"><i class="bi bi-geo-alt"></i> Unidade Sul – Av. Cora Coralina, St. Sul</div>
               <div class="mini"><i class="bi bi-clock"></i> Seg–Sex, 13h–17h30</div>
-              <div class="mini"><i class="bi bi-telephone"></i> (62) 3157-1039</div>
+              <div class="mini"><i class="bi bi-telephone"></i> (62) 3157-1039 (ligação e WhatsApp)</div>
             </div>
             <div class="row">
               <div><strong>Conselhos Tutelares</strong></div>
               <div class="mini"><i class="bi bi-geo-alt"></i> Rua B, nº 56, Qd E, Lt 13, Vila Viana</div>
               <div class="mini"><i class="bi bi-clock"></i> Seg–Sex, 7h–18h</div>
-              <div class="mini"><i class="bi bi-telephone"></i> (62) 3524-7315</div>
+              <div class="mini"><i class="bi bi-telephone"></i> (62) 3524-7315 • <i class="bi bi-envelope"></i> sedhs@goiania.go.gov.br</div>
             </div>
           </div>
         </article>
@@ -169,74 +182,99 @@
           <h2>Abrigamento</h2>
           <div class="list">
             <div class="row">
-              <div><strong>Casa Abrigo Sempre Viva</strong></div>
-              <div class="mini"><i class="bi bi-geo-alt"></i> Rua 25-A c/ Av. República do Líbano, St. Aeroporto</div>
+              <div><strong>Casa de Acolhida Cidadã I</strong> — homens solteiros (18–59), incluindo LGBTQIAPN+</div>
+              <div class="mini"><i class="bi bi-telephone"></i> (62) 99126-0575</div>
+            </div>
+            <div class="row">
+              <div><strong>Casa de Acolhida Cidadã II</strong> — mulheres solteiras (18–59) e famílias, incluindo LGBTQIAPN+</div>
+              <div class="mini"><i class="bi bi-geo-alt"></i> Rua 220, nº 887, Setor Leste Universitário</div>
+              <div class="mini"><i class="bi bi-telephone"></i> (62) 99207-8306</div>
+            </div>
+            <div class="row">
+              <div><strong>Casa Abrigo Sempre Viva</strong> — abrigo para mulheres em situação de violência com risco de morte (podem estar acompanhadas)</div>
+              <div class="mini"><i class="bi bi-geo-alt"></i> Rua 25-A esq. Av. República do Líbano, St. Aeroporto</div>
               <div class="mini"><i class="bi bi-clock"></i> Seg–Sex, 8h–17h</div>
               <div class="mini"><i class="bi bi-telephone"></i> (62) 3524-1309</div>
             </div>
             <div class="row">
-              <div><strong>Casa de Acolhida Cidadã II</strong> — mulheres e famílias (18 a 59)</div>
-              <div class="mini"><i class="bi bi-geo-alt"></i> Rua 220, nº 887, Setor Leste Universitário</div>
-              <div class="mini"><i class="bi bi-telephone"></i> (62) 99207-8306</div>
+              <div><strong>CEVAM – Centro de Valorização da Mulher Consuelo Nasser</strong> — acolhe mulheres, adolescentes e crianças vítimas de violência doméstica, abuso sexual ou abandono</div>
+              <div class="mini"><i class="bi bi-geo-alt"></i> Rua SNF-02, Qd 1A, Lt 1/5, St. Norte Ferroviário II</div>
+              <div class="mini"><i class="bi bi-clock"></i> Seg–Sex, 8h–17h</div>
+              <div class="mini"><i class="bi bi-telephone"></i> (62) 3247-4972 • (62) 9370-5084</div>
             </div>
           </div>
         </article>
+
       </div>
     </section>
 
     <!-- COMO DENUNCIAR -->
     <section id="denunciar">
       <div class="grid">
-        <article class="card span-6">
-          <h2>Delegacias especializadas (DEAM)</h2>
+        <article class="card span-7">
+          <h2>Onde denunciar?</h2>
           <div class="list">
             <div class="row">
-              <div><strong>1ª DEAM (Plantão 24h)</strong></div>
+              <div><strong>1ª DEAM – Plantão 24h</strong></div>
               <div class="mini"><i class="bi bi-geo-alt"></i> Rua 24, nº 203, Qd 49, Lt 27, Setor Central</div>
               <div class="mini"><i class="bi bi-telephone"></i> 62 3201-2802 • <i class="bi bi-envelope"></i> deam-goiania@policiacivil.go.gov.br</div>
             </div>
             <div class="row">
-              <div><strong>2ª DEAM (comercial)</strong></div>
-              <div class="mini"><i class="bi bi-geo-alt"></i> Av. do Povo c/ Rua E, Jd. Curitiba II</div>
-              <div class="mini"><i class="bi bi-clock"></i> 8h–18h seg–sex • <i class="bi bi-telephone"></i> 62 3201-6344 / 6332 / 6331</div>
+              <div><strong>2ª DEAM – Horário comercial</strong></div>
+              <div class="mini"><i class="bi bi-geo-alt"></i> Av. do Povo com Rua E, Qd 10, Lt 101, Jd. Curitiba II</div>
+              <div class="mini"><i class="bi bi-clock"></i> Seg–Sex, 8h–18h</div>
+              <div class="mini"><i class="bi bi-telephone"></i> 62 3201-6344 / 6332 / 6331 • <i class="bi bi-envelope"></i> 2deam-goiania@policiacivil.go.gov.br</div>
             </div>
             <div class="row">
-              <div><strong>DEAEM (estadual)</strong></div>
+              <div><strong>DEAEM – Estadual (horário comercial)</strong></div>
               <div class="mini"><i class="bi bi-geo-alt"></i> Praça Padre Romão Cícero (Praça do Violeiro), Av. Solar, Setor Urias Magalhães</div>
+              <div class="mini"><i class="bi bi-clock"></i> Seg–Sex, 8h–18h</div>
               <div class="mini"><i class="bi bi-telephone"></i> 62 3201-2802 • <i class="bi bi-envelope"></i> deaem@policiacivil.go.gov.br</div>
+            </div>
+            <div class="row">
+              <div><strong>DPCA – Proteção à Criança e ao Adolescente</strong></div>
+              <div class="mini"><i class="bi bi-geo-alt"></i> Rua C-190, esq. C-107, Qd. 226, Lt 13, Jd. América</div>
+              <div class="mini"><i class="bi bi-telephone"></i> 62 3286-1540 / 3286-1298 / 3286-1552 • <i class="bi bi-envelope"></i> dpca-goiania@policiacivil.go.gov.br</div>
+            </div>
+            <div class="chips">
+              <span class="chip"><strong>190</strong> Patrulha Maria da Penha (PM-GO)</span>
+              <span class="chip"><strong>153</strong> Mulher Mais Segura (GCM)</span>
+              <span class="chip"><strong>180</strong> Orientação/denúncia anônima</span>
+              <span class="chip"><strong>100</strong> Violência contra crianças/adolescentes</span>
             </div>
           </div>
         </article>
 
-        <article class="card span-6">
+        <article class="card span-5">
           <h2>Passo a passo</h2>
           <ol class="mini" style="margin:0;display:grid;gap:8px">
-            <li>Guarde evidências com segurança (prints, áudios, fotos).</li>
+            <li>Em emergência: ligue <strong>190</strong> ou <strong>153</strong>.</li>
+            <li>Guarde evidências (prints, áudios, fotos) com segurança.</li>
             <li>Procure a DEAM mais próxima ou fale com a Ouvidoria.</li>
             <li>Para denúncia anônima e orientação: <strong>180</strong>.</li>
           </ol>
           <div style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap">
             <a class="pill" href="https://wa.me/5562982222434" target="_blank" rel="noopener"><i class="bi bi-chat-dots"></i> Preciso de orientação</a>
-            <a class="pill" style="background:var(--rox-3)" href="#mapa"><i class="bi bi-geo-alt"></i> Ver localização</a>
+            <a class="pill am" href="#mapa"><i class="bi bi-geo-alt"></i> Ver localização</a>
           </div>
         </article>
       </div>
     </section>
 
-    <!-- SAÚDE / VIOLÊNCIA SEXUAL (guia rápido) -->
+    <!-- SAÚDE / VIOLÊNCIA SEXUAL -->
     <section id="saude">
       <div class="grid">
         <article class="card span-6">
-          <h2>Atendimento de saúde para violência sexual</h2>
+          <h2>Atendimento em saúde (violência sexual)</h2>
           <ul class="mini" style="margin:0;display:grid;gap:8px">
-            <li><strong>HEMU</strong> — Rua R-7, s/n, Setor Oeste (Mulheres ≥14 / Homens ≥18)</li>
-            <li><strong>HECAD</strong> — Av. Bela Vista, Parque Acalanto</li>
+            <li><strong>HEMU – Hospital Estadual da Mulher Dr. Jurandir</strong> — Rua R-7, s/n, Setor Oeste (Mulheres ≥ 14 / Homens ≥ 18)</li>
+            <li><strong>HECAD – Hospital Estadual da Criança e do Adolescente</strong> — Av. Bela Vista, Parque Acalanto</li>
             <li>Também procure UPAs e UBS via ConecteSUS.</li>
           </ul>
           <div style="margin-top:12px" class="mini">
             <strong>Se sofreu violência sexual:</strong>
             <ul style="margin:8px 0;display:grid;gap:6px;padding-left:18px">
-              <li>Procure atendimento de saúde o quanto antes (profilaxias e coleta de exames).</li>
+              <li>Procure atendimento o quanto antes (profilaxias e exames).</li>
               <li>Evite banhos/limpeza que possam apagar evidências (se possível).</li>
               <li>Busque a DEAM/180 para orientação e medidas protetivas.</li>
             </ul>
@@ -245,14 +283,14 @@
 
         <!-- LEIS CLICÁVEIS -->
         <article class="card span-6" id="leis">
-          <h2>Leis (clique para abrir)</h2>
+          <h2>Conheça seus direitos (Leis)</h2>
           <details>
             <summary>Lei Maria da Penha (11.340/2006)</summary>
-            <p class="mini">Estabelece mecanismos para coibir a violência doméstica e familiar contra a mulher, prevendo medidas protetivas de urgência e responsabilização do agressor.</p>
+            <p class="mini">Coíbe a violência doméstica e familiar contra a mulher e prevê medidas protetivas de urgência.</p>
           </details>
           <details>
             <summary>Lei Carolina Dieckmann (12.737/2012)</summary>
-            <p class="mini">Tipifica crimes cibernéticos (invasão de dispositivos, divulgação de dados/imagens sem consentimento) e define penas.</p>
+            <p class="mini">Tipifica crimes cibernéticos e penaliza invasão de dispositivos e divulgação de informações/imagens sem consentimento.</p>
           </details>
           <details>
             <summary>Lei do Minuto Seguinte (12.845/2013)</summary>
@@ -274,7 +312,7 @@
       </div>
     </section>
 
-    <!-- BUTIQUE & MATERIAIS -->
+    <!-- BUTIQUE E MATERIAIS (placeholders prontos) -->
     <section id="bsol">
       <div class="grid">
         <article class="card span-6">
@@ -311,7 +349,7 @@
           </div>
           <div style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap">
             <a class="pill" href="mailto:ouvidoria@camara.goiania.go.gov.br?subject=Contato%20via%20site%20Ouvidoria%20da%20Mulher"><i class="bi bi-envelope"></i> Enviar e-mail</a>
-            <a class="pill" style="background:var(--rox-3)" href="https://linktr.ee/ouvidoriadamulhergyn" target="_blank" rel="noopener"><i class="bi bi-link-45deg"></i> Linktree</a>
+            <a class="pill am" href="https://linktr.ee/ouvidoriadamulhergyn" target="_blank" rel="noopener"><i class="bi bi-link-45deg"></i> Linktree</a>
           </div>
         </article>
 
