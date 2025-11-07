@@ -5,96 +5,29 @@
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>Ouvidoria da Mulher – Câmara Municipal de Goiânia</title>
 
-<!-- (Favicon fica para depois) -->
+<!-- Favicon -->
+<link rel="icon" type="image/svg+xml" href="assets/logos/logo-mark.svg">
+<link rel="icon" type="image/png" href="favicon.png">
+
+<!-- Open Graph / Social Media -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://ouvidoriadamulher.com.br">
+<meta property="og:title" content="Ouvidoria da Mulher – Você não está sozinha">
+<meta property="og:description" content="Acolhimento psicológico, apoio jurídico e encaminhamentos. Câmara Municipal de Goiânia. Seg–Sex, 8h–18h.">
+<meta property="og:image" content="assets/logos/logo-og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Ouvidoria da Mulher – Você não está sozinha">
+<meta name="twitter:description" content="Acolhimento psicológico, apoio jurídico e encaminhamentos. Câmara Municipal de Goiânia.">
+<meta name="twitter:image" content="assets/logos/logo-og.png">
+
 <meta name="theme-color" content="#6b2a5a"/>
 <meta name="description" content="Acolhimento psicológico, apoio jurídico e encaminhamentos. Você não está sozinha. Seg–Sex, 8h–18h.">
 
 <!-- Ícones PB -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
 
-<style>
-  :root{
-    /* Paleta alinhada ao Insta: roxos + amarelo de destaque */
-    --rox-1:#521f46; /* profundo */
-    --rox-2:#6b2a5a; /* primário */
-    --rox-3:#7e3666; /* gradiente */
-    --amarelo:#FFD134; /* destaque */
-    --bg:#ffffff; --txt:#1b1b1b;
-    --cinza:#5f6368; --linha:#ececec;
-    --r:18px; --shadow:0 8px 28px rgba(0,0,0,.06)
-  }
-  *{box-sizing:border-box}
-  html,body{margin:0;background:var(--bg);color:var(--txt);
-    font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial}
-  a{color:inherit;text-decoration:none}
-  .container{max-width:1160px;margin:0 auto;padding:0 20px}
-
-  /* HEADER */
-  header{position:sticky;top:0;z-index:40;background:#fff;border-bottom:1px solid var(--linha)}
-  .bar{display:flex;align-items:center;gap:24px;padding:14px 0}
-  .brand img{height:46px}
-  nav{margin-left:auto;display:flex;gap:16px;flex-wrap:wrap}
-  nav a{padding:8px 10px;border-radius:10px;color:#555}
-  .cta{background:var(--rox-1);color:#fff;padding:10px 16px;border-radius:999px;font-weight:600}
-
-  /* FITA AMARELA fina (identidade) */
-  .fita{height:8px;background:var(--amarelo)}
-
-  /* HERO (banner roxo incrementado) */
-  .hero{background:linear-gradient(90deg,var(--rox-2),var(--rox-3));color:#fff}
-  .hero-inner{display:grid;grid-template-columns:92px 1fr auto;gap:18px;align-items:center;padding:28px 0}
-  .hero .logo-round{width:92px;height:92px;border-radius:50%;object-fit:contain;background:#ffffff22;padding:10px}
-  .hero h1{margin:0;font-size:32px;letter-spacing:.2px}
-  .hero .sub{margin:6px 0 0;opacity:.92}
-  .selo{background:var(--amarelo);color:#3a2a00;
-        padding:10px 14px;border-radius:999px;font-weight:800;box-shadow:0 6px 18px rgba(0,0,0,.12)}
-  .selo i{margin-right:8px}
-
-  /* Seções & cards */
-  section{padding:28px 0}
-  .grid{display:grid;gap:18px;grid-template-columns:repeat(12,1fr)}
-  .card{grid-column:span 12;background:#fff;border:1px solid var(--linha);
-        border-radius:var(--r);box-shadow:var(--shadow);padding:18px}
-  .card h2{margin:0 0 10px;color:var(--rox-1);font-size:20px}
-  .mini{color:var(--cinza);font-size:14px}
-  .list{display:grid;gap:12px}
-  .row{display:grid;gap:6px}
-
-  .pill{display:inline-flex;align-items:center;gap:10px;padding:10px 14px;background:var(--rox-1);
-        color:#fff;border-radius:999px;font-weight:700}
-  .pill.am{background:var(--amarelo);color:#3a2a00}
-  .chips{display:flex;gap:8px;flex-wrap:wrap}
-  .chip{border:1px solid var(--linha);padding:8px 10px;border-radius:999px}
-
-  .map{border:0;width:100%;height:320px;border-radius:14px}
-
-  /* details/summary – Leis */
-  details{border:1px solid var(--linha);border-radius:12px;padding:12px}
-  summary{cursor:pointer;font-weight:800;color:var(--rox-1)}
-  details+details{margin-top:10px}
-
-  /* Grids responsivos */
-  @media(min-width:900px){
-    .span-4{grid-column:span 4}
-    .span-5{grid-column:span 5}
-    .span-6{grid-column:span 6}
-    .span-7{grid-column:span 7}
-  }
-
-  /* Botões flutuantes */
-  .waf{position:fixed;right:16px;bottom:18px;z-index:70}
-  .waf a{display:flex;align-items:center;gap:10px;background:#25d366;color:#083c17;
-    padding:12px 14px;border-radius:999px;font-weight:800;box-shadow:0 10px 26px rgba(0,0,0,.18)}
-  .panic{position:fixed;left:16px;bottom:18px;z-index:70}
-  .panic a{display:flex;align-items:center;gap:8px;background:#000;color:#fff;
-    padding:10px 12px;border-radius:999px;font-weight:800;box-shadow:0 10px 26px rgba(0,0,0,.18)}
-  .panic i{color:#fff}
-
-  /* Footer */
-  footer{border-top:1px solid var(--linha);padding:28px 0;color:var(--cinza)}
-  .supports{display:flex;gap:24px;align-items:center;flex-wrap:wrap}
-  .slot{width:120px;height:42px;background:#f6f6f6;border:1px dashed #ccc;border-radius:10px}
-</style>
+<!-- External Stylesheet -->
+<link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
@@ -119,13 +52,15 @@
 
   <!-- HERO (banner roxo com selo amarelo) -->
   <section class="hero">
+    <img class="hero-illustration" src="assets/images/hero-illustration.png" alt="" aria-hidden="true">
     <div class="container hero-inner">
       <img class="logo-round" src="logo-simbolo-white.png" alt="Símbolo Ouvidoria da Mulher">
       <div>
-        <h1>Ouvidoria da Mulher</h1>
-        <div class="sub">Câmara Municipal de Goiânia • Espaço de acolhimento, orientação e encaminhamento</div>
+        <h1>Você não está sozinha</h1>
+        <div class="sub">Ouvidoria da Mulher • Câmara Municipal de Goiânia</div>
+        <div class="sub">Espaço de acolhimento, orientação e encaminhamento</div>
       </div>
-      <div class="selo"><i class="bi bi-heart-fill"></i>Você não está sozinha</div>
+      <a class="selo" href="https://wa.me/5562982222434" target="_blank" rel="noopener"><i class="bi bi-whatsapp"></i>Pedir ajuda</a>
     </div>
   </section>
 
@@ -202,6 +137,89 @@
               <div class="mini"><i class="bi bi-clock"></i> Seg–Sex, 8h–17h</div>
               <div class="mini"><i class="bi bi-telephone"></i> (62) 3247-4972 • (62) 9370-5084</div>
             </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- NOSSOS PROGRAMAS E SERVIÇOS -->
+    <section id="programas" class="section--watermark">
+      <div class="container">
+        <h2 style="text-align:center;color:var(--rox-1);margin-bottom:24px;font-size:28px">Programas e Iniciativas</h2>
+      </div>
+      <div class="grid">
+        
+        <article class="card span-4">
+          <span class="badge yellow">Programa</span>
+          <h2>Acolha uma Mulher</h2>
+          <p class="mini">
+            Programa de acolhimento e suporte para mulheres em situação de vulnerabilidade. Oferecemos escuta qualificada, 
+            orientação psicológica e encaminhamento para a rede de proteção. O objetivo é dar voz às mulheres e 
+            conectá-las aos serviços que precisam.
+          </p>
+          <div class="chips" style="margin-top:12px">
+            <span class="chip"><i class="bi bi-heart"></i> Acolhimento</span>
+            <span class="chip"><i class="bi bi-person-check"></i> Escuta qualificada</span>
+          </div>
+        </article>
+
+        <article class="card span-4">
+          <span class="badge yellow">Doações</span>
+          <h2>Butique Solidária</h2>
+          <p class="mini">
+            Arrecadação e distribuição de roupas, calçados e produtos de higiene para mulheres em situação de 
+            vulnerabilidade. Através de voluntariado e parcerias, promovemos dignidade e autoestima.
+          </p>
+          <div class="chips" style="margin-top:12px">
+            <span class="chip"><i class="bi bi-box-seam"></i> Doações</span>
+            <span class="chip"><i class="bi bi-people"></i> Voluntariado</span>
+          </div>
+          <a class="btn primary" href="#bsol" style="margin-top:12px"><i class="bi bi-arrow-right"></i> Saiba mais</a>
+        </article>
+
+        <article class="card span-4">
+          <span class="badge">Assistência</span>
+          <h2>Assistência Jurídica</h2>
+          <p class="mini">
+            Orientação jurídica gratuita para mulheres vítimas de violência doméstica, familiar e de gênero. 
+            Auxiliamos no pedido de medidas protetivas, divórcio, pensão alimentícia e outros direitos. 
+            Trabalhamos em parceria com a Defensoria Pública.
+          </p>
+          <div class="chips" style="margin-top:12px">
+            <span class="chip"><i class="bi bi-shield-check"></i> Medidas protetivas</span>
+            <span class="chip"><i class="bi bi-file-text"></i> Orientação jurídica</span>
+          </div>
+        </article>
+
+        <article class="card span-6">
+          <span class="badge">Mobilização</span>
+          <h2>Ouvidoria Itinerante</h2>
+          <p class="mini">
+            Levamos os serviços da Ouvidoria até as comunidades e bairros de Goiânia. Com a Ouvidoria Itinerante, 
+            realizamos atendimentos, palestras educativas e distribuição de material informativo sobre direitos 
+            das mulheres e combate à violência. Fique atenta à agenda de visitas!
+          </p>
+          <div class="chips" style="margin-top:12px">
+            <span class="chip"><i class="bi bi-geo"></i> Atendimento nas comunidades</span>
+            <span class="chip"><i class="bi bi-calendar-event"></i> Ações mensais</span>
+            <span class="chip"><i class="bi bi-megaphone"></i> Palestras</span>
+          </div>
+        </article>
+
+        <article class="card span-6">
+          <span class="badge">Educação</span>
+          <h2>Campanhas e Programas</h2>
+          <p class="mini">
+            Desenvolvemos campanhas de conscientização e prevenção à violência contra a mulher ao longo do ano. 
+            Participamos de datas importantes como Março Lilás, Agosto Lilás e os 21 Dias de Ativismo. 
+            Realizamos também rodas de conversa, oficinas e eventos em escolas e empresas.
+          </p>
+          <div class="chips" style="margin-top:12px">
+            <span class="chip"><i class="bi bi-calendar2-heart"></i> Março Lilás</span>
+            <span class="chip"><i class="bi bi-calendar2-heart"></i> Agosto Lilás</span>
+            <span class="chip"><i class="bi bi-chat-dots"></i> Rodas de conversa</span>
+            <span class="chip"><i class="bi bi-book"></i> Oficinas</span>
           </div>
         </article>
 
@@ -312,31 +330,147 @@
       </div>
     </section>
 
-    <!-- BUTIQUE E MATERIAIS (placeholders prontos) -->
+    <!-- BUTIQUE SOLIDÁRIA (detalhada) -->
     <section id="bsol">
       <div class="grid">
-        <article class="card span-6">
+        <article class="card">
           <h2>Butique Solidária</h2>
-          <p class="mini">Roupas, calçados e itens de higiene para mulheres em vulnerabilidade. Em breve calendário de arrecadação, voluntariado e entregas.</p>
-          <div class="chips">
-            <span class="chip"><i class="bi bi-people"></i> Voluntariado</span>
-            <span class="chip"><i class="bi bi-box-seam"></i> Doações</span>
-            <span class="chip"><i class="bi bi-calendar-event"></i> Ações mensais</span>
+          <p class="mini">
+            A Butique Solidária é um projeto de arrecadação e distribuição gratuita de roupas, calçados, acessórios 
+            e produtos de higiene pessoal para mulheres em situação de vulnerabilidade social. O objetivo é promover 
+            a dignidade, autoestima e reinserção social das mulheres atendidas pela Ouvidoria.
+          </p>
+          
+          <h3>Objetivos</h3>
+          <ul class="mini" style="margin:8px 0;display:grid;gap:6px;padding-left:18px">
+            <li>Arrecadar doações de roupas, calçados e produtos de higiene em bom estado</li>
+            <li>Organizar e distribuir os itens de forma digna e acolhedora</li>
+            <li>Promover ações de voluntariado e engajamento comunitário</li>
+            <li>Fortalecer a autoestima e autonomia das mulheres atendidas</li>
+          </ul>
+
+          <h3>Pontos de Coleta</h3>
+          <div class="list" style="margin-top:12px">
+            <div class="row">
+              <div><strong>Ouvidoria da Mulher – Câmara Municipal</strong></div>
+              <div class="mini"><i class="bi bi-geo-alt"></i> Av. Goiás, 2001, Setor Central, Goiânia-GO</div>
+              <div class="mini"><i class="bi bi-clock"></i> Seg–Sex, 8h–18h</div>
+            </div>
+            <div class="row">
+              <div class="mini"><em>Outros pontos de coleta em parceria com a comunidade serão divulgados nas redes sociais.</em></div>
+            </div>
+          </div>
+
+          <h3>O que Doar?</h3>
+          <div class="chips" style="margin-top:12px">
+            <span class="chip"><i class="bi bi-bag"></i> Roupas femininas</span>
+            <span class="chip"><i class="bi bi-bag"></i> Calçados</span>
+            <span class="chip"><i class="bi bi-bag"></i> Bolsas e acessórios</span>
+            <span class="chip"><i class="bi bi-droplet"></i> Produtos de higiene</span>
+            <span class="chip"><i class="bi bi-bag"></i> Roupas infantis</span>
+          </div>
+
+          <div style="margin-top:18px;padding:14px;background:#f9f9f9;border-radius:12px">
+            <div class="mini"><strong>Contato da Butique Solidária:</strong></div>
+            <div class="mini" style="margin-top:8px">
+              <i class="bi bi-person-circle"></i> Maria Clara<br>
+              <i class="bi bi-whatsapp"></i> <a href="https://wa.me/5562999793080" target="_blank" rel="noopener">(62) 99979-3080</a>
+            </div>
+          </div>
+
+          <div style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap">
+            <a class="btn primary" href="assets/docs/README.md" download><i class="bi bi-download"></i> Baixar folder (PDF)</a>
+            <a class="btn secondary" href="https://wa.me/5562999793080" target="_blank" rel="noopener"><i class="bi bi-whatsapp"></i> Falar com Maria Clara</a>
           </div>
         </article>
+      </div>
+    </section>
 
-        <article class="card span-6" id="materiais">
-          <h2>Materiais</h2>
+    <!-- MATERIAIS E DEMANDAS -->
+    <section id="materiais">
+      <div class="grid">
+        <article class="card span-6">
+          <h2>Materiais para Download</h2>
           <ul class="mini" style="margin:0;display:grid;gap:8px">
-            <li>Cartilhas e folders (PDF) – em breve.</li>
-            <li>Notícias e releases – em breve.</li>
-            <li>Relatórios de ações – em breve.</li>
+            <li><i class="bi bi-file-pdf"></i> <a href="assets/docs/README.md" download>Plano de Trabalho – Projeto de Extensão</a></li>
+            <li><i class="bi bi-file-pdf"></i> <a href="assets/docs/README.md" download>Butique Solidária – Folder completo</a></li>
+            <li><i class="bi bi-file-pdf"></i> <a href="assets/docs/README.md" download>Cartilha da Ouvidoria da Mulher</a></li>
+            <li><i class="bi bi-file-pdf"></i> <a href="assets/docs/README.md" download>Demandas e Conteúdos para Comunicação</a></li>
+          </ul>
+          <p class="mini" style="margin-top:12px;font-style:italic">
+            <i class="bi bi-info-circle"></i> Os PDFs estarão disponíveis em breve. Enquanto isso, entre em contato para solicitar o material.
+          </p>
+        </article>
+
+        <article class="card span-6">
+          <h2>Demandas e Sugestões de Conteúdo</h2>
+          <p class="mini">Temas prioritários para posts, campanhas e comunicação da Ouvidoria:</p>
+          <ul class="mini" style="margin:8px 0;display:grid;gap:6px;padding-left:18px;max-height:280px;overflow-y:auto">
+            <li>Violência doméstica e familiar contra a mulher</li>
+            <li>Lei Maria da Penha e medidas protetivas</li>
+            <li>Como denunciar violência (passo a passo)</li>
+            <li>Direitos das mulheres vítimas de violência</li>
+            <li>Saúde mental e acolhimento psicológico</li>
+            <li>Campanhas: Março Lilás, Agosto Lilás, 16 Dias de Ativismo</li>
+            <li>Butique Solidária e voluntariado</li>
+            <li>Orientação jurídica gratuita</li>
+            <li>Rede de apoio e serviços disponíveis em Goiânia</li>
+            <li>Empoderamento feminino e autonomia econômica</li>
+            <li>Violência sexual e atendimento de saúde</li>
+            <li>Relacionamentos abusivos (sinais de alerta)</li>
+            <li>Proteção a crianças e adolescentes</li>
+            <li>Depoimentos e histórias de superação (com autorização)</li>
           </ul>
         </article>
       </div>
     </section>
 
-    <!-- CONTATO -->
+    <!-- FAQ -->
+    <section id="faq">
+      <div class="container">
+        <h2 style="text-align:center;color:var(--rox-1);margin-bottom:24px;font-size:28px">Perguntas Frequentes</h2>
+      </div>
+      <div class="grid">
+        <article class="card">
+          <details>
+            <summary>O que é a Ouvidoria da Mulher?</summary>
+            <p class="mini">
+              A Ouvidoria da Mulher é um canal de acolhimento, orientação e encaminhamento para mulheres em situação 
+              de violência doméstica, familiar e de gênero. Atuamos na Câmara Municipal de Goiânia oferecendo escuta 
+              qualificada, apoio psicológico, orientação jurídica e articulação com a rede de proteção.
+            </p>
+          </details>
+          
+          <details>
+            <summary>Como posso pedir ajuda?</summary>
+            <p class="mini">
+              Você pode entrar em contato pelo WhatsApp (62) 98222-2434, Instagram @ouvidoriadamulher, ou comparecer 
+              pessoalmente na Câmara Municipal (Av. Goiás, 2001) de segunda a sexta, das 8h às 18h. Todos os atendimentos 
+              são sigilosos e acolhedores. Em caso de emergência, ligue 190 (Polícia Militar) ou 180 (Central de Atendimento à Mulher).
+            </p>
+          </details>
+
+          <details>
+            <summary>Os serviços são gratuitos?</summary>
+            <p class="mini">
+              Sim! Todos os serviços oferecidos pela Ouvidoria da Mulher são completamente gratuitos: acolhimento psicológico, 
+              orientação jurídica, encaminhamentos e materiais informativos. Também trabalhamos em parceria com a Defensoria 
+              Pública para garantir assistência jurídica gratuita às mulheres que precisam.
+            </p>
+          </details>
+
+          <details>
+            <summary>Como funciona a Butique Solidária?</summary>
+            <p class="mini">
+              A Butique Solidária arrecada e distribui gratuitamente roupas, calçados e produtos de higiene para mulheres 
+              em vulnerabilidade. Você pode doar itens em bom estado na Câmara Municipal ou entrar em contato com 
+              Maria Clara pelo WhatsApp (62) 99979-3080. Também aceitamos voluntários para organizar e distribuir as doações!
+            </p>
+          </details>
+        </article>
+      </div>
+    </section>
+
     <section id="contato">
       <div class="grid">
         <article class="card span-6">

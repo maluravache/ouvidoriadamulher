@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" fill="none">
+  <!-- Placeholder illustration inspired by the pamphlet theme -->
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#521f46;stop-opacity:0.2" />
+      <stop offset="100%" style="stop-color:#7e3666;stop-opacity:0.2" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="800" fill="url(#bgGrad)"/>
+  
+  <!-- Decorative elements representing support and empowerment -->
+  <circle cx="900" cy="400" r="200" fill="#6b2a5a" opacity="0.15"/>
+  <circle cx="950" cy="450" r="150" fill="#FFD134" opacity="0.2"/>
+  
+  <!-- Symbolic star/flower representing hope -->
+  <g transform="translate(900, 400)">
+    <path d="M0,-120 L30,-40 L120,-40 L50,10 L80,100 L0,50 L-80,100 L-50,10 L-120,-40 L-30,-40 Z" 
+          fill="#FFD134" opacity="0.6"/>
+  </g>
+  
+  <!-- Text: Você não está sozinha -->
+  <text x="100" y="400" font-family="Arial, sans-serif" font-size="80" font-weight="700" fill="#521f46" opacity="0.8">
+    Você não está sozinha
+  </text>
+</svg>
