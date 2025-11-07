@@ -52,6 +52,35 @@
   --transition: all 0.3s ease;
 }
 
+/* FONT DECLARATIONS - Amsi Pro (títulos) e Metropolis (corpo) */
+/* Placeholder @font-face for when actual fonts are available */
+@font-face {
+  font-family: 'Amsi Pro';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local('Amsi Pro'), local('AmsiPro-Bold'),
+       url('../assets/fonts/AmsiPro-Bold.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Metropolis';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Metropolis'), local('Metropolis-Regular'),
+       url('../assets/fonts/Metropolis-Regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Metropolis';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: local('Metropolis'), local('Metropolis-SemiBold'),
+       url('../assets/fonts/Metropolis-SemiBold.woff2') format('woff2');
+}
+
 /* RESET E BASE */
 * {
   box-sizing: border-box;
@@ -864,6 +893,342 @@ a {
 }
 
 /* ============================================
+   ATALHOS DE SERVIÇOS
+   ============================================ */
+.shortcuts {
+  padding: var(--spacing-xl) 0;
+}
+
+.section--white {
+  background: var(--bg);
+}
+
+.shortcuts__grid {
+  display: grid;
+  gap: var(--spacing-md);
+  grid-template-columns: 1fr;
+}
+
+.shortcut-card {
+  background: white;
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: var(--transition);
+  border: 2px solid transparent;
+}
+
+.shortcut-card:hover,
+.shortcut-card:focus {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--amarelo);
+  outline: none;
+}
+
+.shortcut-card__icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--rox-2), var(--rox-3));
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.75rem;
+  margin-bottom: var(--spacing-sm);
+}
+
+.shortcut-card__title {
+  color: var(--rox-1);
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: var(--spacing-xs);
+}
+
+.shortcut-card__desc {
+  color: var(--txt-light);
+  font-size: 0.95rem;
+}
+
+/* ============================================
+   GRID SYSTEM
+   ============================================ */
+.grid {
+  display: grid;
+  gap: var(--spacing-md);
+  grid-template-columns: 1fr;
+}
+
+.grid--2 {
+  grid-template-columns: 1fr;
+}
+
+.grid--3 {
+  grid-template-columns: 1fr;
+}
+
+/* ============================================
+   CONTENT CARDS
+   ============================================ */
+.content-card {
+  background: white;
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--linha);
+}
+
+.content-card h2,
+.content-card h3 {
+  color: var(--rox-1);
+  margin-bottom: var(--spacing-sm);
+}
+
+.content-card h2 {
+  font-size: 1.75rem;
+  font-weight: 800;
+}
+
+.content-card h3 {
+  font-size: 1.35rem;
+  font-weight: 700;
+}
+
+.content-card p {
+  color: var(--txt);
+  line-height: 1.7;
+  margin-bottom: var(--spacing-sm);
+}
+
+/* ============================================
+   SERVICE CARDS
+   ============================================ */
+.service-card {
+  background: white;
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-md);
+  box-shadow: var(--shadow);
+  border-left: 4px solid var(--rox-2);
+}
+
+.service-card h3 {
+  color: var(--rox-1);
+  font-size: 1.2rem;
+  margin-bottom: var(--spacing-sm);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.service-card__content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.service-item {
+  padding: var(--spacing-sm);
+  background: var(--bg-alt);
+  border-radius: var(--radius-sm);
+}
+
+.service-item strong {
+  display: block;
+  color: var(--rox-1);
+  margin-bottom: 6px;
+}
+
+.service-item p {
+  color: var(--txt-light);
+  font-size: 0.9rem;
+  margin: 4px 0;
+}
+
+/* ============================================
+   INFO BOXES
+   ============================================ */
+.info-box {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.section--purple .info-box h3 {
+  color: var(--txt-on-purple);
+  margin: var(--spacing-sm) 0;
+}
+
+.denunciar-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  margin: var(--spacing-md) 0;
+}
+
+.denunciar-item {
+  padding: var(--spacing-sm);
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-sm);
+  border-left: 3px solid var(--amarelo-contraste);
+}
+
+.denunciar-item strong {
+  display: block;
+  color: var(--txt-on-purple);
+  margin-bottom: 6px;
+}
+
+.denunciar-item p {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.9rem;
+  margin: 4px 0;
+}
+
+.steps-list {
+  list-style-position: inside;
+  margin: var(--spacing-md) 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  color: var(--txt-on-purple);
+}
+
+.steps-list li {
+  padding-left: 8px;
+}
+
+.emergency-numbers {
+  display: grid;
+  gap: var(--spacing-xs);
+  margin-top: var(--spacing-md);
+}
+
+.emergency-number {
+  display: block;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+  border-radius: var(--radius-sm);
+  text-align: center;
+  font-weight: 600;
+  transition: var(--transition);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.emergency-number:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: translateX(4px);
+}
+
+/* ============================================
+   LAW DETAILS
+   ============================================ */
+.law-details {
+  border: 1px solid var(--linha);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-sm);
+  margin-bottom: var(--spacing-sm);
+  background: white;
+}
+
+.law-details summary {
+  cursor: pointer;
+  font-weight: 700;
+  color: var(--rox-1);
+  padding: 4px 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.law-details summary::before {
+  content: '▸';
+  transition: transform 0.2s;
+  color: var(--rox-2);
+}
+
+.law-details[open] summary::before {
+  transform: rotate(90deg);
+}
+
+.law-details p {
+  margin-top: var(--spacing-sm);
+  padding-top: var(--spacing-sm);
+  border-top: 1px solid var(--linha);
+  color: var(--txt-light);
+}
+
+.health-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  margin: var(--spacing-md) 0;
+}
+
+.health-list li {
+  padding-left: 8px;
+  border-left: 3px solid var(--rox-2);
+  padding-left: 12px;
+}
+
+/* ============================================
+   FLOATING ACTION BUTTONS (FABs)
+   ============================================ */
+.fabs {
+  position: fixed;
+  bottom: var(--spacing-md);
+  right: var(--spacing-md);
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.fab {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,.25);
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.fab:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 16px rgba(0,0,0,.35);
+}
+
+.fab--whatsapp {
+  background: #25d366;
+  color: white;
+}
+
+.fab--whatsapp:hover {
+  background: #20c05a;
+}
+
+.fab--exit {
+  background: #dc3545;
+  color: white;
+}
+
+.fab--exit:hover {
+  background: #c82333;
+}
+
+/* ============================================
    RESPONSIVE - Tablet (640px+)
    ============================================ */
 @media (min-width: 640px) {
@@ -877,6 +1242,10 @@ a {
   
   .carousel-card {
     flex: 0 0 320px;
+  }
+  
+  .shortcuts__grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -919,6 +1288,21 @@ a {
   
   .hero__title {
     font-size: 3rem;
+  }
+  
+  /* Grid 2 columns */
+  .grid--2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  /* Grid 3 columns */
+  .grid--3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  /* Shortcuts 3 columns */
+  .shortcuts__grid {
+    grid-template-columns: repeat(2, 1fr);
   }
   
   /* Footer */
