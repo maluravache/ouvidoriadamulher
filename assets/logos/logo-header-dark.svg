@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 80" fill="none">
+  <circle cx="40" cy="40" r="28" fill="#6b2a5a"/>
+  <path d="M40 20 L50 35 L65 35 L52 45 L57 60 L40 50 L23 60 L28 45 L15 35 L30 35 Z" fill="#FFD134"/>
+  <text x="80" y="48" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#1b1b1b">Ouvidoria da Mulher</text>
+  <text x="80" y="65" font-family="Arial, sans-serif" font-size="12" fill="#5f6368">Câmara Municipal de Goiânia</text>
+</svg>
