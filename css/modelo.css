@@ -530,6 +530,7 @@ a {
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
+  /* Scrollbar hidden for cleaner UI, but keyboard navigation is available (Arrow keys, Home, End) */
   scrollbar-width: none; /* Firefox */
   -webkit-overflow-scrolling: touch;
   padding: var(--spacing-sm);
