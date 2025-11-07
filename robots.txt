@@ -1,0 +1,6 @@
+# Robots.txt - Maintenance Mode
+# Temporarily blocking all crawlers during site redesign
+# This file should be updated or removed after the redesign is complete
+
+User-agent: *
+Disallow: /
