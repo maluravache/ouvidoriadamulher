@@ -5,9 +5,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>Ouvidoria da Mulher – Câmara Municipal de Goiânia</title>
 
-<!-- (Favicon fica para depois) -->
+<link rel="icon" type="image/png" sizes="32x32" href="assets/logos/logo-mark-32.png">
+<link rel="icon" type="image/png" href="assets/logos/logo-mark.png">
 <meta name="theme-color" content="#6b2a5a"/>
 <meta name="description" content="Acolhimento psicológico, apoio jurídico e encaminhamentos. Você não está sozinha. Seg–Sex, 8h–18h.">
+
+<!-- Open Graph meta tags -->
+<meta property="og:title" content="Ouvidoria da Mulher – Câmara Municipal de Goiânia">
+<meta property="og:description" content="Acolhimento psicológico, apoio jurídico e encaminhamentos. Você não está sozinha.">
+<meta property="og:image" content="https://maluravache.github.io/ouvidoriadamulher/assets/logos/logo-og.png">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
 
 <!-- Ícones PB -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
@@ -40,25 +48,57 @@
   /* FITA AMARELA fina (identidade) */
   .fita{height:8px;background:var(--amarelo)}
 
-  /* HERO (banner roxo incrementado) */
-  .hero{background:linear-gradient(90deg,var(--rox-2),var(--rox-3));color:#fff}
-  .hero-inner{display:grid;grid-template-columns:92px 1fr auto;gap:18px;align-items:center;padding:28px 0}
+  /* HERO (banner roxo incrementado com gradiente e título amarelo) */
+  .hero{background:linear-gradient(135deg,var(--rox-1),var(--rox-2),var(--rox-3));color:#fff;position:relative;overflow:hidden}
+  .hero-inner{display:grid;grid-template-columns:92px 1fr auto;gap:18px;align-items:center;padding:48px 0;position:relative;z-index:2}
   .hero .logo-round{width:92px;height:92px;border-radius:50%;object-fit:contain;background:#ffffff22;padding:10px}
-  .hero h1{margin:0;font-size:32px;letter-spacing:.2px}
-  .hero .sub{margin:6px 0 0;opacity:.92}
+  .hero h1{margin:0;font-size:42px;letter-spacing:.2px;color:var(--amarelo);font-weight:900;text-shadow:2px 2px 4px rgba(0,0,0,.3)}
+  .hero .sub{margin:6px 0 0;opacity:.95;font-size:16px}
+  .hero-illustration{position:absolute;right:0;bottom:0;width:300px;height:300px;opacity:.15;pointer-events:none}
   .selo{background:var(--amarelo);color:#3a2a00;
         padding:10px 14px;border-radius:999px;font-weight:800;box-shadow:0 6px 18px rgba(0,0,0,.12)}
   .selo i{margin-right:8px}
+  
+  @media(max-width:768px){
+    .hero-inner{grid-template-columns:1fr;text-align:center;padding:32px 0}
+    .hero .logo-round{justify-self:center}
+    .hero h1{font-size:32px}
+    .selo{justify-self:center}
+    .hero-illustration{width:200px;height:200px}
+  }
 
   /* Seções & cards */
   section{padding:28px 0}
   .grid{display:grid;gap:18px;grid-template-columns:repeat(12,1fr)}
   .card{grid-column:span 12;background:#fff;border:1px solid var(--linha);
-        border-radius:var(--r);box-shadow:var(--shadow);padding:18px}
+        border-radius:var(--r);box-shadow:var(--shadow);padding:18px;transition:transform .2s,box-shadow .2s}
+  .card:hover{transform:translateY(-2px);box-shadow:0 12px 32px rgba(0,0,0,.08)}
   .card h2{margin:0 0 10px;color:var(--rox-1);font-size:20px}
   .mini{color:var(--cinza);font-size:14px}
   .list{display:grid;gap:12px}
   .row{display:grid;gap:6px}
+
+  /* Botões de download */
+  .btn-download{display:inline-flex;align-items:center;gap:8px;padding:10px 16px;
+                background:var(--amarelo);color:#3a2a00;border-radius:999px;font-weight:700;
+                text-decoration:none;transition:transform .2s,box-shadow .2s}
+  .btn-download:hover{transform:translateY(-2px);box-shadow:0 6px 18px rgba(0,0,0,.15)}
+  .btn-download i{font-size:18px}
+  
+  /* Utility classes */
+  .section-subtitle{font-size:16px;color:var(--rox-1);margin:0 0 8px}
+  .download-container{margin-top:16px;display:flex;gap:10px;flex-wrap:wrap}
+  .downloads-grid{margin-top:16px;display:grid;gap:12px}
+  .theme-card{background:#f9f9f9;padding:14px;grid-column:span 12}
+  .content-section{margin-top:16px}
+  .content-section-lg{margin-top:20px}
+  .info-list{margin:0;display:grid;gap:8px;padding-left:20px}
+  .info-list-sm{margin:8px 0;display:grid;gap:6px;padding-left:18px}
+  .info-text{margin:6px 0}
+  .flex-buttons{margin-top:14px;display:flex;gap:10px;flex-wrap:wrap}
+  .theme-title{color:var(--rox-1)}
+  .theme-desc{margin:6px 0 0}
+  .grid-tight{gap:12px}
 
   .pill{display:inline-flex;align-items:center;gap:10px;padding:10px 14px;background:var(--rox-1);
         color:#fff;border-radius:999px;font-weight:700}
@@ -110,6 +150,7 @@
         <a href="#leis">Leis</a>
         <a href="#bsol">Butique Solidária</a>
         <a href="#materiais">Materiais</a>
+        <a href="#faq">FAQ</a>
         <a href="#contato">Contato</a>
         <a class="cta" href="https://wa.me/5562982222434" target="_blank" rel="noopener">Pedir ajuda</a>
       </nav>
@@ -117,15 +158,17 @@
     <div class="fita" aria-hidden="true"></div>
   </header>
 
-  <!-- HERO (banner roxo com selo amarelo) -->
+  <!-- HERO (banner roxo com selo amarelo e ilustração) -->
   <section class="hero">
+    <img class="hero-illustration" src="assets/images/hero-illustration.png" aria-hidden="true">
     <div class="container hero-inner">
       <img class="logo-round" src="logo-simbolo-white.png" alt="Símbolo Ouvidoria da Mulher">
       <div>
-        <h1>Ouvidoria da Mulher</h1>
-        <div class="sub">Câmara Municipal de Goiânia • Espaço de acolhimento, orientação e encaminhamento</div>
+        <h1>Você não está sozinha</h1>
+        <div class="sub">Ouvidoria da Mulher • Câmara Municipal de Goiânia</div>
+        <div class="sub">Espaço de acolhimento, orientação e encaminhamento</div>
       </div>
-      <div class="selo"><i class="bi bi-heart-fill"></i>Você não está sozinha</div>
+      <div class="selo"><i class="bi bi-heart-fill"></i>Atendimento gratuito</div>
     </div>
   </section>
 
@@ -247,13 +290,13 @@
 
         <article class="card span-5">
           <h2>Passo a passo</h2>
-          <ol class="mini" style="margin:0;display:grid;gap:8px">
+          <ol class="mini info-list">
             <li>Em emergência: ligue <strong>190</strong> ou <strong>153</strong>.</li>
             <li>Guarde evidências (prints, áudios, fotos) com segurança.</li>
             <li>Procure a DEAM mais próxima ou fale com a Ouvidoria.</li>
             <li>Para denúncia anônima e orientação: <strong>180</strong>.</li>
           </ol>
-          <div style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap">
+          <div class="flex-buttons">
             <a class="pill" href="https://wa.me/5562982222434" target="_blank" rel="noopener"><i class="bi bi-chat-dots"></i> Preciso de orientação</a>
             <a class="pill am" href="#mapa"><i class="bi bi-geo-alt"></i> Ver localização</a>
           </div>
@@ -266,14 +309,14 @@
       <div class="grid">
         <article class="card span-6">
           <h2>Atendimento em saúde (violência sexual)</h2>
-          <ul class="mini" style="margin:0;display:grid;gap:8px">
+          <ul class="mini info-list">
             <li><strong>HEMU – Hospital Estadual da Mulher Dr. Jurandir</strong> — Rua R-7, s/n, Setor Oeste (Mulheres ≥ 14 / Homens ≥ 18)</li>
             <li><strong>HECAD – Hospital Estadual da Criança e do Adolescente</strong> — Av. Bela Vista, Parque Acalanto</li>
             <li>Também procure UPAs e UBS via ConecteSUS.</li>
           </ul>
-          <div style="margin-top:12px" class="mini">
+          <div class="content-section mini">
             <strong>Se sofreu violência sexual:</strong>
-            <ul style="margin:8px 0;display:grid;gap:6px;padding-left:18px">
+            <ul class="info-list-sm">
               <li>Procure atendimento o quanto antes (profilaxias e exames).</li>
               <li>Evite banhos/limpeza que possam apagar evidências (se possível).</li>
               <li>Busque a DEAM/180 para orientação e medidas protetivas.</li>
@@ -312,13 +355,46 @@
       </div>
     </section>
 
-    <!-- BUTIQUE E MATERIAIS (placeholders prontos) -->
+    <!-- BUTIQUE E MATERIAIS (expandido com contatos e downloads) -->
     <section id="bsol">
       <div class="grid">
         <article class="card span-6">
           <h2>Butique Solidária</h2>
-          <p class="mini">Roupas, calçados e itens de higiene para mulheres em vulnerabilidade. Em breve calendário de arrecadação, voluntariado e entregas.</p>
-          <div class="chips">
+          <p class="mini">A Butique Solidária oferece roupas, calçados e itens de higiene para mulheres em situação de vulnerabilidade. Trabalhamos com doações da comunidade e voluntários dedicados.</p>
+          
+          <div class="content-section">
+            <h3 class="section-subtitle">Como funciona?</h3>
+            <ul class="mini info-list">
+              <li>Recebemos doações de roupas, calçados e produtos de higiene</li>
+              <li>Voluntários organizam e separam os itens</li>
+              <li>Distribuição para mulheres cadastradas e encaminhadas</li>
+              <li>Eventos de arrecadação e conscientização</li>
+            </ul>
+          </div>
+
+          <div class="content-section">
+            <h3 class="section-subtitle">Pontos de coleta</h3>
+            <div class="mini">
+              <p class="info-text"><i class="bi bi-geo-alt"></i> Câmara Municipal de Goiânia - Av. Goiás, 2001, Setor Central</p>
+              <p class="info-text"><i class="bi bi-clock"></i> Seg–Sex, 8h–18h</p>
+            </div>
+          </div>
+
+          <div class="content-section">
+            <h3 class="section-subtitle">Contato para doações e voluntariado</h3>
+            <div class="mini">
+              <p class="info-text"><strong>Maria Clara</strong></p>
+              <p class="info-text"><i class="bi bi-whatsapp"></i> (62) 99979-3080</p>
+            </div>
+          </div>
+          
+          <div class="download-container">
+            <a class="btn-download" href="assets/docs/butique_solidaria.pdf" target="_blank" rel="noopener">
+              <i class="bi bi-file-pdf"></i> Baixar relatório da Butique
+            </a>
+          </div>
+
+          <div class="chips content-section">
             <span class="chip"><i class="bi bi-people"></i> Voluntariado</span>
             <span class="chip"><i class="bi bi-box-seam"></i> Doações</span>
             <span class="chip"><i class="bi bi-calendar-event"></i> Ações mensais</span>
@@ -326,12 +402,84 @@
         </article>
 
         <article class="card span-6" id="materiais">
-          <h2>Materiais</h2>
-          <ul class="mini" style="margin:0;display:grid;gap:8px">
-            <li>Cartilhas e folders (PDF) – em breve.</li>
-            <li>Notícias e releases – em breve.</li>
-            <li>Relatórios de ações – em breve.</li>
-          </ul>
+          <h2>Materiais para download</h2>
+          <p class="mini">Baixe documentos, relatórios e materiais informativos sobre a Ouvidoria da Mulher e nossos projetos.</p>
+          
+          <div class="downloads-grid">
+            <a class="btn-download" href="assets/docs/plano_trabalho_extensao.pdf" target="_blank" rel="noopener">
+              <i class="bi bi-file-pdf"></i> Plano de Trabalho de Extensão
+            </a>
+            <a class="btn-download" href="assets/docs/butique_solidaria.pdf" target="_blank" rel="noopener">
+              <i class="bi bi-file-pdf"></i> Relatório da Butique Solidária
+            </a>
+            <a class="btn-download" href="assets/docs/ouvidoria_mulher.pdf" target="_blank" rel="noopener">
+              <i class="bi bi-file-pdf"></i> Informações da Ouvidoria
+            </a>
+            <a class="btn-download" href="assets/docs/ouvidoria_mulher_demandas.pdf" target="_blank" rel="noopener">
+              <i class="bi bi-file-pdf"></i> Calendário de Conteúdo
+            </a>
+          </div>
+
+          <div class="content-section-lg">
+            <h3 class="section-subtitle">Outros materiais</h3>
+            <ul class="mini info-list">
+              <li>Cartilhas e folders informativos</li>
+              <li>Notícias e releases para imprensa</li>
+              <li>Relatórios de atividades e eventos</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq">
+      <div class="grid">
+        <article class="card">
+          <h2>Perguntas frequentes (FAQ)</h2>
+          <div class="downloads-grid">
+            
+            <details>
+              <summary>Como a Ouvidoria da Mulher pode me ajudar?</summary>
+              <p class="mini">Oferecemos acolhimento psicológico, orientação jurídica e encaminhamentos para serviços especializados. Você pode nos procurar para denunciar violência, buscar orientação sobre seus direitos ou solicitar medidas protetivas.</p>
+            </details>
+
+            <details>
+              <summary>O atendimento é gratuito?</summary>
+              <p class="mini">Sim, todos os serviços da Ouvidoria da Mulher são 100% gratuitos. Atendemos de segunda a sexta-feira, das 8h às 18h.</p>
+            </details>
+
+            <details>
+              <summary>Posso fazer uma denúncia anônima?</summary>
+              <p class="mini">Sim. Você pode ligar para o número 180 (Central de Atendimento à Mulher) para fazer denúncias anônimas e receber orientação. O serviço funciona 24 horas, todos os dias.</p>
+            </details>
+
+            <details>
+              <summary>Como posso doar para a Butique Solidária?</summary>
+              <p class="mini">Aceitamos doações de roupas, calçados e produtos de higiene em bom estado. Entre em contato com Maria Clara pelo WhatsApp (62) 99979-3080 ou leve suas doações à Câmara Municipal de Goiânia (Av. Goiás, 2001) de segunda a sexta, das 8h às 18h.</p>
+            </details>
+
+            <details>
+              <summary>Como posso me tornar voluntário(a)?</summary>
+              <p class="mini">Entre em contato conosco pelo WhatsApp (62) 98222-2434 ou Instagram @ouvidoriadamulher. Teremos prazer em explicar as oportunidades de voluntariado disponíveis na Ouvidoria e na Butique Solidária.</p>
+            </details>
+
+            <details>
+              <summary>O que fazer em caso de emergência?</summary>
+              <p class="mini">Em situações de emergência, ligue imediatamente para 190 (Polícia Militar), 153 (Guarda Civil Metropolitana) ou procure a Delegacia Especializada de Atendimento à Mulher (DEAM) mais próxima. A 1ª DEAM funciona 24 horas.</p>
+            </details>
+
+            <details>
+              <summary>Preciso levar algum documento para ser atendida?</summary>
+              <p class="mini">Se possível, leve RG, CPF e comprovante de residência. Porém, se você estiver em situação de emergência e não tiver documentos, ainda assim será atendida. Sua segurança é nossa prioridade.</p>
+            </details>
+
+            <details>
+              <summary>Posso levar meus filhos comigo?</summary>
+              <p class="mini">Sim, você pode vir acompanhada de seus filhos. Temos estrutura para receber famílias e orientá-las sobre os recursos disponíveis.</p>
+            </details>
+
+          </div>
         </article>
       </div>
     </section>
@@ -355,12 +503,64 @@
 
         <article class="card span-6">
           <h2>Denúncia anônima</h2>
-          <ul class="mini" style="margin:0;display:grid;gap:8px">
+          <ul class="mini info-list">
             <li><strong>180</strong> — Central de Atendimento à Mulher</li>
             <li><strong>190</strong> — Emergência (PM-GO)</li>
             <li><strong>153</strong> — Mulher Mais Segura (GCM)</li>
             <li><strong>100</strong> — Violência contra crianças e adolescentes</li>
           </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- COMUNICAÇÃO E CONTEÚDO -->
+    <section id="comunicacao">
+      <div class="grid">
+        <article class="card">
+          <h2>Comunicação e calendário de conteúdo</h2>
+          <p class="mini">A Ouvidoria da Mulher mantém uma agenda ativa de comunicação e conscientização, com posts e campanhas sobre temas importantes relacionados aos direitos das mulheres e combate à violência.</p>
+          
+          <div class="content-section-lg">
+            <h3 class="section-subtitle">Temas abordados em nossa comunicação:</h3>
+            
+            <div class="grid grid-tight">
+              <div class="card theme-card">
+                <strong class="theme-title">Direitos das mulheres</strong>
+                <p class="mini theme-desc">Lei Maria da Penha, medidas protetivas, direitos trabalhistas, licença-maternidade, pensão alimentícia</p>
+              </div>
+              
+              <div class="card theme-card">
+                <strong class="theme-title">Tipos de violência</strong>
+                <p class="mini theme-desc">Violência física, psicológica, sexual, patrimonial, moral, digital/cibernética</p>
+              </div>
+              
+              <div class="card theme-card">
+                <strong class="theme-title">Saúde da mulher</strong>
+                <p class="mini theme-desc">Saúde mental, autoestima, autocuidado, prevenção de doenças, direitos reprodutivos</p>
+              </div>
+              
+              <div class="card theme-card">
+                <strong class="theme-title">Datas comemorativas</strong>
+                <p class="mini theme-desc">8 de março (Dia da Mulher), 25 de novembro (Dia Internacional contra a Violência à Mulher), Outubro Rosa, outras datas relevantes</p>
+              </div>
+              
+              <div class="card theme-card">
+                <strong class="theme-title">Histórias e depoimentos</strong>
+                <p class="mini theme-desc">Relatos de superação, mulheres inspiradoras, casos de sucesso (sempre respeitando a privacidade)</p>
+              </div>
+              
+              <div class="card theme-card">
+                <strong class="theme-title">Serviços e recursos</strong>
+                <p class="mini theme-desc">Divulgação de canais de atendimento, eventos, ações da Butique Solidária, parcerias</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="download-container">
+            <a class="btn-download" href="assets/docs/ouvidoria_mulher_demandas.pdf" target="_blank" rel="noopener">
+              <i class="bi bi-file-pdf"></i> Baixar calendário completo de conteúdo
+            </a>
+          </div>
         </article>
       </div>
     </section>
