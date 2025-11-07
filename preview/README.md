@@ -55,8 +55,8 @@ http://localhost:8000/preview/modelo.html
 As fontes precisam ser adicionadas ao diretório `assets/fonts/`:
 
 ### Amsi Pro (licenciada)
-- `AmsipPro-Bold.woff2` (peso 700)
-- `AmsipPro-Black.woff2` (peso 900)
+- `AmsiPro-Bold.woff2` (peso 700)
+- `AmsiPro-Black.woff2` (peso 900)
 
 ### Metropolis (gratuita)
 - `Metropolis-Regular.woff2` (peso 400)

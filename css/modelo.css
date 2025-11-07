@@ -6,12 +6,13 @@
 
 /* ============================================
    FONTS - Amsi Pro e Metropolis
+   NOTA: Paths são placeholders. Atualizar com nomes reais quando adicionar fontes em assets/fonts/
    ============================================ */
 
 /* Amsi Pro (licenciada) - Placeholder paths com fallbacks seguros */
 @font-face {
   font-family: 'Amsi Pro';
-  src: url('../assets/fonts/AmsipPro-Bold.woff2') format('woff2');
+  src: url('../assets/fonts/AmsiPro-Bold.woff2') format('woff2');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -19,7 +20,7 @@
 
 @font-face {
   font-family: 'Amsi Pro';
-  src: url('../assets/fonts/AmsipPro-Black.woff2') format('woff2');
+  src: url('../assets/fonts/AmsiPro-Black.woff2') format('woff2');
   font-weight: 900;
   font-style: normal;
   font-display: swap;
