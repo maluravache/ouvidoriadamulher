@@ -44,6 +44,7 @@
   /* Layout específico */
   --mobile-cta-height: 60px;
   --footer-logo-max: 200px;
+  --fab-bottom-mobile: calc(var(--mobile-cta-height) + var(--spacing-sm));
   
   /* Transições */
   --transition: all 0.3s ease;
@@ -1136,7 +1137,7 @@ a {
 .fab-whatsapp {
   position: fixed;
   right: var(--spacing-sm);
-  bottom: calc(var(--mobile-cta-height) + var(--spacing-sm));
+  bottom: var(--fab-bottom-mobile);
   z-index: 45;
   width: 56px;
   height: 56px;
@@ -1166,7 +1167,7 @@ a {
 .fab-exit {
   position: fixed;
   left: var(--spacing-sm);
-  bottom: calc(var(--mobile-cta-height) + var(--spacing-sm));
+  bottom: var(--fab-bottom-mobile);
   z-index: 45;
   width: 56px;
   height: 56px;

@@ -724,9 +724,21 @@
     }
 
     // Atalho de teclado para saída rápida (Esc)
+    // Só ativa se não houver elementos interativos em foco
     document.addEventListener('keydown', function(e) {
       if (e.key === 'Escape' || e.key === 'Esc') {
-        quickExit();
+        // Não aciona se houver input, textarea, select ou elemento com contenteditable em foco
+        const activeElement = document.activeElement;
+        const isInteractiveElement = activeElement && (
+          activeElement.tagName === 'INPUT' ||
+          activeElement.tagName === 'TEXTAREA' ||
+          activeElement.tagName === 'SELECT' ||
+          activeElement.hasAttribute('contenteditable')
+        );
+        
+        if (!isInteractiveElement) {
+          quickExit();
+        }
       }
     });
   </script>
