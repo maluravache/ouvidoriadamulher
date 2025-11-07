@@ -725,22 +725,25 @@
     }
 
     // Atalho de teclado para saída rápida (Esc)
-    // Só ativa se não houver elementos interativos em foco
+    // Só desativa se o usuário estiver digitando em um campo de texto
     document.addEventListener('keydown', function(e) {
       if (e.key === 'Escape' || e.key === 'Esc') {
         const activeElement = document.activeElement;
-        const tabindex = activeElement.getAttribute('tabindex');
-        const isInteractiveElement = activeElement && (
-          activeElement.tagName === 'INPUT' ||
+        // Permite Esc exceto quando usuário está digitando
+        const isTyping = activeElement && (
+          activeElement.tagName === 'INPUT' && (
+            activeElement.type === 'text' ||
+            activeElement.type === 'password' ||
+            activeElement.type === 'email' ||
+            activeElement.type === 'search' ||
+            activeElement.type === 'tel' ||
+            activeElement.type === 'url'
+          ) ||
           activeElement.tagName === 'TEXTAREA' ||
-          activeElement.tagName === 'SELECT' ||
-          activeElement.hasAttribute('contenteditable') ||
-          activeElement.getAttribute('role') === 'textbox' ||
-          activeElement.getAttribute('role') === 'button' ||
-          (tabindex !== null && tabindex !== '-1')
+          activeElement.hasAttribute('contenteditable')
         );
         
-        if (!isInteractiveElement) {
+        if (!isTyping) {
           quickExit();
         }
       }
