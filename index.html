@@ -713,6 +713,7 @@
     }
 
     // Funcionalidade de saída rápida - substitui página por Google
+    // Usa window.location.replace() para impedir retorno via botão voltar
     function quickExit() {
       window.location.replace('https://www.google.com');
     }
@@ -727,13 +728,15 @@
     // Só ativa se não houver elementos interativos em foco
     document.addEventListener('keydown', function(e) {
       if (e.key === 'Escape' || e.key === 'Esc') {
-        // Não aciona se houver input, textarea, select ou elemento com contenteditable em foco
         const activeElement = document.activeElement;
         const isInteractiveElement = activeElement && (
           activeElement.tagName === 'INPUT' ||
           activeElement.tagName === 'TEXTAREA' ||
           activeElement.tagName === 'SELECT' ||
-          activeElement.hasAttribute('contenteditable')
+          activeElement.hasAttribute('contenteditable') ||
+          activeElement.getAttribute('role') === 'textbox' ||
+          activeElement.getAttribute('role') === 'button' ||
+          (activeElement.hasAttribute('tabindex') && activeElement.getAttribute('tabindex') !== '-1')
         );
         
         if (!isInteractiveElement) {

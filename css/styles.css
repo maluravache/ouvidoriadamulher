@@ -44,6 +44,7 @@
   /* Layout específico */
   --mobile-cta-height: 60px;
   --footer-logo-max: 200px;
+  /* Posicionamento dos FABs acima da barra CTA mobile */
   --fab-bottom-mobile: calc(var(--mobile-cta-height) + var(--spacing-sm));
   
   /* Transições */
