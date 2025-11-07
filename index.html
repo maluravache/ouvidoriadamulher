@@ -712,18 +712,18 @@
       });
     }
 
-    // Quick Exit functionality - substitui página por Google
+    // Funcionalidade de saída rápida - substitui página por Google
     function quickExit() {
       window.location.replace('https://www.google.com');
     }
 
-    // Quick Exit button click
+    // Click do botão de saída rápida
     const quickExitBtn = document.getElementById('quickExit');
     if (quickExitBtn) {
       quickExitBtn.addEventListener('click', quickExit);
     }
 
-    // Quick Exit keyboard shortcut (Esc)
+    // Atalho de teclado para saída rápida (Esc)
     document.addEventListener('keydown', function(e) {
       if (e.key === 'Escape' || e.key === 'Esc') {
         quickExit();
