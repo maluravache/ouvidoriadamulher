@@ -877,6 +877,271 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 0.9375rem;
 }
 
+/* Seção de apoiadores/parceiros */
+.footer__supporters {
+  margin-top: var(--spacing-lg);
+  padding-top: var(--spacing-lg);
+  border-top: 1px solid rgba(255,255,255,.15);
+}
+
+.footer__supporters h3 {
+  font-size: 1.125rem;
+  margin-bottom: var(--spacing-md);
+  color: var(--amarelo);
+  font-weight: 900;
+  text-align: center;
+}
+
+.supporters__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-md);
+  align-items: center;
+  justify-items: center;
+}
+
+.supporter__logo {
+  width: 100%;
+  max-width: 120px;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-sm);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.supporter__logo img {
+  max-width: 100%;
+  max-height: 100%;
+  opacity: 0.9;
+  filter: brightness(0) invert(1);
+}
+
+/* ============================================
+   FLOATING BUTTONS - WhatsApp e Sair Agora
+   ============================================ */
+
+/* Botão flutuante WhatsApp */
+.floating-whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 100;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #25d366;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+  transition: var(--transition);
+  text-decoration: none;
+  font-size: 1.75rem;
+  animation: pulse-whatsapp 2s infinite;
+}
+
+.floating-whatsapp:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+}
+
+@keyframes pulse-whatsapp {
+  0%, 100% {
+    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+  }
+  50% {
+    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.7), 0 0 0 10px rgba(37, 211, 102, 0.1);
+  }
+}
+
+/* Botão Sair Agora (Quick Exit) */
+.quick-exit {
+  position: fixed;
+  top: 80px;
+  right: 20px;
+  z-index: 99;
+  background: #000;
+  color: white;
+  padding: 10px 18px;
+  border-radius: var(--radius-full);
+  font-weight: 700;
+  font-size: 0.875rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,.3);
+  transition: var(--transition);
+  text-decoration: none;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.quick-exit:hover {
+  background: #1a1a1a;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0,0,0,.4);
+}
+
+.quick-exit i {
+  font-size: 1.1rem;
+}
+
+/* ============================================
+   QUEM SOMOS - Seção sobre a ouvidoria
+   ============================================ */
+.about {
+  padding: var(--spacing-xl) 0;
+  background: var(--bg);
+}
+
+.about__content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.about__intro {
+  font-size: 1.125rem;
+  color: var(--txt);
+  line-height: 1.8;
+  margin-bottom: var(--spacing-lg);
+  text-align: center;
+}
+
+.about__grid {
+  display: grid;
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-lg);
+}
+
+.about__card {
+  background: var(--lavanda-light);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+  border-left: 4px solid var(--rox-2);
+}
+
+.about__card h3 {
+  color: var(--rox-1);
+  font-size: 1.25rem;
+  font-weight: 900;
+  margin-bottom: var(--spacing-sm);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.about__card h3 i {
+  color: var(--amarelo);
+  font-size: 1.5rem;
+}
+
+.about__card p {
+  color: var(--txt);
+  line-height: 1.7;
+}
+
+.about__card ul {
+  margin-top: var(--spacing-sm);
+  padding-left: 20px;
+}
+
+.about__card li {
+  color: var(--txt);
+  margin: 6px 0;
+  line-height: 1.6;
+}
+
+/* ============================================
+   SERVIÇOS - Detalhamento dos serviços
+   ============================================ */
+.services {
+  padding: var(--spacing-xl) 0;
+  background: var(--lavanda-light);
+}
+
+.services__grid {
+  display: grid;
+  gap: var(--spacing-lg);
+  margin-top: var(--spacing-lg);
+}
+
+.service-card {
+  background: white;
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+  box-shadow: var(--shadow-soft);
+  border-left: 4px solid var(--rox-2);
+  transition: var(--transition);
+}
+
+.service-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateX(4px);
+}
+
+.service-card__header {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-md);
+}
+
+.service-card__icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--rox-1), var(--rox-2));
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+  box-shadow: var(--shadow-soft);
+}
+
+.service-card h3 {
+  color: var(--rox-1);
+  font-size: 1.375rem;
+  font-weight: 900;
+  margin: 0;
+}
+
+.service-card__desc {
+  color: var(--txt);
+  line-height: 1.7;
+  margin-bottom: var(--spacing-md);
+}
+
+.service-card__features {
+  background: var(--lavanda-light);
+  border-radius: var(--radius-sm);
+  padding: var(--spacing-md);
+  margin-top: var(--spacing-md);
+}
+
+.service-card__features h4 {
+  color: var(--rox-1);
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: var(--spacing-sm);
+}
+
+.service-card__features ul {
+  padding-left: 20px;
+  margin: 0;
+}
+
+.service-card__features li {
+  color: var(--txt);
+  margin: 6px 0;
+  line-height: 1.6;
+}
+
 /* ============================================
    RESPONSIVE - Tablet (480px+)
    ============================================ */
@@ -897,6 +1162,14 @@ h1, h2, h3, h4, h5, h6 {
   
   .emergency-chips {
     grid-template-columns: repeat(4, 1fr);
+  }
+  
+  .supporters__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .about__grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -968,6 +1241,10 @@ h1, h2, h3, h4, h5, h6 {
   /* Footer */
   .footer__content {
     grid-template-columns: 2fr 1fr 1fr;
+  }
+  
+  .supporters__grid {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
