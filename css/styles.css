@@ -889,40 +889,6 @@ a {
   margin: 0;
 }
 
-.law-details {
-  border: 1px solid var(--linha);
-  border-radius: var(--radius-sm);
-  padding: var(--spacing-sm);
-  margin-bottom: var(--spacing-sm);
-}
-
-.law-details summary {
-  cursor: pointer;
-  font-weight: 700;
-  color: var(--rox-1);
-  padding: 4px 0;
-  list-style: none;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.law-details summary::before {
-  content: '▸';
-  transition: transform 0.2s;
-}
-
-.law-details[open] summary::before {
-  transform: rotate(90deg);
-}
-
-.law-details p {
-  margin-top: var(--spacing-sm);
-  padding-top: var(--spacing-sm);
-  border-top: 1px solid var(--linha);
-  color: var(--txt-light);
-}
-
 .health-list {
   list-style: none;
   display: flex;
@@ -1225,10 +1191,6 @@ a {
   transform: translateY(-2px) scale(1.05);
   box-shadow: 0 8px 24px rgba(0,0,0,.2);
 }
-
-/* ============================================
-   QUICK EXIT - Botão sair rápido (REMOVIDO - substituído por FAB)
-   ============================================ */
 
 /* ============================================
    FOOTER
