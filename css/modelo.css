@@ -773,6 +773,13 @@ a {
   border: 1px solid var(--rox-3);
 }
 
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-xs);
+  margin-top: var(--spacing-md);
+}
+
 /* ============================================
    BUTTONS
    ============================================ */
@@ -1300,7 +1307,7 @@ a {
     grid-template-columns: repeat(3, 1fr);
   }
   
-  /* Shortcuts 3 columns */
+  /* Shortcuts 2 columns on tablet */
   .shortcuts__grid {
     grid-template-columns: repeat(2, 1fr);
   }
