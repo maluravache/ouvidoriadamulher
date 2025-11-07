@@ -252,7 +252,7 @@ h1 {
   // Check if preview mode is requested
   if (previewParam === '1') {
     // Set a cookie for preview mode (expires in 1 day)
-    document.cookie = 'preview_mode=1; path=/; max-age=86400';
+    document.cookie = 'preview_mode=1; path=/; max-age=86400; SameSite=Lax';
     // Redirect to the actual site
     window.location.href = 'site.html';
   }
