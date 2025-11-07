@@ -447,18 +447,18 @@
           
           <article class="content-card">
             <h2>Conheça seus direitos (Leis)</h2>
-            <details class="law-details">
-              <summary>Lei Maria da Penha (11.340/2006)</summary>
+            <div class="law-item">
+              <h3>Lei Maria da Penha (11.340/2006)</h3>
               <p>Coíbe a violência doméstica e familiar contra a mulher e prevê medidas protetivas de urgência.</p>
-            </details>
-            <details class="law-details">
-              <summary>Lei Carolina Dieckmann (12.737/2012)</summary>
+            </div>
+            <div class="law-item">
+              <h3>Lei Carolina Dieckmann (12.737/2012)</h3>
               <p>Tipifica crimes cibernéticos e penaliza invasão de dispositivos e divulgação de informações/imagens sem consentimento.</p>
-            </details>
-            <details class="law-details">
-              <summary>Lei do Minuto Seguinte (12.845/2013)</summary>
+            </div>
+            <div class="law-item">
+              <h3>Lei do Minuto Seguinte (12.845/2013)</h3>
               <p>Garante atendimento emergencial, integral e multidisciplinar às vítimas de violência sexual nos serviços de saúde do SUS.</p>
-            </details>
+            </div>
           </article>
 
           <article class="content-card" id="saude">
@@ -644,6 +644,24 @@
     <i class="bi bi-x-octagon"></i> Sair rápido
   </a>
 
+  <!-- FLOATING ACTION BUTTONS (FABs) -->
+  <!-- WhatsApp FAB (inferior direito) -->
+  <a href="https://wa.me/5562982222434" 
+     class="fab-whatsapp" 
+     target="_blank" 
+     rel="noopener" 
+     aria-label="Enviar mensagem no WhatsApp">
+    <i class="bi bi-whatsapp"></i>
+  </a>
+
+  <!-- Sair Agora FAB (inferior esquerdo) -->
+  <button 
+    class="fab-exit" 
+    id="quickExit"
+    aria-label="Sair agora - substitui a página por Google (Atalho: tecla Esc)">
+    <i class="bi bi-x-octagon-fill"></i>
+  </button>
+
   <!-- RODAPÉ -->
   <footer class="footer">
     <div class="container">
@@ -698,6 +716,24 @@
         });
       });
     }
+
+    // Quick Exit functionality - substitui página por Google
+    function quickExit() {
+      window.location.replace('https://www.google.com');
+    }
+
+    // Quick Exit button click
+    const quickExitBtn = document.getElementById('quickExit');
+    if (quickExitBtn) {
+      quickExitBtn.addEventListener('click', quickExit);
+    }
+
+    // Quick Exit keyboard shortcut (Esc)
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' || e.key === 'Esc') {
+        quickExit();
+      }
+    });
   </script>
 </body>
 </html>

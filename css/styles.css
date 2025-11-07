@@ -19,6 +19,10 @@
   --linha: #ececec;
   --linha-dark: #d0d0d0;
   
+  /* Cores derivadas discretas para CTAs */
+  --rox-light: #8b4878;
+  --rox-hover: #9d5c8a;
+  
   /* Espaçamentos */
   --spacing-xs: 8px;
   --spacing-sm: 16px;
@@ -532,22 +536,22 @@ a {
 }
 
 .emergency-btn--primary {
-  background: #dc3545;
+  background: var(--rox-light);
   color: white;
 }
 
 .emergency-btn--primary:hover {
-  background: #c82333;
+  background: var(--rox-hover);
   transform: scale(1.02);
 }
 
 .emergency-btn--whatsapp {
-  background: #25d366;
-  color: #083c17;
+  background: var(--rox-2);
+  color: white;
 }
 
 .emergency-btn--whatsapp:hover {
-  background: #20c05a;
+  background: var(--rox-3);
   transform: scale(1.02);
 }
 
@@ -865,6 +869,26 @@ a {
 /* ============================================
    LEGISLAÇÃO E SAÚDE
    ============================================ */
+.law-item {
+  border: 1px solid var(--linha);
+  border-radius: var(--radius-sm);
+  padding: var(--spacing-sm);
+  margin-bottom: var(--spacing-sm);
+  background: var(--bg-alt);
+}
+
+.law-item h3 {
+  font-weight: 700;
+  color: var(--rox-1);
+  font-size: 1.05rem;
+  margin-bottom: var(--spacing-xs);
+}
+
+.law-item p {
+  color: var(--txt-light);
+  margin: 0;
+}
+
 .law-details {
   border: 1px solid var(--linha);
   border-radius: var(--radius-sm);
@@ -1126,12 +1150,12 @@ a {
 }
 
 .mobile-cta-bar__btn--whatsapp {
-  background: #25d366;
-  color: #083c17;
+  background: var(--rox-2);
+  color: white;
 }
 
 .mobile-cta-bar__btn--emergency {
-  background: #dc3545;
+  background: var(--rox-light);
   color: white;
 }
 
@@ -1140,30 +1164,71 @@ a {
 }
 
 /* ============================================
-   QUICK EXIT - Botão sair rápido
+   FLOATING ACTION BUTTONS (FABs)
    ============================================ */
-.quick-exit {
+/* WhatsApp FAB - inferior direito */
+.fab-whatsapp {
   position: fixed;
-  left: var(--spacing-sm);
-  bottom: var(--spacing-sm);
-  z-index: 39;
-  background: #000;
+  right: var(--spacing-sm);
+  bottom: calc(var(--mobile-cta-height) + var(--spacing-sm));
+  z-index: 45;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--rox-2);
   color: white;
-  padding: 10px 16px;
-  border-radius: var(--radius-full);
-  font-weight: 700;
-  font-size: 0.85rem;
   display: flex;
   align-items: center;
-  gap: 6px;
+  justify-content: center;
   box-shadow: var(--shadow-lg);
   transition: var(--transition);
+  border: none;
+  cursor: pointer;
 }
 
-.quick-exit:hover {
-  background: #333;
-  transform: translateY(-2px);
+.fab-whatsapp i {
+  font-size: 1.75rem;
 }
+
+.fab-whatsapp:hover {
+  background: var(--rox-3);
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 8px 24px rgba(0,0,0,.2);
+}
+
+/* Quick Exit FAB - inferior esquerdo */
+.fab-exit {
+  position: fixed;
+  left: var(--spacing-sm);
+  bottom: calc(var(--mobile-cta-height) + var(--spacing-sm));
+  z-index: 45;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #000;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-lg);
+  transition: var(--transition);
+  border: none;
+  cursor: pointer;
+}
+
+.fab-exit i {
+  font-size: 1.5rem;
+}
+
+.fab-exit:hover {
+  background: #333;
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 8px 24px rgba(0,0,0,.2);
+}
+
+/* ============================================
+   QUICK EXIT - Botão sair rápido (REMOVIDO - substituído por FAB)
+   ============================================ */
 
 /* ============================================
    FOOTER
@@ -1356,10 +1421,12 @@ a {
     margin-bottom: 0;
   }
   
-  /* Quick exit on desktop */
-  .quick-exit {
-    left: auto;
-    right: var(--spacing-sm);
+  /* FABs positioned at bottom on desktop (no mobile bar) */
+  .fab-whatsapp {
+    bottom: var(--spacing-sm);
+  }
+  
+  .fab-exit {
     bottom: var(--spacing-sm);
   }
 }
