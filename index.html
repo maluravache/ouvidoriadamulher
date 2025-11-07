@@ -13,7 +13,7 @@
 <!-- Open Graph meta tags -->
 <meta property="og:title" content="Ouvidoria da Mulher – Câmara Municipal de Goiânia">
 <meta property="og:description" content="Acolhimento psicológico, apoio jurídico e encaminhamentos. Você não está sozinha.">
-<meta property="og:image" content="assets/logos/logo-og.png">
+<meta property="og:image" content="https://maluravache.github.io/ouvidoriadamulher/assets/logos/logo-og.png">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="pt_BR">
 
@@ -84,6 +84,12 @@
                 text-decoration:none;transition:transform .2s,box-shadow .2s}
   .btn-download:hover{transform:translateY(-2px);box-shadow:0 6px 18px rgba(0,0,0,.15)}
   .btn-download i{font-size:18px}
+  
+  /* Utility classes */
+  .section-subtitle{font-size:16px;color:var(--rox-1);margin:0 0 8px}
+  .download-container{margin-top:16px;display:flex;gap:10px;flex-wrap:wrap}
+  .downloads-grid{margin-top:16px;display:grid;gap:12px}
+  .theme-card{background:#f9f9f9;padding:14px;grid-column:span 12}
 
   .pill{display:inline-flex;align-items:center;gap:10px;padding:10px 14px;background:var(--rox-1);
         color:#fff;border-radius:999px;font-weight:700}
@@ -145,7 +151,7 @@
 
   <!-- HERO (banner roxo com selo amarelo e ilustração) -->
   <section class="hero">
-    <img class="hero-illustration" src="assets/images/hero-illustration.png" alt="" aria-hidden="true">
+    <img class="hero-illustration" src="assets/images/hero-illustration.png" aria-hidden="true">
     <div class="container hero-inner">
       <img class="logo-round" src="logo-simbolo-white.png" alt="Símbolo Ouvidoria da Mulher">
       <div>
@@ -348,7 +354,7 @@
           <p class="mini">A Butique Solidária oferece roupas, calçados e itens de higiene para mulheres em situação de vulnerabilidade. Trabalhamos com doações da comunidade e voluntários dedicados.</p>
           
           <div style="margin-top:16px">
-            <h3 style="font-size:16px;color:var(--rox-1);margin:0 0 8px">Como funciona?</h3>
+            <h3 class="section-subtitle">Como funciona?</h3>
             <ul class="mini" style="margin:0;display:grid;gap:8px;padding-left:20px">
               <li>Recebemos doações de roupas, calçados e produtos de higiene</li>
               <li>Voluntários organizam e separam os itens</li>
@@ -358,7 +364,7 @@
           </div>
 
           <div style="margin-top:16px">
-            <h3 style="font-size:16px;color:var(--rox-1);margin:0 0 8px">Pontos de coleta</h3>
+            <h3 class="section-subtitle">Pontos de coleta</h3>
             <div class="mini">
               <p style="margin:6px 0"><i class="bi bi-geo-alt"></i> Câmara Municipal de Goiânia - Av. Goiás, 2001, Setor Central</p>
               <p style="margin:6px 0"><i class="bi bi-clock"></i> Seg–Sex, 8h–18h</p>
@@ -366,14 +372,14 @@
           </div>
 
           <div style="margin-top:16px">
-            <h3 style="font-size:16px;color:var(--rox-1);margin:0 0 8px">Contato para doações e voluntariado</h3>
+            <h3 class="section-subtitle">Contato para doações e voluntariado</h3>
             <div class="mini">
               <p style="margin:6px 0"><strong>Maria Clara</strong></p>
               <p style="margin:6px 0"><i class="bi bi-whatsapp"></i> (62) 99979-3080</p>
             </div>
           </div>
           
-          <div style="margin-top:16px;display:flex;gap:10px;flex-wrap:wrap">
+          <div class="download-container">
             <a class="btn-download" href="assets/docs/butique_solidaria.pdf" target="_blank" rel="noopener">
               <i class="bi bi-file-pdf"></i> Baixar relatório da Butique
             </a>
@@ -390,7 +396,7 @@
           <h2>Materiais para download</h2>
           <p class="mini">Baixe documentos, relatórios e materiais informativos sobre a Ouvidoria da Mulher e nossos projetos.</p>
           
-          <div style="margin-top:16px;display:grid;gap:12px">
+          <div class="downloads-grid">
             <a class="btn-download" href="assets/docs/plano_trabalho_extensao.pdf" target="_blank" rel="noopener">
               <i class="bi bi-file-pdf"></i> Plano de Trabalho de Extensão
             </a>
@@ -406,7 +412,7 @@
           </div>
 
           <div style="margin-top:20px">
-            <h3 style="font-size:16px;color:var(--rox-1);margin:0 0 8px">Outros materiais</h3>
+            <h3 class="section-subtitle">Outros materiais</h3>
             <ul class="mini" style="margin:0;display:grid;gap:8px;padding-left:20px">
               <li>Cartilhas e folders informativos</li>
               <li>Notícias e releases para imprensa</li>
@@ -506,42 +512,42 @@
           <p class="mini">A Ouvidoria da Mulher mantém uma agenda ativa de comunicação e conscientização, com posts e campanhas sobre temas importantes relacionados aos direitos das mulheres e combate à violência.</p>
           
           <div style="margin-top:20px">
-            <h3 style="font-size:16px;color:var(--rox-1);margin:0 0 12px">Temas abordados em nossa comunicação:</h3>
+            <h3 class="section-subtitle">Temas abordados em nossa comunicação:</h3>
             
             <div class="grid" style="gap:12px">
-              <div class="card" style="background:#f9f9f9;padding:14px;grid-column:span 12">
+              <div class="card theme-card">
                 <strong style="color:var(--rox-1)">Direitos das mulheres</strong>
                 <p class="mini" style="margin:6px 0 0">Lei Maria da Penha, medidas protetivas, direitos trabalhistas, licença-maternidade, pensão alimentícia</p>
               </div>
               
-              <div class="card" style="background:#f9f9f9;padding:14px;grid-column:span 12">
+              <div class="card theme-card">
                 <strong style="color:var(--rox-1)">Tipos de violência</strong>
                 <p class="mini" style="margin:6px 0 0">Violência física, psicológica, sexual, patrimonial, moral, digital/cibernética</p>
               </div>
               
-              <div class="card" style="background:#f9f9f9;padding:14px;grid-column:span 12">
+              <div class="card theme-card">
                 <strong style="color:var(--rox-1)">Saúde da mulher</strong>
                 <p class="mini" style="margin:6px 0 0">Saúde mental, autoestima, autocuidado, prevenção de doenças, direitos reprodutivos</p>
               </div>
               
-              <div class="card" style="background:#f9f9f9;padding:14px;grid-column:span 12">
+              <div class="card theme-card">
                 <strong style="color:var(--rox-1)">Datas comemorativas</strong>
                 <p class="mini" style="margin:6px 0 0">8 de março (Dia da Mulher), 25 de novembro (Dia Internacional contra a Violência à Mulher), Outubro Rosa, outras datas relevantes</p>
               </div>
               
-              <div class="card" style="background:#f9f9f9;padding:14px;grid-column:span 12">
+              <div class="card theme-card">
                 <strong style="color:var(--rox-1)">Histórias e depoimentos</strong>
                 <p class="mini" style="margin:6px 0 0">Relatos de superação, mulheres inspiradoras, casos de sucesso (sempre respeitando a privacidade)</p>
               </div>
               
-              <div class="card" style="background:#f9f9f9;padding:14px;grid-column:span 12">
+              <div class="card theme-card">
                 <strong style="color:var(--rox-1)">Serviços e recursos</strong>
                 <p class="mini" style="margin:6px 0 0">Divulgação de canais de atendimento, eventos, ações da Butique Solidária, parcerias</p>
               </div>
             </div>
           </div>
 
-          <div style="margin-top:20px">
+          <div class="download-container">
             <a class="btn-download" href="assets/docs/ouvidoria_mulher_demandas.pdf" target="_blank" rel="noopener">
               <i class="bi bi-file-pdf"></i> Baixar calendário completo de conteúdo
             </a>
