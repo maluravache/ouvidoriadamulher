@@ -729,6 +729,7 @@
     document.addEventListener('keydown', function(e) {
       if (e.key === 'Escape' || e.key === 'Esc') {
         const activeElement = document.activeElement;
+        const tabindex = activeElement.getAttribute('tabindex');
         const isInteractiveElement = activeElement && (
           activeElement.tagName === 'INPUT' ||
           activeElement.tagName === 'TEXTAREA' ||
@@ -736,7 +737,7 @@
           activeElement.hasAttribute('contenteditable') ||
           activeElement.getAttribute('role') === 'textbox' ||
           activeElement.getAttribute('role') === 'button' ||
-          (activeElement.hasAttribute('tabindex') && activeElement.getAttribute('tabindex') !== '-1')
+          (tabindex !== null && tabindex !== '-1')
         );
         
         if (!isInteractiveElement) {
