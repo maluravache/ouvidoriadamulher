@@ -19,6 +19,10 @@
   --linha: #ececec;
   --linha-dark: #d0d0d0;
   
+  /* Cores derivadas discretas para botões de ação */
+  --rox-light: #8b4878;
+  --rox-hover: #9d5c8a;
+  
   /* Espaçamentos */
   --spacing-xs: 8px;
   --spacing-sm: 16px;
@@ -40,6 +44,8 @@
   /* Layout específico */
   --mobile-cta-height: 60px;
   --footer-logo-max: 200px;
+  /* Posicionamento dos FABs acima da barra CTA mobile */
+  --fab-bottom-mobile: calc(var(--mobile-cta-height) + var(--spacing-sm));
   
   /* Transições */
   --transition: all 0.3s ease;
@@ -532,22 +538,22 @@ a {
 }
 
 .emergency-btn--primary {
-  background: #dc3545;
+  background: var(--rox-light);
   color: white;
 }
 
 .emergency-btn--primary:hover {
-  background: #c82333;
+  background: var(--rox-hover);
   transform: scale(1.02);
 }
 
 .emergency-btn--whatsapp {
-  background: #25d366;
-  color: #083c17;
+  background: var(--rox-2);
+  color: white;
 }
 
 .emergency-btn--whatsapp:hover {
-  background: #20c05a;
+  background: var(--rox-3);
   transform: scale(1.02);
 }
 
@@ -865,38 +871,24 @@ a {
 /* ============================================
    LEGISLAÇÃO E SAÚDE
    ============================================ */
-.law-details {
+.law-item {
   border: 1px solid var(--linha);
   border-radius: var(--radius-sm);
   padding: var(--spacing-sm);
   margin-bottom: var(--spacing-sm);
+  background: var(--bg-alt);
 }
 
-.law-details summary {
-  cursor: pointer;
+.law-item h3 {
   font-weight: 700;
   color: var(--rox-1);
-  padding: 4px 0;
-  list-style: none;
-  display: flex;
-  align-items: center;
-  gap: 8px;
+  font-size: 1.05rem;
+  margin-bottom: var(--spacing-xs);
 }
 
-.law-details summary::before {
-  content: '▸';
-  transition: transform 0.2s;
-}
-
-.law-details[open] summary::before {
-  transform: rotate(90deg);
-}
-
-.law-details p {
-  margin-top: var(--spacing-sm);
-  padding-top: var(--spacing-sm);
-  border-top: 1px solid var(--linha);
+.law-item p {
   color: var(--txt-light);
+  margin: 0;
 }
 
 .health-list {
@@ -1126,12 +1118,12 @@ a {
 }
 
 .mobile-cta-bar__btn--whatsapp {
-  background: #25d366;
-  color: #083c17;
+  background: var(--rox-2);
+  color: white;
 }
 
 .mobile-cta-bar__btn--emergency {
-  background: #dc3545;
+  background: var(--rox-light);
   color: white;
 }
 
@@ -1140,29 +1132,66 @@ a {
 }
 
 /* ============================================
-   QUICK EXIT - Botão sair rápido
+   FLOATING ACTION BUTTONS (FABs)
    ============================================ */
-.quick-exit {
+/* WhatsApp FAB - inferior direito */
+.fab-whatsapp {
   position: fixed;
-  left: var(--spacing-sm);
-  bottom: var(--spacing-sm);
-  z-index: 39;
-  background: #000;
+  right: var(--spacing-sm);
+  bottom: var(--fab-bottom-mobile);
+  z-index: 45;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--rox-2);
   color: white;
-  padding: 10px 16px;
-  border-radius: var(--radius-full);
-  font-weight: 700;
-  font-size: 0.85rem;
   display: flex;
   align-items: center;
-  gap: 6px;
+  justify-content: center;
   box-shadow: var(--shadow-lg);
   transition: var(--transition);
+  border: none;
+  cursor: pointer;
 }
 
-.quick-exit:hover {
+.fab-whatsapp i {
+  font-size: 1.75rem;
+}
+
+.fab-whatsapp:hover {
+  background: var(--rox-3);
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 8px 24px rgba(0,0,0,.2);
+}
+
+/* Quick Exit FAB - inferior esquerdo */
+.fab-exit {
+  position: fixed;
+  left: var(--spacing-sm);
+  bottom: var(--fab-bottom-mobile);
+  z-index: 45;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #000;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-lg);
+  transition: var(--transition);
+  border: none;
+  cursor: pointer;
+}
+
+.fab-exit i {
+  font-size: 1.5rem;
+}
+
+.fab-exit:hover {
   background: #333;
-  transform: translateY(-2px);
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 8px 24px rgba(0,0,0,.2);
 }
 
 /* ============================================
@@ -1356,10 +1385,9 @@ a {
     margin-bottom: 0;
   }
   
-  /* Quick exit on desktop */
-  .quick-exit {
-    left: auto;
-    right: var(--spacing-sm);
+  /* FABs positioned at bottom on desktop (no mobile bar) */
+  .fab-whatsapp,
+  .fab-exit {
     bottom: var(--spacing-sm);
   }
 }
