@@ -90,6 +90,15 @@
   .download-container{margin-top:16px;display:flex;gap:10px;flex-wrap:wrap}
   .downloads-grid{margin-top:16px;display:grid;gap:12px}
   .theme-card{background:#f9f9f9;padding:14px;grid-column:span 12}
+  .content-section{margin-top:16px}
+  .content-section-lg{margin-top:20px}
+  .info-list{margin:0;display:grid;gap:8px;padding-left:20px}
+  .info-list-sm{margin:8px 0;display:grid;gap:6px;padding-left:18px}
+  .info-text{margin:6px 0}
+  .flex-buttons{margin-top:14px;display:flex;gap:10px;flex-wrap:wrap}
+  .theme-title{color:var(--rox-1)}
+  .theme-desc{margin:6px 0 0}
+  .grid-tight{gap:12px}
 
   .pill{display:inline-flex;align-items:center;gap:10px;padding:10px 14px;background:var(--rox-1);
         color:#fff;border-radius:999px;font-weight:700}
@@ -281,13 +290,13 @@
 
         <article class="card span-5">
           <h2>Passo a passo</h2>
-          <ol class="mini" style="margin:0;display:grid;gap:8px">
+          <ol class="mini info-list">
             <li>Em emergência: ligue <strong>190</strong> ou <strong>153</strong>.</li>
             <li>Guarde evidências (prints, áudios, fotos) com segurança.</li>
             <li>Procure a DEAM mais próxima ou fale com a Ouvidoria.</li>
             <li>Para denúncia anônima e orientação: <strong>180</strong>.</li>
           </ol>
-          <div style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap">
+          <div class="flex-buttons">
             <a class="pill" href="https://wa.me/5562982222434" target="_blank" rel="noopener"><i class="bi bi-chat-dots"></i> Preciso de orientação</a>
             <a class="pill am" href="#mapa"><i class="bi bi-geo-alt"></i> Ver localização</a>
           </div>
@@ -300,14 +309,14 @@
       <div class="grid">
         <article class="card span-6">
           <h2>Atendimento em saúde (violência sexual)</h2>
-          <ul class="mini" style="margin:0;display:grid;gap:8px">
+          <ul class="mini info-list">
             <li><strong>HEMU – Hospital Estadual da Mulher Dr. Jurandir</strong> — Rua R-7, s/n, Setor Oeste (Mulheres ≥ 14 / Homens ≥ 18)</li>
             <li><strong>HECAD – Hospital Estadual da Criança e do Adolescente</strong> — Av. Bela Vista, Parque Acalanto</li>
             <li>Também procure UPAs e UBS via ConecteSUS.</li>
           </ul>
-          <div style="margin-top:12px" class="mini">
+          <div class="content-section mini">
             <strong>Se sofreu violência sexual:</strong>
-            <ul style="margin:8px 0;display:grid;gap:6px;padding-left:18px">
+            <ul class="info-list-sm">
               <li>Procure atendimento o quanto antes (profilaxias e exames).</li>
               <li>Evite banhos/limpeza que possam apagar evidências (se possível).</li>
               <li>Busque a DEAM/180 para orientação e medidas protetivas.</li>
@@ -353,9 +362,9 @@
           <h2>Butique Solidária</h2>
           <p class="mini">A Butique Solidária oferece roupas, calçados e itens de higiene para mulheres em situação de vulnerabilidade. Trabalhamos com doações da comunidade e voluntários dedicados.</p>
           
-          <div style="margin-top:16px">
+          <div class="content-section">
             <h3 class="section-subtitle">Como funciona?</h3>
-            <ul class="mini" style="margin:0;display:grid;gap:8px;padding-left:20px">
+            <ul class="mini info-list">
               <li>Recebemos doações de roupas, calçados e produtos de higiene</li>
               <li>Voluntários organizam e separam os itens</li>
               <li>Distribuição para mulheres cadastradas e encaminhadas</li>
@@ -363,19 +372,19 @@
             </ul>
           </div>
 
-          <div style="margin-top:16px">
+          <div class="content-section">
             <h3 class="section-subtitle">Pontos de coleta</h3>
             <div class="mini">
-              <p style="margin:6px 0"><i class="bi bi-geo-alt"></i> Câmara Municipal de Goiânia - Av. Goiás, 2001, Setor Central</p>
-              <p style="margin:6px 0"><i class="bi bi-clock"></i> Seg–Sex, 8h–18h</p>
+              <p class="info-text"><i class="bi bi-geo-alt"></i> Câmara Municipal de Goiânia - Av. Goiás, 2001, Setor Central</p>
+              <p class="info-text"><i class="bi bi-clock"></i> Seg–Sex, 8h–18h</p>
             </div>
           </div>
 
-          <div style="margin-top:16px">
+          <div class="content-section">
             <h3 class="section-subtitle">Contato para doações e voluntariado</h3>
             <div class="mini">
-              <p style="margin:6px 0"><strong>Maria Clara</strong></p>
-              <p style="margin:6px 0"><i class="bi bi-whatsapp"></i> (62) 99979-3080</p>
+              <p class="info-text"><strong>Maria Clara</strong></p>
+              <p class="info-text"><i class="bi bi-whatsapp"></i> (62) 99979-3080</p>
             </div>
           </div>
           
@@ -385,7 +394,7 @@
             </a>
           </div>
 
-          <div class="chips" style="margin-top:16px">
+          <div class="chips content-section">
             <span class="chip"><i class="bi bi-people"></i> Voluntariado</span>
             <span class="chip"><i class="bi bi-box-seam"></i> Doações</span>
             <span class="chip"><i class="bi bi-calendar-event"></i> Ações mensais</span>
@@ -411,9 +420,9 @@
             </a>
           </div>
 
-          <div style="margin-top:20px">
+          <div class="content-section-lg">
             <h3 class="section-subtitle">Outros materiais</h3>
-            <ul class="mini" style="margin:0;display:grid;gap:8px;padding-left:20px">
+            <ul class="mini info-list">
               <li>Cartilhas e folders informativos</li>
               <li>Notícias e releases para imprensa</li>
               <li>Relatórios de atividades e eventos</li>
@@ -428,7 +437,7 @@
       <div class="grid">
         <article class="card">
           <h2>Perguntas frequentes (FAQ)</h2>
-          <div style="margin-top:16px;display:grid;gap:12px">
+          <div class="downloads-grid">
             
             <details>
               <summary>Como a Ouvidoria da Mulher pode me ajudar?</summary>
@@ -494,7 +503,7 @@
 
         <article class="card span-6">
           <h2>Denúncia anônima</h2>
-          <ul class="mini" style="margin:0;display:grid;gap:8px">
+          <ul class="mini info-list">
             <li><strong>180</strong> — Central de Atendimento à Mulher</li>
             <li><strong>190</strong> — Emergência (PM-GO)</li>
             <li><strong>153</strong> — Mulher Mais Segura (GCM)</li>
@@ -511,38 +520,38 @@
           <h2>Comunicação e calendário de conteúdo</h2>
           <p class="mini">A Ouvidoria da Mulher mantém uma agenda ativa de comunicação e conscientização, com posts e campanhas sobre temas importantes relacionados aos direitos das mulheres e combate à violência.</p>
           
-          <div style="margin-top:20px">
+          <div class="content-section-lg">
             <h3 class="section-subtitle">Temas abordados em nossa comunicação:</h3>
             
-            <div class="grid" style="gap:12px">
+            <div class="grid grid-tight">
               <div class="card theme-card">
-                <strong style="color:var(--rox-1)">Direitos das mulheres</strong>
-                <p class="mini" style="margin:6px 0 0">Lei Maria da Penha, medidas protetivas, direitos trabalhistas, licença-maternidade, pensão alimentícia</p>
+                <strong class="theme-title">Direitos das mulheres</strong>
+                <p class="mini theme-desc">Lei Maria da Penha, medidas protetivas, direitos trabalhistas, licença-maternidade, pensão alimentícia</p>
               </div>
               
               <div class="card theme-card">
-                <strong style="color:var(--rox-1)">Tipos de violência</strong>
-                <p class="mini" style="margin:6px 0 0">Violência física, psicológica, sexual, patrimonial, moral, digital/cibernética</p>
+                <strong class="theme-title">Tipos de violência</strong>
+                <p class="mini theme-desc">Violência física, psicológica, sexual, patrimonial, moral, digital/cibernética</p>
               </div>
               
               <div class="card theme-card">
-                <strong style="color:var(--rox-1)">Saúde da mulher</strong>
-                <p class="mini" style="margin:6px 0 0">Saúde mental, autoestima, autocuidado, prevenção de doenças, direitos reprodutivos</p>
+                <strong class="theme-title">Saúde da mulher</strong>
+                <p class="mini theme-desc">Saúde mental, autoestima, autocuidado, prevenção de doenças, direitos reprodutivos</p>
               </div>
               
               <div class="card theme-card">
-                <strong style="color:var(--rox-1)">Datas comemorativas</strong>
-                <p class="mini" style="margin:6px 0 0">8 de março (Dia da Mulher), 25 de novembro (Dia Internacional contra a Violência à Mulher), Outubro Rosa, outras datas relevantes</p>
+                <strong class="theme-title">Datas comemorativas</strong>
+                <p class="mini theme-desc">8 de março (Dia da Mulher), 25 de novembro (Dia Internacional contra a Violência à Mulher), Outubro Rosa, outras datas relevantes</p>
               </div>
               
               <div class="card theme-card">
-                <strong style="color:var(--rox-1)">Histórias e depoimentos</strong>
-                <p class="mini" style="margin:6px 0 0">Relatos de superação, mulheres inspiradoras, casos de sucesso (sempre respeitando a privacidade)</p>
+                <strong class="theme-title">Histórias e depoimentos</strong>
+                <p class="mini theme-desc">Relatos de superação, mulheres inspiradoras, casos de sucesso (sempre respeitando a privacidade)</p>
               </div>
               
               <div class="card theme-card">
-                <strong style="color:var(--rox-1)">Serviços e recursos</strong>
-                <p class="mini" style="margin:6px 0 0">Divulgação de canais de atendimento, eventos, ações da Butique Solidária, parcerias</p>
+                <strong class="theme-title">Serviços e recursos</strong>
+                <p class="mini theme-desc">Divulgação de canais de atendimento, eventos, ações da Butique Solidária, parcerias</p>
               </div>
             </div>
           </div>
