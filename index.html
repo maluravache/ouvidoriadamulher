@@ -3,70 +3,210 @@
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Site em Atualização – Ouvidoria da Mulher</title>
-  <meta name="robots" content="noindex, nofollow"/>
-  <meta name="theme-color" content="#6b2a5a"/>
+  <title>Ouvidoria da Mulher – Câmara Municipal de Goiânia</title>
+  <meta name="description" content="Espaço institucional de acolhimento, escuta e encaminhamento da Câmara Municipal de Goiânia para mulheres em situação de violência. Juntas somos mais fortes."/>
   <link rel="icon" type="image/svg+xml" href="assets/logos/logo-mark.svg"/>
   <link rel="icon" type="image/png" href="favicon.png"/>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet"/>
   <style>
-    :root { --rox-1:#521f46; --rox-2:#6b2a5a; --rox-3:#7e3666; --amarelo:#FFD134; --txt:#1b1b1b; }
+    :root{--roxo:#4B1E6D;--lilas:#7A3DA0;--vinho:#5E1648;--amarelo:#FFD230;--rosa:#BE2A7E;--white:#fff;--bg-suave:#F7F6F9;--shadow:0 10px 28px rgba(0,0,0,.12);--hero-grad:linear-gradient(135deg,var(--roxo) 0%,var(--lilas) 55%,var(--vinho) 100%)}
     *{box-sizing:border-box;margin:0;padding:0}
-    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,sans-serif;line-height:1.6;color:var(--txt);background:linear-gradient(135deg,var(--rox-1)0%,var(--rox-2)50%,var(--rox-3)100%);min-height:100vh;display:flex;align-items:center;justify-content:center;padding:20px}
-    .maintenance-container{background:#fff;border-radius:20px;padding:40px 30px;max-width:600px;width:100%;box-shadow:0 20px 60px rgba(0,0,0,.3);text-align:center;border-top:6px solid var(--amarelo)}
-    .logo{width:120px;height:auto;margin:0 auto 30px;display:block}
-    h1{color:var(--rox-1);font-size:2rem;font-weight:800;margin-bottom:20px;line-height:1.2}
-    .message{font-size:1.05rem;margin-bottom:26px}
-    .badge{display:inline-block;background:var(--amarelo);color:#3a2a00;padding:8px 20px;border-radius:999px;font-size:.75rem;font-weight:800;letter-spacing:.5px;margin-bottom:18px;text-transform:uppercase}
-    .contact-section{background:#f9f9f9;border-radius:12px;padding:24px;margin-top:10px;border-left:4px solid var(--amarelo)}
-    .contact-title{color:var(--rox-1);font-size:1.15rem;font-weight:700;margin:0 0 16px}
-    .contact-links{display:flex;flex-direction:column;gap:14px}
-    .contact-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 24px;border-radius:999px;font-weight:700;font-size:1rem;text-decoration:none;transition:.3s;border:none;cursor:pointer}
-    .contact-btn--whatsapp{background:#25d366;color:#083c17}
-    .contact-btn--whatsapp:hover{background:#20c05a;transform:translateY(-2px);box-shadow:0 6px 20px rgba(37,211,102,.4)}
-    .contact-btn--email{background:var(--rox-1);color:#fff}
-    .contact-btn--email:hover{background:var(--rox-2);transform:translateY(-2px);box-shadow:0 6px 20px rgba(107,42,90,.4)}
-    *:focus-visible{outline:3px solid var(--amarelo);outline-offset:2px}
-    @media(min-width:480px){h1{font-size:2.4rem}.contact-links{flex-direction:row}.contact-btn{flex:1}}
-    @media(max-width:479px){.maintenance-container{padding:30px 22px}h1{font-size:1.7rem}.logo{width:100px}}
+    html,body{font-family:system-ui,-apple-system,'Poppins',Arial,sans-serif;color:#2e2e2e;line-height:1.3}
+    body{background:#fff}
+    .wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+    a{text-decoration:none;color:inherit}
+    /* Header */
+    .site-header{position:sticky;top:0;z-index:60;background:var(--roxo);color:var(--white);box-shadow:0 2px 6px rgba(0,0,0,.18)}
+    .site-header .wrap{display:flex;align-items:center;gap:16px;padding:10px 20px}
+    .site-header .brand img{height:44px;display:block}
+    .nav{display:flex;gap:18px;margin-left:auto}
+    .nav a{color:var(--white);opacity:.9;font-weight:500}
+    .nav a:hover{opacity:1}
+    .btn-escape{margin-left:12px;background:#5E2B86;color:#fff;padding:8px 14px;border-radius:999px;font-weight:700;box-shadow:var(--shadow)}
+    /* Hero */
+    .hero{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:64px 0;background:var(--hero-grad);color:#fff;position:relative}
+    .hero-copy{padding:0 20px;flex:1 1 54%}
+    .hero h1{font-size:clamp(44px,7vw,76px);line-height:1.05;color:var(--amarelo);margin:0 0 12px;font-weight:800;letter-spacing:-.5px}
+    .hero-sub{opacity:.95;max-width:60ch;margin:0 0 24px}
+    .btn-primary{display:inline-block;background:#6D2C8E;color:#fff;padding:12px 22px;border-radius:14px;font-weight:800;box-shadow:0 8px 24px rgba(0,0,0,.25)}
+    .btn-primary:hover{filter:brightness(.95)}
+    .hero-art{flex:0 1 38%;padding:0 20px;max-width:460px}
+    .hero-art img{width:100%;height:auto;display:block;filter:drop-shadow(0 10px 24px rgba(0,0,0,.28))}
+    .btn-whatsapp{position:absolute;right:22px;bottom:18px;z-index:80;width:56px;height:56px;border-radius:50%;background:#25D366 url('assets/whatsapp-icon.png') no-repeat center/60%;box-shadow:0 10px 24px rgba(0,0,0,.25)}
+    /* Surface under hero */
+    .surface{background:#fff;border-radius:24px 24px 0 0;margin-top:-18px;box-shadow:0 -8px 18px rgba(0,0,0,.08)}
+    /* Novidades */
+    .news{padding:48px 0}
+    h2{color:#2c2450;margin:0 0 16px;padding:0 20px;font-size:clamp(26px,3.2vw,40px);font-weight:800}
+    .cards{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;padding:0 20px 8px}
+    .card{border-radius:18px;padding:18px;color:#fff;box-shadow:var(--shadow);min-height:150px;display:flex;flex-direction:column}
+    .card h3{margin:0 0 8px;font-size:18px}
+    .card p{margin:0 0 12px;font-size:14px;opacity:.95}
+    .card-link{margin-top:auto;color:#fff;font-weight:700}
+    .card-link:hover{text-decoration:underline}
+    .card--amarelo{background:var(--amarelo);color:#31124A}
+    .card--roxo{background:#5C3A8E}
+    .card--vinho{background:var(--vinho)}
+    .card--lilas{background:var(--lilas)}
+    /* Sobre */
+    .sobre{background:var(--bg-suave);padding:48px 0}
+    .sobre-text{padding:0 20px;max-width:80ch;margin-bottom:18px}
+    .sobre-features{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;padding:0 20px}
+    .feature{background:#3F2B64;color:#fff;border-radius:16px;padding:14px;display:flex;align-items:center;gap:10px;box-shadow:var(--shadow)}
+    .feature-icon{width:42px;height:42px;display:grid;place-items:center;background:#7A3DA0;border-radius:50%;font-size:20px}    
+    .feature-text{font-weight:700}
+    /* Servicos */
+    .servicos{background:#fff;padding:48px 0}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;padding:0 20px}
+    .svc{background:#6D2C8E;color:#fff;border-radius:14px;padding:18px;text-align:center;font-weight:700;box-shadow:var(--shadow);display:flex;align-items:center;justify-content:center;min-height:100px}
+    /* Campanhas */
+    .campanhas{background:#F7F6F9;padding:48px 0}
+    .cards-inline{padding:0 20px}
+    .tag{display:inline-block;border-radius:999px;padding:10px 16px;font-weight:700;margin:8px 12px 0 0;color:#fff}
+    .tag.amarelo{background:var(--amarelo);color:#3b1a57}
+    .tag.lilas{background:var(--lilas)}
+    .tag.rosa{background:var(--rosa)}
+    .tag.vinho{background:var(--vinho)}
+    /* Contato */
+    .contato{background:#fff;padding:48px 0}
+    .contact-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:20px;padding:0 20px}
+    .contact-info form{display:grid;gap:12px;margin-top:12px}
+    input,textarea,button{font:inherit}
+    input,textarea{padding:12px 14px;border:1px solid #ddd;border-radius:12px}
+    button{background:var(--roxo);color:#fff;border:0;border-radius:12px;padding:12px 16px;font-weight:700;cursor:pointer}
+    .map-wrap{border-radius:16px;overflow:hidden;box-shadow:var(--shadow)}
+    .map-wrap iframe{width:100%;height:100%;min-height:320px;border:0}
+    /* Footer */
+    .site-footer{background:var(--roxo);color:#fff;padding:28px 0;text-align:center}
+    .site-footer .logos{display:flex;justify-content:center;align-items:center;gap:20px;margin-bottom:10px;flex-wrap:wrap}
+    .site-footer img{height:40px}
+    .logo-white{filter:brightness(0) invert(1)}
+    .site-footer p{margin:0;font-size:13px;opacity:.85}
+    /* Responsive */
+    @media (max-width:1024px){.cards{grid-template-columns:repeat(2,1fr)}.sobre-features{grid-template-columns:repeat(2,1fr)}}
+    @media (max-width:700px){.nav{display:none}.hero{flex-direction:column;gap:16px;padding:56px 0}.cards{grid-template-columns:1fr}.grid{grid-template-columns:1fr}.contact-grid{grid-template-columns:1fr}.btn-whatsapp{right:16px;bottom:16px}.hero-art{max-width:420px}}
   </style>
 </head>
 <body>
-  <main class="maintenance-container" role="main">
-    <img src="logo-horizontal.png" alt="Ouvidoria da Mulher – Câmara Municipal de Goiânia" class="logo"/>
-    <span class="badge" aria-label="Status do site">Em atualização</span>
-    <h1>Estamos atualizando o site</h1>
-    <p class="message">Estamos trabalhando em melhorias para oferecer um atendimento ainda melhor. Em breve, o novo site estará disponível.</p>
-    <p class="message"><strong style="color:var(--rox-2)">Você não está sozinha.</strong> Enquanto isso, continue contando com nossos canais de atendimento:</p>
-    <section class="contact-section">
-      <h2 class="contact-title">Entre em contato</h2>
-      <div class="contact-links">
-        <a href="https://wa.me/5562982222434" class="contact-btn contact-btn--whatsapp" target="_blank" rel="noopener" aria-label="Enviar mensagem no WhatsApp">
-          <i class="bi bi-whatsapp"></i>
-          <span>WhatsApp<br><small style="font-weight:400;font-size:.85rem">(62) 98222-2434</small></span>
-        </a>
-        <a href="mailto:ouvidoria@camara.goiania.go.gov.br" class="contact-btn contact-btn--email" aria-label="Enviar e-mail">
-          <i class="bi bi-envelope-fill"></i>
-          <span>E-mail</span>
-        </a>
+<header class="site-header">
+  <div class="wrap">
+    <a href="#inicio" class="brand" aria-label="Ir para o início">
+      <img src="assets/Logo Ouvidoria da Mulher_horizontal cor fundo transparente.png" alt="Ouvidoria da Mulher – Câmara Municipal de Goiânia" />
+    </a>
+    <nav class="nav" aria-label="Menu principal">
+      <a href="#inicio">Início</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#campanhas">Campanhas</a>
+      <a href="#noticias">Notícias</a>
+      <a href="#contato">Contato</a>
+    </nav>
+    <a href="https://www.google.com" class="btn-escape" aria-label="Sair rápido e ir para o Google">Sair rápido</a>
+  </div>
+</header>
+<main id="inicio">
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="hero-copy">
+      <h1 id="hero-title">Você não está sozinha.</h1>
+      <p class="hero-sub">Espaço de acolhimento e escuta da Câmara Municipal de Goiânia.<br><strong>Juntas somos mais fortes 💜</strong></p>
+      <a class="btn-primary" href="https://wa.me/5562982222434" target="_blank" rel="noopener" aria-label="Falar com a Ouvidoria pelo WhatsApp">Fale com a Ouvidoria</a>
+    </div>
+    <div class="hero-art">
+      <img src="assets/hero-ilustracao.png" alt="Ilustração de mulher em gesto de acolhimento" />
+    </div>
+    <a class="btn-whatsapp" href="https://wa.me/5562982222434" target="_blank" rel="noopener" aria-label="WhatsApp da Ouvidoria"></a>
+  </section>
+  <section id="noticias" class="news surface" aria-labelledby="news-title">
+    <div class="wrap">
+      <h2 id="news-title">Novidades & Ações Recentes</h2>
+      <div class="cards">
+        <article class="card card--roxo">
+          <h3>Como identificar violência patrimonial</h3>
+          <p>Entenda os sinais e saiba como agir com segurança.</p>
+          <a class="card-link" href="#">Saiba mais ›</a>
+        </article>
+        <article class="card card--amarelo">
+          <h3>Curso para acolhimento psicológico e jurídico</h3>
+          <p>Formação contínua da nossa rede de apoio.</p>
+          <a class="card-link" href="#">Saiba mais ›</a>
+        </article>
+        <article class="card card--vinho">
+          <h3>Violência no trabalho</h3>
+          <p>Orientações sobre assédio moral e sexual.</p>
+          <a class="card-link" href="#">Saiba mais ›</a>
+        </article>
+        <article class="card card--lilas">
+          <h3>Agosto Lilás</h3>
+          <p>Ações de conscientização e mobilização.</p>
+          <a class="card-link" href="#">Saiba mais ›</a>
+        </article>
       </div>
-    </section>
-  </main>
-  <script>
-    /* Preview token access: append ?preview=OUV_PREVIEW_d1fa7c2e9b54 to URL to ver site completo */
-    (function(){
-      const TOKEN = 'OUV_PREVIEW_d1fa7c2e9b54'; // Troque por outro se quiser mais sigilo
-      const qp = new URLSearchParams(location.search);
-      const pv = qp.get('preview');
-      const hasCookie = () => document.cookie.split('; ').some(c => c === 'preview_token=' + encodeURIComponent(TOKEN));
-      if(pv && pv === TOKEN){
-        document.cookie = 'preview_token=' + encodeURIComponent(TOKEN) + '; path=/; max-age=' + (60*60*12) + '; SameSite=Lax';
-        location.replace('site.html');
-        return;
-      }
-      // Se já tem cookie e quiser sempre redirecionar, descomente abaixo:
-      // if(hasCookie()) location.replace('site.html');
-    })();
-  </script>
+    </div>
+  </section>
+  <section id="sobre" class="sobre" aria-labelledby="sobre-title">
+    <div class="wrap">
+      <h2 id="sobre-title">Sobre a Ouvidoria</h2>
+      <p class="sobre-text">A Ouvidoria da Mulher é um canal da Câmara Municipal de Goiânia criado para acolher, escutar e orientar mulheres em situação de violência, além de encaminhá-las à rede de apoio e proteção.</p>
+      <div class="sobre-features">
+        <div class="feature"><span class="feature-icon" aria-hidden="true">🫂</span><span class="feature-text">Acolhimento Psicológico</span></div>
+        <div class="feature"><span class="feature-icon" aria-hidden="true">⚖️</span><span class="feature-text">Assistência Jurídica</span></div>
+        <div class="feature"><span class="feature-icon" aria-hidden="true">🚐</span><span class="feature-text">Ouvidoria Itinerante</span></div>
+        <div class="feature"><span class="feature-icon" aria-hidden="true">👚</span><span class="feature-text">Butique Solidária</span></div>
+      </div>
+    </div>
+  </section>
+  <section id="servicos" class="servicos" aria-labelledby="servicos-title">
+    <div class="wrap">
+      <h2 id="servicos-title">Nossos Serviços</h2>
+      <div class="grid">
+        <a class="svc" href="#">Acolha uma Mulher</a>
+        <a class="svc" href="#">Butique Solidária</a>
+        <a class="svc" href="#">Assistência Jurídica</a>
+        <a class="svc" href="#">Ouvidoria Itinerante</a>
+        <a class="svc" href="#">Dignidade Menstrual</a>
+        <a class="svc" href="#">Mães na Cidade</a>
+      </div>
+    </div>
+  </section>
+  <section id="campanhas" class="campanhas" aria-labelledby="campanhas-title">
+    <div class="wrap">
+      <h2 id="campanhas-title">Campanhas & Datas</h2>
+      <div class="cards-inline">
+        <div class="tag amarelo">Março – Mês da Mulher</div>
+        <div class="tag lilas">Agosto Lilás</div>
+        <div class="tag rosa">Outubro Rosa</div>
+        <div class="tag vinho">Novembro Negro</div>
+      </div>
+    </div>
+  </section>
+  <section id="contato" class="contato" aria-labelledby="contato-title">
+    <div class="wrap">
+      <h2 id="contato-title">Fale Conosco</h2>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <p>📍 Av. Goiás, 2001 – Setor Central, Goiânia</p>
+          <p>📞 <a href="https://wa.me/5562982222434" target="_blank" rel="noopener">(62) 98222-2434</a></p>
+          <p>📧 <a href="mailto:ouvidoriadamulhercamara@gmail.com">ouvidoriadamulhercamara@gmail.com</a></p>
+          <form action="mailto:ouvidoriadamulhercamara@gmail.com" method="post" enctype="text/plain" aria-label="Formulário de contato">
+            <input type="text" name="name" placeholder="Seu nome" required>
+            <input type="email" name="email" placeholder="Seu e-mail" required>
+            <textarea name="message" placeholder="Sua mensagem" required></textarea>
+            <button type="submit">Enviar mensagem</button>
+          </form>
+        </div>
+        <div class="map-wrap" aria-label="Mapa de localização">
+          <iframe src="https://www.google.com/maps?q=Av.+Goi%C3%A1s,+2001,+Setor+Central,+Goi%C3%A2nia&output=embed" loading="lazy" title="Localização da Ouvidoria no mapa"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="site-footer">
+  <div class="wrap logos">
+    <img class="logo-white" src="assets/Logo Ouvidoria da Mulher_horizontal cor fundo transparente.png" alt="Ouvidoria da Mulher">
+    <img class="logo-white" src="assets/logo-aava.png" alt="Vereadora Aava Santiago">
+    <img class="logo-white" src="assets/logo-camara.png" alt="Câmara Municipal de Goiânia">
+  </div>
+  <p>© 2025 Ouvidoria da Mulher – Câmara Municipal de Goiânia.</p>
+</footer>
 </body>
 </html>
