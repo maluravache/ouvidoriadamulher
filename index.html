@@ -1,375 +1,289 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ouvidoria da Mulher – Câmara Municipal de Goiânia</title>
-  <meta name="description" content="A Ouvidoria da Mulher é um canal da Câmara Municipal de Goiânia criado para acolher, orientar e encaminhar mulheres em situação de violência. Juntas somos mais fortes.">
-  <meta name="theme-color" content="#4B1E6D">
-  <link rel="icon" type="image/png" href="assets/favicon.png">
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+  <meta name="description" content="Canal de acolhimento, orientação e encaminhamento para mulheres em situação de violência em Goiânia. Você não está sozinha." />
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Ajustes específicos do layout lilás */
+    body {
+      background-color: #f3e7ff;
+      font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+      color: #2a2a2a;
+      margin: 0;
+      padding: 0;
+    }
 
-<header class="site-header" role="banner">
-  <div class="wrap header-inner">
-    <a class="brand" href="#inicio" aria-label="Início">
-      <img src="assets/logo-ouvidoria.png" alt="Ouvidoria da Mulher – C��mara Municipal de Goiânia" class="logo">
-    </a>
-    <nav class="nav" aria-label="Menu principal">
-      <a href="#inicio">Início</a>
-      <a href="#sobre">Sobre</a>
-      <a href="#servicos">Serviços</a>
-      <a href="#campanhas">Campanhas</a>
-      <a href="#contato">Contato</a>
-    </nav>
-    <button class="btn-escape-top" type="button" aria-label="Sair rápido">Sair rápido</button>
-  </div>
-</header>
+    header {
+      background-color: #4b2a7a;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.75rem 1.25rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
 
-<section id="inicio" class="hero" aria-labelledby="hero-title">
-  <div class="wrap hero-grid">
-    <div class="hero-left">
-      <h1 id="hero-title">Você não está sozinha.</h1>
-      <p class="hero-sub">
-        Espaço de acolhimento e escuta da Câmara Municipal de Goiânia.
-      </p>
-      <a class="btn btn-primary" href="https://wa.me/5562982222434" target="_blank" rel="noopener" aria-label="Fale com a Ouvidoria pelo WhatsApp">
-        Fale com a Ouvidoria
-      </a>
+    header img {
+      height: 42px;
+      width: auto;
+    }
 
-      <ul class="quick-pills" role="list" aria-label="Canais rápidos">
-        <li class="pill">
-          <img src="assets/ic-phone.svg" alt="" aria-hidden="true">
-          <span>Disque 180 – Central de Atendimento à Mulher</span>
-        </li>
-        <li class="pill">
-          <img src="assets/ic-shield.svg" alt="" aria-hidden="true">
-          <span>Disque 100 – Direitos Humanos</span>
-        </li>
-        <li class="pill">
-          <img src="assets/ic-phone.svg" alt="" aria-hidden="true">
-          <span>153 – Guarda Civil Metropolitana</span>
-        </li>
-      </ul>
-    </div>
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.25rem;
+      margin: 0;
+      padding: 0;
+    }
 
-    <figure class="hero-right">
-      <img src="assets/hero-ilustracao.png" alt="Ilustração representando acolhimento e escuta">
-    </figure>
-  </div>
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.2s;
+    }
 
-  <!-- Botões flutuantes -->
-  <a class="fab fab-whatsapp" href="https://wa.me/5562982222434" target="_blank" rel="noopener" aria-label="Abrir WhatsApp">
-    <img src="assets/ic-whatsapp.svg" alt="" aria-hidden="true">
-  </a>
-  <button class="fab fab-escape" type="button" aria-label="Sair rápido">Sair rápido</button>
-</section>
+    nav a:hover {
+      border-bottom: 2px solid white;
+      padding-bottom: 2px;
+    }
 
-<div class="surface-top" aria-hidden="true"></div>
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      padding: 4rem 2rem;
+      background-color: #f3e7ff;
+    }
 
-<main id="conteudo">
+    .hero img {
+      max-width: 100%;
+      height: auto;
+    }
 
-  <!-- Sobre -->
-  <section id="sobre" class="sobre-section" aria-labelledby="sobre-title">
-    <div class="wrap">
-      <h2 id="sobre-title">Sobre a Ouvidoria</h2>
-      <p class="sobre-text">
-        A Ouvidoria da Mulher é um canal da Câmara Municipal de Goiânia criado para acolher, orientar e encaminhar
-        mulheres em situação de violência. Atuamos em rede com órgãos públicos e entidades da sociedade civil,
-        promovendo ações educativas, campanhas e a defesa dos direitos das mulheres.
-      </p>
-    </div>
-  </section>
+    .hero-text {
+      text-align: left;
+      padding: 1rem;
+    }
 
-  <!-- Serviços / Carrossel -->
-  <section id="servicos" class="servicos-section" aria-labelledby="servicos-title">
-    <div class="wrap">
-      <h2 id="servicos-title">Serviços, ações e novidades</h2>
+    .hero-text h1 {
+      font-size: 2.2rem;
+      color: #4b2a7a;
+      margin-bottom: 0.75rem;
+    }
 
-      <div class="carousel">
-        <button class="car-btn prev" aria-label="Voltar">
-          <img src="assets/ic-arrow-left.svg" alt="">
-        </button>
+    .hero-text p {
+      font-size: 1rem;
+      margin-bottom: 1.5rem;
+      max-width: 28rem;
+      color: #333;
+    }
 
-        <div class="car-track" role="list" aria-live="polite">
-          <article class="car-card car--amarelo" role="listitem">
-            <h3>Notícia destaque</h3>
-            <p>Espaço reservado para atualizações oficiais e campanhas em andamento.</p>
-            <a class="card-cta" href="#" aria-label="Saiba mais: Notícia destaque">
-              Saiba mais
-              <img src="assets/ic-external.svg" alt="">
-            </a>
-          </article>
+    .buttons {
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+    }
 
-          <article class="car-card car--lilas" role="listitem">
-            <h3>Curso de acolhimento</h3>
-            <p>Formações periódicas para a rede de proteção e voluntárias.</p>
-            <a class="card-cta" href="#" aria-label="Saiba mais: Curso de acolhimento">
-              Saiba mais
-              <img src="assets/ic-external.svg" alt="">
-            </a>
-          </article>
+    .btn {
+      padding: 0.7rem 1.5rem;
+      border-radius: 999px;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      font-size: 0.95rem;
+      transition: 0.2s;
+    }
 
-          <article class="car-card car--vinho" role="listitem">
-            <h3>Rede de proteção</h3>
-            <p>Integração com DEAM, Patrulha Maria da Penha e serviços municipais.</p>
-            <a class="card-cta" href="#" aria-label="Saiba mais: Rede de proteção">
-              Saiba mais
-              <img src="assets/ic-external.svg" alt="">
-            </a>
-          </article>
+    .btn-primary {
+      background-color: #6b3fa6;
+      color: white;
+    }
 
-          <article class="car-card car--rosa" role="listitem">
-            <h3>Dignidade Menstrual</h3>
-            <p>Arrecadação e entrega de kits de higiene para mulheres.</p>
-            <a class="card-cta" href="#" aria-label="Saiba mais: Dignidade Menstrual">
-              Saiba mais
-              <img src="assets/ic-external.svg" alt="">
-            </a>
-          </article>
-        </div>
+    .btn-primary:hover {
+      background-color: #4b2a7a;
+    }
 
-        <button class="car-btn next" aria-label="Avançar">
-          <img src="assets/ic-arrow-right.svg" alt="">
-        </button>
-      </div>
-    </div>
-  </section>
+    .btn-ghost {
+      background-color: white;
+      color: #4b2a7a;
+      border: 1.5px solid #4b2a7a;
+    }
 
-  <!-- Butique Solidária -->
-  <section id="butique" aria-labelledby="butique-title">
-    <div class="wrap">
-      <h2 id="butique-title">Butique Solidária</h2>
-      <div class="grid-2">
-        <div class="stack">
-          <article class="info-box">
-            <h3 class="with-icon">
-              <img src="assets/ic-heart.svg" alt="" aria-hidden="true">
-              O que é
-            </h3>
-            <p>
-              A Butique Solidária é uma ação da Ouvidoria da Mulher que arrecada e distribui roupas, calçados
-              e itens de higiene para mulheres em situação de vulnerabilidade social e/ou com medidas protetivas.
-            </p>
-            <p><strong>Horário:</strong> Seg a Sex, 8h–18h</p>
-            <div class="cta-row">
-              <a class="btn btn-primary" href="https://wa.me/5562982222434" target="_blank" rel="noopener">Quero doar</a>
-              <a class="btn-ghost" href="#contato">Quero solicitar</a>
-              <a class="btn-ghost" href="https://wa.me/5562982222434" target="_blank" rel="noopener">Quero ser voluntária</a>
-            </div>
-          </article>
-        </div>
+    .btn-ghost:hover {
+      background-color: #f8f4ff;
+    }
 
-        <div class="stack">
-          <article class="info-box">
-            <h3>O que doar (prioridades)</h3>
-            <ul class="info-list">
-              <li>Roupas (em bom estado) e acessórios</li>
-              <li>Calçados</li>
-              <li>Itens de higiene pessoal</li>
-              <li>Materiais de inverno e enxoval</li>
-            </ul>
-          </article>
+    main {
+      padding: 2.5rem 2rem;
+      max-width: 1080px;
+      margin: auto;
+    }
 
-          <article class="info-box">
-            <h3>Quem pode receber</h3>
-            <p>
-              Mulheres em situação de vulnerabilidade social e/ou com medidas protetivas, atendidas pela rede
-              de proteção e encaminhadas por serviços públicos municipais ou parceiros.
-            </p>
-            <p class="note-box">
-              As doações são registradas e destinadas às mulheres acompanhadas pela rede de proteção.
-            </p>
-          </article>
-        </div>
-      </div>
-    </div>
-  </section>
+    h2 {
+      color: #4b2a7a;
+      margin-bottom: 0.75rem;
+      font-size: 1.4rem;
+    }
 
-  <!-- Campanhas & Direitos -->
-  <section id="campanhas" class="campanhas-section" aria-labelledby="campanhas-title">
-    <div class="wrap">
-      <h2 id="campanhas-title">Campanhas & Direitos</h2>
+    p {
+      line-height: 1.6;
+    }
 
-      <div class="info-grid">
-        <article class="info-box">
-          <h3>Conheça seus direitos</h3>
-          <ul class="info-list">
-            <li><strong>Lei Maria da Penha (Lei 11.340/2006):</strong> medidas de prevenção e punição para violência doméstica e familiar, com medidas protetivas de urgência.</li>
-            <li><strong>Lei Carolina Dieckmann (Lei 12.737/2012):</strong> define crimes cibernéticos e penaliza invasão/divulgação indevida de dados.</li>
-            <li><strong>Lei do Minuto Seguinte (Lei 12.845/2013):</strong> garante atendimento integral e humanizado às vítimas de violência sexual no SUS.</li>
-          </ul>
-          <p class="muted">Procure orientação jurídica e a rede local de apoio para conhecer todos os seus direitos.</p>
-        </article>
+    .cards {
+      margin-top: 1.5rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+    }
 
-        <article class="info-box">
-          <h3>Onde denunciar</h3>
-          <ul class="info-list">
-            <li>1ª DEAM – Plantão 24h: Rua 24, nº 203, Qd 49, Lt 27 – Setor Central | (62) 3201-2802</li>
-            <li>2ª DEAM – Horário comercial: Av. do Povo c/ Rua E, Qd 10, Lt 101 – Jardim Curitiba II | (62) 3201-6334 / 3201-6320 / 3201-6331</li>
-            <li>DEAM – Delegacia Estadual: Praça Padre Romão Cícero (Praça do Violeiro) – Setor Marista | (62) 3201-2802</li>
-            <li>DPCA – Delegacia de Proteção à Criança e ao Adolescente: Rua C-190, Qd 226 – Jardim América | (62) 3286-1540 / 3286-1398 / 3286-1552</li>
-            <li><strong>Emergências:</strong> 190 Polícia Militar • 153 GCM • 180 Mulher • 100 Direitos Humanos</li>
-          </ul>
-        </article>
+    .card {
+      background: white;
+      border-radius: 1rem;
+      padding: 1.25rem;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+    }
 
-        <article class="info-box">
-          <h3>Atendimento em saúde (violência sexual)</h3>
-          <ul class="info-list">
-            <li><strong>HEMU – Hospital Estadual da Mulher:</strong> Rua R-7, s/n – Setor Oeste. Atende mulheres a partir de 14 anos e maiores de 18 anos (homens).</li>
-            <li><strong>HECAD – Hospital Estadual da Criança e do Adolescente:</strong> Av. Bela Vista – Parque Acalanto.</li>
-          </ul>
-          <p class="muted">Atendimento também nas UPAs, UBS e Hospitais Gerais. Verifique a unidade mais próxima.</p>
-        </article>
+    footer {
+      background-color: #4b2a7a;
+      color: white;
+      text-align: center;
+      padding: 1.25rem;
+      margin-top: 3rem;
+      font-size: 0.9rem;
+    }
 
-        <article class="info-box">
-          <h3>Acolhimento psicológico</h3>
-          <p>
-            <strong>Ouvidoria da Mulher (Câmara Municipal de Goiânia)</strong> — Av. Goiás, 2001 – Setor Central.<br>
-            Seg–Sex, 8h–18h • (62) 98222-2434 • Instagram: @ouvidoriadamulher
-          </p>
-        </article>
+    .floating-buttons {
+      position: fixed;
+      right: 1rem;
+      bottom: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      z-index: 999;
+    }
 
-        <article class="info-box">
-          <h3>Apoio jurídico</h3>
-          <ul class="info-list">
-            <li><strong>Defensoria Pública do Estado de Goiás – NUDEM (Unidade Sul):</strong> Setor Sul. Seg–Sex, 7h–17h30 • (62) 3157-1039</li>
-            <li><strong>Conselhos Tutelares:</strong> atendimento por região (Secretaria Municipal de Desenvolvimento Humano e Social).</li>
-          </ul>
-        </article>
+    .floating-buttons a {
+      padding: 0.6rem 0.9rem;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+      text-align: center;
+    }
 
-        <article class="info-box">
-          <h3>Abrigamento</h3>
-          <ul class="info-list">
-            <li><strong>CEVAM – Centro de Valorização da Mulher Consuelo Nasser:</strong> Rua SNF-02, Qd 1A, Lt 1/5 – Setor Norte Ferroviário II. Seg–Sex, 8h–17h • (62) 3247-4972 / 9370-5084</li>
-            <li><strong>Casa de Acolhida Cidadã I:</strong> homens solteiros (18–59), incluindo público LGBTQIAPN+. (62) 99126-0575</li>
-            <li><strong>Casa de Acolhida Cidadã II:</strong> mulheres solteiras com crianças e famílias, incluindo público LGBTQIAPN+. Setor Leste Universitário • (62) 99207-8306</li>
-            <li><strong>Casa Abrigo Sempre Viva:</strong> mulheres em situação de violência e risco de morte, com acolhimento familiar. Centro • (62) 3524-1309</li>
-          </ul>
-        </article>
-      </div>
-    </div>
-  </section>
+    .btn-whatsapp {
+      background-color: #25d366;
+    }
 
-  <!-- Contato & Localização -->
-  <section id="contato" class="contato-section" aria-labelledby="contato-title">
-    <div class="wrap contato-grid">
-      <div class="contato-info">
-        <h2 id="contato-title">Contato & Localização</h2>
-        <ul class="contact-list">
-          <li>
-            <img src="assets/ic-map-pin.svg" alt="" aria-hidden="true">
-            Av. Goiás, 2001 – Setor Central, Goiânia
-          </li>
-          <li>
-            <img src="assets/ic-whatsapp.svg" alt="" aria-hidden="true">
-            <a href="https://wa.me/5562982222434" target="_blank" rel="noopener">(62) 98222-2434</a>
-          </li>
-          <li>
-            <img src="assets/ic-mail.svg" alt="" aria-hidden="true">
-            <a href="mailto:ouvidoriadamulhercamara@gmail.com">ouvidoriadamulhercamara@gmail.com</a>
-          </li>
-          <li>
-            <img src="assets/ic-shield.svg" alt="" aria-hidden="true">
-            Seg–Sex, 8h–18h
-          </li>
-        </ul>
+    .btn-sair {
+      background-color: #d7263d;
+    }
 
-        <form class="contact-form" action="mailto:ouvidoriadamulhercamara@gmail.com" method="post" enctype="text/plain" aria-label="Formulário de contato">
-          <input type="text" name="name" placeholder="Nome" required>
-          <input type="email" name="email" placeholder="E-mail" required>
-          <textarea name="message" rows="4" placeholder="Mensagem" required></textarea>
-          <button class="btn btn-primary" type="submit">Enviar</button>
-        </form>
-      </div>
-
-      <div class="map-wrap" aria-label="Mapa do Google">
-        <iframe
-          title="Localização da Ouvidoria"
-          loading="lazy"
-          src="https://www.google.com/maps?q=Av.+Goi%C3%A1s,+2001,+Setor+Central,+Goi%C3%A2nia&output=embed">
-        </iframe>
-      </div>
-    </div>
-  </section>
-</main>
-
-<footer class="site-footer" role="contentinfo">
-  <div class="wrap footer-inner">
-    <div class="footer-logos">
-      <img src="assets/logo-ouvidoria.png" alt="Ouvidoria da Mulher" class="footer-logo">
-      <img src="assets/logo-aava.png" alt="Vereadora Aava Santiago" class="footer-logo">
-      <img src="assets/logo-camara.png" alt="Câmara Municipal de Goiânia" class="footer-logo">
-    </div>
-    <p class="copyright">© 2025 Ouvidoria da Mulher – Câmara Municipal de Goiânia.</p>
-  </div>
-</footer>
-
-<script>
-  // Rolagem suave
-  document.querySelectorAll('a[href^="#"]').forEach(a => {
-    a.addEventListener('click', (e) => {
-      const id = a.getAttribute('href');
-      if (id.length > 1) {
-        e.preventDefault();
-        const el = document.querySelector(id);
-        if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    @media (max-width: 768px) {
+      .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 2.5rem 1rem;
       }
-    });
-  });
+      .hero-text {
+        text-align: center;
+      }
+      .hero-text h1 {
+        font-size: 1.8rem;
+      }
+      .buttons {
+        justify-content: center;
+      }
+      nav ul {
+        display: none;
+      }
+    }
+  </style>
+</head>
 
-  // Sair rápido (topo e flutuante)
-  const goOut = () => window.location.href = 'https://www.google.com';
-  document.querySelectorAll('.btn-escape-top, .fab-escape').forEach(btn =>
-    btn.addEventListener('click', goOut)
-  );
+<body>
+  <header>
+    <img src="logo-horizontal-white.png" alt="Logo Ouvidoria da Mulher" />
+    <nav>
+      <ul>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#projetos">Projetos</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  // Carrossel: setas + teclado + swipe
-  (function(){
-    const track = document.querySelector('.car-track');
-    if(!track) return;
-    const prev = document.querySelector('.car-btn.prev');
-    const next = document.querySelector('.car-btn.next');
+  <section class="hero">
+    <img src="logo-horizontal-white.png" alt="Ouvidoria da Mulher logo" />
+    <div class="hero-text">
+      <h1>Você não está sozinha.</h1>
+      <p>A Ouvidoria da Mulher é um canal de acolhimento, escuta e encaminhamento para mulheres em situação de violência em Goiânia. Aqui você encontra apoio psicológico, jurídico e social de forma segura e gratuita.</p>
+      <div class="buttons">
+        <a href="https://wa.me/5562982222434" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Fale conosco</a>
+        <a href="https://www.google.com" class="btn btn-ghost" target="_blank" rel="noopener noreferrer">Sair rápido</a>
+      </div>
+    </div>
+  </section>
 
-    const getGap = () => {
-      const cs = getComputedStyle(track);
-      return parseFloat(cs.columnGap || cs.gap || '16');
-    };
-    const getCardWidth = () => {
-      const card = track.querySelector('.car-card');
-      if (!card) return 0;
-      return card.getBoundingClientRect().width + getGap();
-    };
-    const scrollByCard = (dir) => {
-      track.scrollBy({ left: dir * getCardWidth(), behavior: 'smooth' });
-    };
-    prev?.addEventListener('click', () => scrollByCard(-1));
-    next?.addEventListener('click', () => scrollByCard(1));
+  <main>
+    <section id="sobre">
+      <h2>O que é a Ouvidoria da Mulher</h2>
+      <p>A Ouvidoria da Mulher da Câmara Municipal de Goiânia integra o poder público e a sociedade civil na defesa dos direitos das mulheres e no combate à violência doméstica e de gênero. O serviço acolhe relatos, orienta sobre a legislação e acompanha programas voltados à equidade de gênero.</p>
+    </section>
 
-    // Teclado
-    track.setAttribute('tabindex', '0');
-    track.addEventListener('keydown', (e) => {
-      if (e.key === 'ArrowRight') scrollByCard(1);
-      if (e.key === 'ArrowLeft') scrollByCard(-1);
-    });
+    <section id="servicos">
+      <h2>Serviços oferecidos</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>Acolha uma Mulher</h3>
+          <p>Rede de psicólogas voluntárias que oferecem acolhimento gratuito a mulheres que não têm condições financeiras de arcar com o tratamento.</p>
+        </div>
+        <div class="card">
+          <h3>Butique Solidária Giselle Evangelista Gonçalves</h3>
+          <p>Espaço de doação de roupas, calçados e itens de higiene para mulheres em vulnerabilidade após romperem o ciclo da violência.</p>
+        </div>
+        <div class="card">
+          <h3>Assistência Jurídica Gratuita</h3>
+          <p>Encaminhamento para núcleos jurídicos parceiros que auxiliam mulheres na defesa de seus direitos.</p>
+        </div>
+        <div class="card">
+          <h3>Campanhas Educativas</h3>
+          <p>Ações em escolas e comunidades que informam sobre tipos de violência, canais de denúncia e direitos das mulheres.</p>
+        </div>
+      </div>
+    </section>
 
-    // Swipe
-    let startX = 0, active = false, pid = 0;
-    track.addEventListener('pointerdown', (e) => {
-      active = true;
-      startX = e.clientX;
-      pid = e.pointerId;
-      track.setPointerCapture(pid);
-    });
-    track.addEventListener('pointerup', (e) => {
-      if (!active) return;
-      active = false;
-      const dx = e.clientX - startX;
-      if (Math.abs(dx) > 40) dx < 0 ? scrollByCard(1) : scrollByCard(-1);
-      try { track.releasePointerCapture(pid); } catch {}
-    });
-  })();
-</script>
+    <section id="projetos">
+      <h2>Projetos e campanhas</h2>
+      <p>A Ouvidoria da Mulher realiza campanhas permanentes como o programa “Você não está sozinha”, “Dignidade Menstrual” e os “21 Dias de Ativismo”. Todas buscam informar, acolher e fortalecer as mulheres goianienses.</p>
+    </section>
+
+    <section id="contato">
+      <h2>Contatos e atendimento</h2>
+      <p><strong>Sala de Acolhimento da Ouvidoria da Mulher</strong><br>Câmara Municipal de Goiânia<br>Av. Goiás, 2001, Setor Central.</p>
+      <p><strong>WhatsApp:</strong> (62) 98222-2434<br>
+      <strong>E-mail:</strong> ouvidoriadamulhercamara@gmail.com<br>
+      <strong>Instagram:</strong> @ouvidoriadamulher</p>
+    </section>
+  </main>
+
+  <div class="floating-buttons">
+    <a href="https://wa.me/5562982222434" class="btn-whatsapp" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+    <a href="https://www.google.com" class="btn-sair" target="_blank" rel="noopener noreferrer">Sair rápido</a>
+  </div>
+
+  <footer>
+    <p>© 2025 Ouvidoria da Mulher – Câmara Municipal de Goiânia. Você não está sozinha.</p>
+  </footer>
 </body>
 </html>
