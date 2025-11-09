@@ -3,65 +3,373 @@
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Site em Atualização – Ouvidoria da Mulher</title>
-  <meta name="robots" content="noindex, nofollow"/>
-  <meta name="theme-color" content="#6b2a5a"/>
-  <link rel="icon" type="image/svg+xml" href="assets/logos/logo-mark.svg"/>
-  <link rel="icon" type="image/png" href="favicon.png"/>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet"/>
-  <style>
-    :root { --rox-1:#521f46; --rox-2:#6b2a5a; --rox-3:#7e3666; --amarelo:#FFD134; --txt:#1b1b1b; }
-    *{box-sizing:border-box;margin:0;padding:0}
-    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,sans-serif;line-height:1.6;color:var(--txt);background:linear-gradient(135deg,var(--rox-1)0%,var(--rox-2)50%,var(--rox-3)100%);min-height:100vh;display:flex;align-items:center;justify-content:center;padding:20px}
-    .maintenance-container{background:#fff;border-radius:20px;padding:40px 30px;max-width:600px;width:100%;box-shadow:0 20px 60px rgba(0,0,0,.3);text-align:center;border-top:6px solid var(--amarelo)}
-    .logo{width:120px;height:auto;margin:0 auto 30px;display:block}
-    h1{color:var(--rox-1);font-size:2rem;font-weight:800;margin-bottom:20px;line-height:1.2}
-    .message{font-size:1.05rem;margin-bottom:26px}
-    .badge{display:inline-block;background:var(--amarelo);color:#3a2a00;padding:8px 20px;border-radius:999px;font-size:.75rem;font-weight:800;letter-spacing:.5px;margin-bottom:18px;text-transform:uppercase}
-    .contact-section{background:#f9f9f9;border-radius:12px;padding:24px;margin-top:10px;border-left:4px solid var(--amarelo)}
-    .contact-title{color:var(--rox-1);font-size:1.15rem;font-weight:700;margin:0 0 16px}
-    .contact-links{display:flex;flex-direction:column;gap:14px}
-    .contact-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 24px;border-radius:999px;font-weight:700;font-size:1rem;text-decoration:none;transition:.3s;border:none;cursor:pointer}
-    .contact-btn--whatsapp{background:#25d366;color:#083c17}
-    .contact-btn--whatsapp:hover{background:#20c05a;transform:translateY(-2px);box-shadow:0 6px 20px rgba(37,211,102,.4)}
-    .contact-btn--email{background:var(--rox-1);color:#fff}
-    .contact-btn--email:hover{background:var(--rox-2);transform:translateY(-2px);box-shadow:0 6px 20px rgba(107,42,90,.4)}
-    *:focus-visible{outline:3px solid var(--amarelo);outline-offset:2px}
-    @media(min-width:480px){h1{font-size:2.4rem}.contact-links{flex-direction:row}.contact-btn{flex:1}}
-    @media(max-width:479px){.maintenance-container{padding:30px 22px}h1{font-size:1.7rem}.logo{width:100px}}
-  </style>
+  <title>Ouvidoria da Mulher – Câmara Municipal de Goiânia</title>
+  <meta name="description" content="A Ouvidoria da Mulher é um canal da Câmara Municipal de Goiânia criado para acolher, orientar e encaminhar mulheres em situação de violência. Juntas somos mais fortes.">
+  <meta name="theme-color" content="#4B1E6D">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <main class="maintenance-container" role="main">
-    <img src="logo-horizontal.png" alt="Ouvidoria da Mulher – Câmara Municipal de Goiânia" class="logo"/>
-    <span class="badge" aria-label="Status do site">Em atualização</span>
-    <h1>Estamos atualizando o site</h1>
-    <p class="message">Estamos trabalhando em melhorias para oferecer um atendimento ainda melhor. Em breve, o novo site estará disponível.</p>
-    <p class="message"><strong style="color:var(--rox-2)">Você não está sozinha.</strong> Enquanto isso, continue contando com nossos canais de atendimento:</p>
-    <section class="contact-section">
-      <h2 class="contact-title">Entre em contato</h2>
-      <div class="contact-links">
-        <a href="https://wa.me/5562982222434" class="contact-btn contact-btn--whatsapp" target="_blank" rel="noopener" aria-label="Enviar mensagem no WhatsApp">
-          <i class="bi bi-whatsapp"></i>
-          <span>WhatsApp<br><small style="font-weight:400;font-size:.85rem">(62) 98222-2434</small></span>
-        </a>
-        <a href="mailto:ouvidoria@camara.goiania.go.gov.br" class="contact-btn contact-btn--email" aria-label="Enviar e-mail">
-          <i class="bi bi-envelope-fill"></i>
-          <span>E-mail</span>
-        </a>
+
+<header class="site-header" role="banner">
+  <div class="wrap header-inner">
+    <a class="brand" href="#inicio" aria-label="Início">
+      <img src="assets/logo-ouvidoria.png" alt="Ouvidoria da Mulher – C��mara Municipal de Goiânia" class="logo">
+    </a>
+    <nav class="nav" aria-label="Menu principal">
+      <a href="#inicio">Início</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#campanhas">Campanhas</a>
+      <a href="#contato">Contato</a>
+    </nav>
+    <button class="btn-escape-top" type="button" aria-label="Sair rápido">Sair rápido</button>
+  </div>
+</header>
+
+<section id="inicio" class="hero" aria-labelledby="hero-title">
+  <div class="wrap hero-grid">
+    <div class="hero-left">
+      <h1 id="hero-title">Você não está sozinha.</h1>
+      <p class="hero-sub">
+        Espaço de acolhimento e escuta da Câmara Municipal de Goiânia.
+      </p>
+      <a class="btn btn-primary" href="https://wa.me/5562982222434" target="_blank" rel="noopener" aria-label="Fale com a Ouvidoria pelo WhatsApp">
+        Fale com a Ouvidoria
+      </a>
+
+      <ul class="quick-pills" role="list" aria-label="Canais rápidos">
+        <li class="pill">
+          <img src="assets/ic-phone.svg" alt="" aria-hidden="true">
+          <span>Disque 180 – Central de Atendimento à Mulher</span>
+        </li>
+        <li class="pill">
+          <img src="assets/ic-shield.svg" alt="" aria-hidden="true">
+          <span>Disque 100 – Direitos Humanos</span>
+        </li>
+        <li class="pill">
+          <img src="assets/ic-phone.svg" alt="" aria-hidden="true">
+          <span>153 – Guarda Civil Metropolitana</span>
+        </li>
+      </ul>
+    </div>
+
+    <figure class="hero-right">
+      <img src="assets/hero-ilustracao.png" alt="Ilustração representando acolhimento e escuta">
+    </figure>
+  </div>
+
+  <!-- Botões flutuantes -->
+  <a class="fab fab-whatsapp" href="https://wa.me/5562982222434" target="_blank" rel="noopener" aria-label="Abrir WhatsApp">
+    <img src="assets/ic-whatsapp.svg" alt="" aria-hidden="true">
+  </a>
+  <button class="fab fab-escape" type="button" aria-label="Sair rápido">Sair rápido</button>
+</section>
+
+<div class="surface-top" aria-hidden="true"></div>
+
+<main id="conteudo">
+
+  <!-- Sobre -->
+  <section id="sobre" class="sobre-section" aria-labelledby="sobre-title">
+    <div class="wrap">
+      <h2 id="sobre-title">Sobre a Ouvidoria</h2>
+      <p class="sobre-text">
+        A Ouvidoria da Mulher é um canal da Câmara Municipal de Goiânia criado para acolher, orientar e encaminhar
+        mulheres em situação de violência. Atuamos em rede com órgãos públicos e entidades da sociedade civil,
+        promovendo ações educativas, campanhas e a defesa dos direitos das mulheres.
+      </p>
+    </div>
+  </section>
+
+  <!-- Serviços / Carrossel -->
+  <section id="servicos" class="servicos-section" aria-labelledby="servicos-title">
+    <div class="wrap">
+      <h2 id="servicos-title">Serviços, ações e novidades</h2>
+
+      <div class="carousel">
+        <button class="car-btn prev" aria-label="Voltar">
+          <img src="assets/ic-arrow-left.svg" alt="">
+        </button>
+
+        <div class="car-track" role="list" aria-live="polite">
+          <article class="car-card car--amarelo" role="listitem">
+            <h3>Notícia destaque</h3>
+            <p>Espaço reservado para atualizações oficiais e campanhas em andamento.</p>
+            <a class="card-cta" href="#" aria-label="Saiba mais: Notícia destaque">
+              Saiba mais
+              <img src="assets/ic-external.svg" alt="">
+            </a>
+          </article>
+
+          <article class="car-card car--lilas" role="listitem">
+            <h3>Curso de acolhimento</h3>
+            <p>Formações periódicas para a rede de proteção e voluntárias.</p>
+            <a class="card-cta" href="#" aria-label="Saiba mais: Curso de acolhimento">
+              Saiba mais
+              <img src="assets/ic-external.svg" alt="">
+            </a>
+          </article>
+
+          <article class="car-card car--vinho" role="listitem">
+            <h3>Rede de proteção</h3>
+            <p>Integração com DEAM, Patrulha Maria da Penha e serviços municipais.</p>
+            <a class="card-cta" href="#" aria-label="Saiba mais: Rede de proteção">
+              Saiba mais
+              <img src="assets/ic-external.svg" alt="">
+            </a>
+          </article>
+
+          <article class="car-card car--rosa" role="listitem">
+            <h3>Dignidade Menstrual</h3>
+            <p>Arrecadação e entrega de kits de higiene para mulheres.</p>
+            <a class="card-cta" href="#" aria-label="Saiba mais: Dignidade Menstrual">
+              Saiba mais
+              <img src="assets/ic-external.svg" alt="">
+            </a>
+          </article>
+        </div>
+
+        <button class="car-btn next" aria-label="Avançar">
+          <img src="assets/ic-arrow-right.svg" alt="">
+        </button>
       </div>
-    </section>
-  </main>
-  <script>
-    (function(){
-      const TOKEN = 'OUV_PREVIEW_d1fa7c2e9b54';
-      const qp = new URLSearchParams(location.search);
-      const pv = qp.get('preview');
-      if(pv && pv === TOKEN){
-        document.cookie = 'preview_token='+encodeURIComponent(TOKEN)+'; path=/; max-age='+(60*60*12)+'; SameSite=Lax';
-        location.replace('site.html');
+    </div>
+  </section>
+
+  <!-- Butique Solidária -->
+  <section id="butique" aria-labelledby="butique-title">
+    <div class="wrap">
+      <h2 id="butique-title">Butique Solidária</h2>
+      <div class="grid-2">
+        <div class="stack">
+          <article class="info-box">
+            <h3 class="with-icon">
+              <img src="assets/ic-heart.svg" alt="" aria-hidden="true">
+              O que é
+            </h3>
+            <p>
+              A Butique Solidária é uma ação da Ouvidoria da Mulher que arrecada e distribui roupas, calçados
+              e itens de higiene para mulheres em situação de vulnerabilidade social e/ou com medidas protetivas.
+            </p>
+            <p><strong>Horário:</strong> Seg a Sex, 8h–18h</p>
+            <div class="cta-row">
+              <a class="btn btn-primary" href="https://wa.me/5562982222434" target="_blank" rel="noopener">Quero doar</a>
+              <a class="btn-ghost" href="#contato">Quero solicitar</a>
+              <a class="btn-ghost" href="https://wa.me/5562982222434" target="_blank" rel="noopener">Quero ser voluntária</a>
+            </div>
+          </article>
+        </div>
+
+        <div class="stack">
+          <article class="info-box">
+            <h3>O que doar (prioridades)</h3>
+            <ul class="info-list">
+              <li>Roupas (em bom estado) e acessórios</li>
+              <li>Calçados</li>
+              <li>Itens de higiene pessoal</li>
+              <li>Materiais de inverno e enxoval</li>
+            </ul>
+          </article>
+
+          <article class="info-box">
+            <h3>Quem pode receber</h3>
+            <p>
+              Mulheres em situação de vulnerabilidade social e/ou com medidas protetivas, atendidas pela rede
+              de proteção e encaminhadas por serviços públicos municipais ou parceiros.
+            </p>
+            <p class="note-box">
+              As doações são registradas e destinadas às mulheres acompanhadas pela rede de proteção.
+            </p>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Campanhas & Direitos -->
+  <section id="campanhas" class="campanhas-section" aria-labelledby="campanhas-title">
+    <div class="wrap">
+      <h2 id="campanhas-title">Campanhas & Direitos</h2>
+
+      <div class="info-grid">
+        <article class="info-box">
+          <h3>Conheça seus direitos</h3>
+          <ul class="info-list">
+            <li><strong>Lei Maria da Penha (Lei 11.340/2006):</strong> medidas de prevenção e punição para violência doméstica e familiar, com medidas protetivas de urgência.</li>
+            <li><strong>Lei Carolina Dieckmann (Lei 12.737/2012):</strong> define crimes cibernéticos e penaliza invasão/divulgação indevida de dados.</li>
+            <li><strong>Lei do Minuto Seguinte (Lei 12.845/2013):</strong> garante atendimento integral e humanizado às vítimas de violência sexual no SUS.</li>
+          </ul>
+          <p class="muted">Procure orientação jurídica e a rede local de apoio para conhecer todos os seus direitos.</p>
+        </article>
+
+        <article class="info-box">
+          <h3>Onde denunciar</h3>
+          <ul class="info-list">
+            <li>1ª DEAM – Plantão 24h: Rua 24, nº 203, Qd 49, Lt 27 – Setor Central | (62) 3201-2802</li>
+            <li>2ª DEAM – Horário comercial: Av. do Povo c/ Rua E, Qd 10, Lt 101 – Jardim Curitiba II | (62) 3201-6334 / 3201-6320 / 3201-6331</li>
+            <li>DEAM – Delegacia Estadual: Praça Padre Romão Cícero (Praça do Violeiro) – Setor Marista | (62) 3201-2802</li>
+            <li>DPCA – Delegacia de Proteção à Criança e ao Adolescente: Rua C-190, Qd 226 – Jardim América | (62) 3286-1540 / 3286-1398 / 3286-1552</li>
+            <li><strong>Emergências:</strong> 190 Polícia Militar • 153 GCM • 180 Mulher • 100 Direitos Humanos</li>
+          </ul>
+        </article>
+
+        <article class="info-box">
+          <h3>Atendimento em saúde (violência sexual)</h3>
+          <ul class="info-list">
+            <li><strong>HEMU – Hospital Estadual da Mulher:</strong> Rua R-7, s/n – Setor Oeste. Atende mulheres a partir de 14 anos e maiores de 18 anos (homens).</li>
+            <li><strong>HECAD – Hospital Estadual da Criança e do Adolescente:</strong> Av. Bela Vista – Parque Acalanto.</li>
+          </ul>
+          <p class="muted">Atendimento também nas UPAs, UBS e Hospitais Gerais. Verifique a unidade mais próxima.</p>
+        </article>
+
+        <article class="info-box">
+          <h3>Acolhimento psicológico</h3>
+          <p>
+            <strong>Ouvidoria da Mulher (Câmara Municipal de Goiânia)</strong> — Av. Goiás, 2001 – Setor Central.<br>
+            Seg–Sex, 8h–18h • (62) 98222-2434 • Instagram: @ouvidoriadamulher
+          </p>
+        </article>
+
+        <article class="info-box">
+          <h3>Apoio jurídico</h3>
+          <ul class="info-list">
+            <li><strong>Defensoria Pública do Estado de Goiás – NUDEM (Unidade Sul):</strong> Setor Sul. Seg–Sex, 7h–17h30 • (62) 3157-1039</li>
+            <li><strong>Conselhos Tutelares:</strong> atendimento por região (Secretaria Municipal de Desenvolvimento Humano e Social).</li>
+          </ul>
+        </article>
+
+        <article class="info-box">
+          <h3>Abrigamento</h3>
+          <ul class="info-list">
+            <li><strong>CEVAM – Centro de Valorização da Mulher Consuelo Nasser:</strong> Rua SNF-02, Qd 1A, Lt 1/5 – Setor Norte Ferroviário II. Seg–Sex, 8h–17h • (62) 3247-4972 / 9370-5084</li>
+            <li><strong>Casa de Acolhida Cidadã I:</strong> homens solteiros (18–59), incluindo público LGBTQIAPN+. (62) 99126-0575</li>
+            <li><strong>Casa de Acolhida Cidadã II:</strong> mulheres solteiras com crianças e famílias, incluindo público LGBTQIAPN+. Setor Leste Universitário • (62) 99207-8306</li>
+            <li><strong>Casa Abrigo Sempre Viva:</strong> mulheres em situação de violência e risco de morte, com acolhimento familiar. Centro • (62) 3524-1309</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contato & Localização -->
+  <section id="contato" class="contato-section" aria-labelledby="contato-title">
+    <div class="wrap contato-grid">
+      <div class="contato-info">
+        <h2 id="contato-title">Contato & Localização</h2>
+        <ul class="contact-list">
+          <li>
+            <img src="assets/ic-map-pin.svg" alt="" aria-hidden="true">
+            Av. Goiás, 2001 – Setor Central, Goiânia
+          </li>
+          <li>
+            <img src="assets/ic-whatsapp.svg" alt="" aria-hidden="true">
+            <a href="https://wa.me/5562982222434" target="_blank" rel="noopener">(62) 98222-2434</a>
+          </li>
+          <li>
+            <img src="assets/ic-mail.svg" alt="" aria-hidden="true">
+            <a href="mailto:ouvidoriadamulhercamara@gmail.com">ouvidoriadamulhercamara@gmail.com</a>
+          </li>
+          <li>
+            <img src="assets/ic-shield.svg" alt="" aria-hidden="true">
+            Seg–Sex, 8h–18h
+          </li>
+        </ul>
+
+        <form class="contact-form" action="mailto:ouvidoriadamulhercamara@gmail.com" method="post" enctype="text/plain" aria-label="Formulário de contato">
+          <input type="text" name="name" placeholder="Nome" required>
+          <input type="email" name="email" placeholder="E-mail" required>
+          <textarea name="message" rows="4" placeholder="Mensagem" required></textarea>
+          <button class="btn btn-primary" type="submit">Enviar</button>
+        </form>
+      </div>
+
+      <div class="map-wrap" aria-label="Mapa do Google">
+        <iframe
+          title="Localização da Ouvidoria"
+          loading="lazy"
+          src="https://www.google.com/maps?q=Av.+Goi%C3%A1s,+2001,+Setor+Central,+Goi%C3%A2nia&output=embed">
+        </iframe>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer" role="contentinfo">
+  <div class="wrap footer-inner">
+    <div class="footer-logos">
+      <img src="assets/logo-ouvidoria.png" alt="Ouvidoria da Mulher" class="footer-logo">
+      <img src="assets/logo-aava.png" alt="Vereadora Aava Santiago" class="footer-logo">
+      <img src="assets/logo-camara.png" alt="Câmara Municipal de Goiânia" class="footer-logo">
+    </div>
+    <p class="copyright">© 2025 Ouvidoria da Mulher – Câmara Municipal de Goiânia.</p>
+  </div>
+</footer>
+
+<script>
+  // Rolagem suave
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', (e) => {
+      const id = a.getAttribute('href');
+      if (id.length > 1) {
+        e.preventDefault();
+        const el = document.querySelector(id);
+        if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }
-    })();
-  </script>
+    });
+  });
+
+  // Sair rápido (topo e flutuante)
+  const goOut = () => window.location.href = 'https://www.google.com';
+  document.querySelectorAll('.btn-escape-top, .fab-escape').forEach(btn =>
+    btn.addEventListener('click', goOut)
+  );
+
+  // Carrossel: setas + teclado + swipe
+  (function(){
+    const track = document.querySelector('.car-track');
+    if(!track) return;
+    const prev = document.querySelector('.car-btn.prev');
+    const next = document.querySelector('.car-btn.next');
+
+    const getGap = () => {
+      const cs = getComputedStyle(track);
+      return parseFloat(cs.columnGap || cs.gap || '16');
+    };
+    const getCardWidth = () => {
+      const card = track.querySelector('.car-card');
+      if (!card) return 0;
+      return card.getBoundingClientRect().width + getGap();
+    };
+    const scrollByCard = (dir) => {
+      track.scrollBy({ left: dir * getCardWidth(), behavior: 'smooth' });
+    };
+    prev?.addEventListener('click', () => scrollByCard(-1));
+    next?.addEventListener('click', () => scrollByCard(1));
+
+    // Teclado
+    track.setAttribute('tabindex', '0');
+    track.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight') scrollByCard(1);
+      if (e.key === 'ArrowLeft') scrollByCard(-1);
+    });
+
+    // Swipe
+    let startX = 0, active = false, pid = 0;
+    track.addEventListener('pointerdown', (e) => {
+      active = true;
+      startX = e.clientX;
+      pid = e.pointerId;
+      track.setPointerCapture(pid);
+    });
+    track.addEventListener('pointerup', (e) => {
+      if (!active) return;
+      active = false;
+      const dx = e.clientX - startX;
+      if (Math.abs(dx) > 40) dx < 0 ? scrollByCard(1) : scrollByCard(-1);
+      try { track.releasePointerCapture(pid); } catch {}
+    });
+  })();
+</script>
 </body>
 </html>
