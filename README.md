@@ -10,7 +10,8 @@ Site da Ouvidoria da Mulher - Câmara Municipal de Goiânia
 
 Você pode visualizar o HTML do site diretamente pelo navegador usando o HTML Preview:
 
-🔗 **Preview (branch main):** [Ver index.html](https://htmlpreview.github.io/?https://raw.githubusercontent.com/maluravache/ouvidoriadamulher/main/index.html)
+🔗 **Página de manutenção:** [Ver index.html](https://htmlpreview.github.io/?https://raw.githubusercontent.com/maluravache/ouvidoriadamulher/main/index.html)  
+🔗 **Site completo:** [Ver site.html](https://htmlpreview.github.io/?https://raw.githubusercontent.com/maluravache/ouvidoriadamulher/main/site.html)
 
 ## Sobre o Projeto
 
