@@ -6,6 +6,12 @@ Site da Ouvidoria da Mulher - Câmara Municipal de Goiânia
 📱 **WhatsApp:** [(62) 98222-2434](https://wa.me/5562982222434)  
 📷 **Instagram:** [@ouvidoriadamulher](https://instagram.com/ouvidoriadamulher)
 
+## Preview do Site
+
+Você pode visualizar o HTML do site diretamente pelo navegador usando o HTML Preview:
+
+🔗 **Preview (branch main):** [Ver index.html](https://htmlpreview.github.io/?https://raw.githubusercontent.com/maluravache/ouvidoriadamulher/main/index.html)
+
 ## Sobre o Projeto
 
 A Ouvidoria da Mulher é um canal de acolhimento, orientação e encaminhamento para mulheres em situação de violência doméstica, familiar e de gênero. Oferecemos:
