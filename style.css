@@ -30,6 +30,11 @@ body {
 img { max-width: 100%; display: block; }
 a { text-decoration: none; color: inherit; transition: 0.3s; }
 
+/* Correção para menu fixo não cortar âncoras */
+html {
+    scroll-padding-top: 100px; /* Valor seguro para a altura do seu header */
+}
+
 /* ============================================
    TIPOGRAFIA (CORRIGIDA E SEPARADA)
    ============================================ */
