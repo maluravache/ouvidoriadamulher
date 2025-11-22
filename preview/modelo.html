@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Preview: Ouvidoria da Mulher – Você não está sozinha</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="../assets/logos/logo-mark.svg">
+  <link rel="icon" type="image/png" href="../favicon.png">
+
+  <!-- Theme color -->
+  <meta name="theme-color" content="#6b2a5a"/>
+
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="../css/modelo.css">
+</head>
+<body>
+
+  <!-- Skip to main content (Accessibility) -->
+  <a href="#main-content" class="skip-link">Pular para o conteúdo</a>
+
+  <!-- ============================================
+       INTERACTIVE HERO - Purple with parallax
+       ============================================ -->
+  <section class="hero" id="hero">
+    
+    <!-- Background layers with curves (SVG) -->
+    <div class="hero__bg-layer hero__parallax" data-speed="0.3">
+      <svg class="hero__curve-1" viewBox="0 0 1440 200" preserveAspectRatio="none">
+        <path d="M0,100 C480,180 960,20 1440,100 L1440,200 L0,200 Z"></path>
+      </svg>
+      <svg class="hero__curve-2" viewBox="0 0 800 300" preserveAspectRatio="none">
+        <path d="M0,0 C200,100 400,50 600,150 C700,200 800,100 800,0 Z"></path>
+      </svg>
+    </div>
+
+    <!-- Floating decorative shapes -->
+    <div class="hero__shapes hero__parallax" data-speed="0.5">
+      <div class="hero__shape hero__shape--1"></div>
+      <div class="hero__shape hero__shape--2"></div>
+      <div class="hero__shape hero__shape--3"></div>
+      <div class="hero__shape hero__shape--4"></div>
+    </div>
+
+    <!-- Small floating icons (decorative) -->
+    <div class="hero__icons hero__parallax" data-speed="0.4">
+      <i class="hero__icon hero__icon--1 bi bi-heart-fill"></i>
+      <i class="hero__icon hero__icon--2 bi bi-shield-check"></i>
+      <i class="hero__icon hero__icon--3 bi bi-chat-heart-fill"></i>
+      <i class="hero__icon hero__icon--4 bi bi-people-fill"></i>
+    </div>
+
+    <!-- Hero content -->
+    <div class="hero__content">
+      <img src="../logo-simbolo-white.png" alt="Símbolo Ouvidoria da Mulher" class="hero__logo" loading="eager">
+      
+      <h1 class="hero__title">Você não está sozinha</h1>
+      
+      <p class="hero__subtitle">
+        Acolhimento, orientação e encaminhamento para mulheres em situação de violência. 
+        Estamos aqui para ajudar você.
+      </p>
+
+      <!-- Dual CTAs -->
+      <div class="hero__ctas">
+        <a href="https://wa.me/5562982222434" 
+           class="hero__cta hero__cta--primary" 
+           target="_blank" 
+           rel="noopener"
+           aria-label="Falar agora no WhatsApp">
+          <i class="bi bi-whatsapp"></i>
+          Falar agora
+        </a>
+        <a href="#denunciar" 
+           class="hero__cta hero__cta--secondary"
+           aria-label="Como denunciar">
+          <i class="bi bi-shield-check"></i>
+          Como denunciar
+        </a>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="hero__scroll" aria-hidden="true">
+      <span>Role para ver mais</span>
+      <i class="bi bi-chevron-down"></i>
+    </div>
+
+  </section>
+
+  <!-- ============================================
+       MAIN CONTENT
+       ============================================ -->
+  <main id="main-content" class="main">
+
+    <!-- ============================================
+         CAROUSEL - Campanhas & Notícias
+         ============================================ -->
+    <section class="carousel-section" id="campanhas">
+      <div class="container">
+        <div class="carousel-section__header">
+          <h2 class="carousel-section__title">Campanhas &amp; Notícias</h2>
+          <p class="carousel-section__subtitle">Acompanhe nossas ações e iniciativas</p>
+        </div>
+
+        <div class="carousel">
+          <div class="carousel__wrapper">
+            <div class="carousel__track" id="carouselTrack" role="region" aria-label="Carrossel de campanhas e notícias" tabindex="0">
+              
+              <!-- Item 1 -->
+              <article class="carousel__item">
+                <div class="carousel__item-image" role="img" aria-label="Imagem da campanha"></div>
+                <div class="carousel__item-content">
+                  <span class="carousel__item-badge">Campanha</span>
+                  <h3 class="carousel__item-title">Novembro Roxo: Unidos contra a violência</h3>
+                  <p class="carousel__item-desc">
+                    Campanha de conscientização sobre a violência contra a mulher. Participe das ações educativas.
+                  </p>
+                  <a href="#" class="carousel__item-link">
+                    Saiba mais <i class="bi bi-arrow-right"></i>
+                  </a>
+                </div>
+              </article>
+
+              <!-- Item 2 -->
+              <article class="carousel__item">
+                <div class="carousel__item-image" role="img" aria-label="Imagem da notícia"></div>
+                <div class="carousel__item-content">
+                  <span class="carousel__item-badge">Notícia</span>
+                  <h3 class="carousel__item-title">Butique Solidária recebe doações</h3>
+                  <p class="carousel__item-desc">
+                    A Butique Solidária está recebendo doações de roupas, calçados e produtos de higiene.
+                  </p>
+                  <a href="#" class="carousel__item-link">
+                    Saiba mais <i class="bi bi-arrow-right"></i>
+                  </a>
+                </div>
+              </article>
+
+              <!-- Item 3 -->
+              <article class="carousel__item">
+                <div class="carousel__item-image" role="img" aria-label="Imagem do evento"></div>
+                <div class="carousel__item-content">
+                  <span class="carousel__item-badge">Evento</span>
+                  <h3 class="carousel__item-title">Ouvidoria Itinerante no Jardim Curitiba</h3>
+                  <p class="carousel__item-desc">
+                    A Ouvidoria Itinerante estará no Jardim Curitiba oferecendo atendimentos e orientações.
+                  </p>
+                  <a href="#" class="carousel__item-link">
+                    Saiba mais <i class="bi bi-arrow-right"></i>
+                  </a>
+                </div>
+              </article>
+
+              <!-- Item 4 -->
+              <article class="carousel__item">
+                <div class="carousel__item-image" role="img" aria-label="Imagem da palestra"></div>
+                <div class="carousel__item-content">
+                  <span class="carousel__item-badge">Palestra</span>
+                  <h3 class="carousel__item-title">Palestra sobre Lei Maria da Penha</h3>
+                  <p class="carousel__item-desc">
+                    Conheça seus direitos e as medidas de proteção disponíveis pela Lei Maria da Penha.
+                  </p>
+                  <a href="#" class="carousel__item-link">
+                    Saiba mais <i class="bi bi-arrow-right"></i>
+                  </a>
+                </div>
+              </article>
+
+              <!-- Item 5 -->
+              <article class="carousel__item">
+                <div class="carousel__item-image" role="img" aria-label="Imagem da ação"></div>
+                <div class="carousel__item-content">
+                  <span class="carousel__item-badge">Ação</span>
+                  <h3 class="carousel__item-title">Programa Acolha uma Mulher</h3>
+                  <p class="carousel__item-desc">
+                    Oferecemos acolhimento psicológico e orientação para mulheres em vulnerabilidade.
+                  </p>
+                  <a href="#" class="carousel__item-link">
+                    Saiba mais <i class="bi bi-arrow-right"></i>
+                  </a>
+                </div>
+              </article>
+
+            </div>
+          </div>
+
+          <!-- Navigation buttons -->
+          <nav class="carousel__nav" aria-label="Navegação do carrossel">
+            <button class="carousel__btn carousel__btn--prev" 
+                    id="carouselPrev" 
+                    aria-label="Item anterior">
+              <i class="bi bi-chevron-left"></i>
+            </button>
+            <button class="carousel__btn carousel__btn--next" 
+                    id="carouselNext" 
+                    aria-label="Próximo item">
+              <i class="bi bi-chevron-right"></i>
+            </button>
+          </nav>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         QUICK SECTION - Como denunciar
+         ============================================ -->
+    <section class="section" id="denunciar">
+      <div class="container">
+        <h2 class="section__title">Como denunciar</h2>
+        <p style="text-align: center; color: var(--txt-light); max-width: 700px; margin: 0 auto var(--spacing-lg);">
+          Em situações de emergência, não hesite em pedir ajuda. Ligue 190 (Polícia Militar) ou 180 (Central de Atendimento à Mulher).
+          Nossa Ouvidoria também está disponível para orientações e encaminhamentos.
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================
+       FABs - Floating Action Buttons
+       ============================================ -->
+  <div class="fab-container" role="complementary" aria-label="Ações rápidas">
+    <!-- WhatsApp FAB -->
+    <a href="https://wa.me/5562982222434" 
+       class="fab fab--whatsapp" 
+       target="_blank" 
+       rel="noopener"
+       aria-label="Falar no WhatsApp">
+      <i class="bi bi-whatsapp"></i>
+      <span class="fab__tooltip">WhatsApp</span>
+    </a>
+
+    <!-- Exit FAB -->
+    <a href="https://www.google.com" 
+       class="fab fab--exit" 
+       rel="noopener"
+       aria-label="Sair agora">
+      <i class="bi bi-x-octagon"></i>
+      <span class="fab__tooltip">Sair agora</span>
+    </a>
+  </div>
+
+  <!-- ============================================
+       FOOTER
+       ============================================ -->
+  <footer class="footer">
+    <div class="container">
+      <img src="../logo-horizontal-white.png" alt="Ouvidoria da Mulher" class="footer__logo" loading="lazy">
+      <p class="footer__text">Ouvidoria da Mulher — Câmara Municipal de Goiânia</p>
+      <p class="footer__text"><strong>Você não está sozinha.</strong></p>
+      <div class="footer__bottom">
+        <p>&copy; 2025 Ouvidoria da Mulher - Câmara Municipal de Goiânia</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================================
+       JAVASCRIPT - Parallax & Carousel
+       ============================================ -->
+  <script>
+    // ============================================
+    // PARALLAX EFFECT - Light mouse movement
+    // Disabled automatically with prefers-reduced-motion
+    // ============================================
+    (function() {
+      // Check if user prefers reduced motion
+      const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      
+      if (!prefersReducedMotion) {
+        const hero = document.querySelector('.hero');
+        const parallaxElements = document.querySelectorAll('.hero__parallax');
+        
+        if (hero && parallaxElements.length > 0) {
+          hero.addEventListener('mousemove', (e) => {
+            const { clientX, clientY } = e;
+            const { innerWidth, innerHeight } = window;
+            
+            // Calculate movement percentage from center
+            const xPercent = (clientX / innerWidth - 0.5) * 2;
+            const yPercent = (clientY / innerHeight - 0.5) * 2;
+            
+            parallaxElements.forEach((el) => {
+              const speed = parseFloat(el.dataset.speed) || 0.3;
+              const x = xPercent * 20 * speed;
+              const y = yPercent * 20 * speed;
+              el.style.transform = `translate(${x}px, ${y}px)`;
+            });
+          });
+          
+          // Reset on mouse leave
+          hero.addEventListener('mouseleave', () => {
+            parallaxElements.forEach((el) => {
+              el.style.transform = 'translate(0, 0)';
+            });
+          });
+        }
+      }
+    })();
+
+    // ============================================
+    // CAROUSEL - Scroll-snap + Keyboard navigation
+    // ============================================
+    (function() {
+      const track = document.getElementById('carouselTrack');
+      const prevBtn = document.getElementById('carouselPrev');
+      const nextBtn = document.getElementById('carouselNext');
+      
+      if (!track || !prevBtn || !nextBtn) return;
+      
+      const items = track.querySelectorAll('.carousel__item');
+      let currentIndex = 0;
+      
+      // Function to scroll to item
+      function scrollToItem(index) {
+        if (index < 0 || index >= items.length) return;
+        
+        const item = items[index];
+        const scrollLeft = item.offsetLeft - (track.offsetWidth / 2) + (item.offsetWidth / 2);
+        
+        track.scrollTo({
+          left: scrollLeft,
+          behavior: 'smooth'
+        });
+        
+        currentIndex = index;
+        updateButtons();
+      }
+      
+      // Update button states
+      function updateButtons() {
+        prevBtn.disabled = currentIndex === 0;
+        nextBtn.disabled = currentIndex === items.length - 1;
+      }
+      
+      // Button click handlers
+      prevBtn.addEventListener('click', () => {
+        scrollToItem(currentIndex - 1);
+      });
+      
+      nextBtn.addEventListener('click', () => {
+        scrollToItem(currentIndex + 1);
+      });
+      
+      // Keyboard navigation
+      track.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowLeft') {
+          e.preventDefault();
+          scrollToItem(currentIndex - 1);
+        } else if (e.key === 'ArrowRight') {
+          e.preventDefault();
+          scrollToItem(currentIndex + 1);
+        } else if (e.key === 'Home') {
+          e.preventDefault();
+          scrollToItem(0);
+        } else if (e.key === 'End') {
+          e.preventDefault();
+          scrollToItem(items.length - 1);
+        }
+      });
+      
+      // Detect scroll position to update current index
+      let scrollTimeout;
+      track.addEventListener('scroll', () => {
+        clearTimeout(scrollTimeout);
+        scrollTimeout = setTimeout(() => {
+          const scrollCenter = track.scrollLeft + (track.offsetWidth / 2);
+          
+          items.forEach((item, index) => {
+            const itemCenter = item.offsetLeft + (item.offsetWidth / 2);
+            const distance = Math.abs(scrollCenter - itemCenter);
+            
+            if (distance < item.offsetWidth / 2) {
+              currentIndex = index;
+            }
+          });
+          
+          updateButtons();
+        }, 100);
+      });
+      
+      // Initialize
+      updateButtons();
+    })();
+
+    // ============================================
+    // SMOOTH SCROLL for anchor links
+    // ============================================
+    (function() {
+      const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      
+      if (!prefersReducedMotion) {
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+          anchor.addEventListener('click', function (e) {
+            const href = this.getAttribute('href');
+            if (href === '#') return;
+            
+            e.preventDefault();
+            const target = document.querySelector(href);
+            
+            if (target) {
+              target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+              });
+              
+              // Update focus for accessibility
+              target.focus({ preventScroll: true });
+            }
+          });
+        });
+      }
+    })();
+  </script>
+
+</body>
+</html>
