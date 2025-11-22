@@ -1,5 +1,0 @@
-# Maintenance mode: Block all search engine crawlers
-# This file should be reverted after maintenance is complete
-
-User-agent: *
-Disallow: /
