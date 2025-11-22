@@ -22,13 +22,38 @@ body { font-family: 'Poppins', sans-serif; color: var(--text); background: var(-
 img { max-width: 100%; display: block; }
 a { text-decoration: none; color: inherit; transition: 0.3s; }
 
-/* Tipografia */
-h1, h2, h3, .section-title { 
-    color: var(--roxo-escuro); /* MUDAR AQUI A COR */
+/* ============================================
+   TIPOGRAFIA (CORRIGIDA E SEPARADA)
+   ============================================ */
+
+/* H1: TÍTULO PRINCIPAL DO SITE (NO HERO) */
+h1 {
+    color: var(--amarelo); /* CORRIGIDO: Volta a ser Amarelo no topo */
     font-weight: 800; 
-    text-align: center;    /* Isto faz o título ir para o meio */
 }
-h4, .section-subtitle { color: var(--text); font-weight: 400; max-width: 800px; margin: 0 auto 40px; text-align: center; }
+
+/* H2 e SECTION-TITLE: TÍTULOS DE SECÇÃO (EX: QUEM SOMOS, SERVIÇOS) */
+h2, .section-title { 
+    color: var(--roxo-escuro); 
+    font-weight: 800; 
+    text-align: center;    /* Centraliza os títulos */
+    margin-bottom: 30px;   /* Adiciona o espaço de 30px por baixo */
+}
+
+/* H3: SUBTÍTULOS DENTRO DOS CARDS (EX: ACOLHIMENTO PSICOLÓGICO, LEI MARIA DA PENHA) */
+h3 { 
+    color: var(--jacarta); /* CORRIGIDO: Usa o Jacarta (roxo dos cartões) */
+    font-weight: 800; 
+}
+
+/* H4 e SECTION-SUBTITLE: SUBTÍTULOS MENORES/TEXTO EXPLICATIVO GERAL */
+h4, .section-subtitle { 
+    color: var(--text); 
+    font-weight: 400; 
+    max-width: 800px; 
+    margin: 0 auto 40px; 
+    text-align: center; 
+}
 
 .container { max-width: var(--container-width); margin: 0 auto; padding: 0 20px; }
 
