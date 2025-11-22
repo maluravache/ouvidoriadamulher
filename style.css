@@ -286,6 +286,33 @@ h4, .section-subtitle {
 .locations-dropdown summary { font-weight: 700; color: var(--jacarta); cursor: pointer; list-style: none; display: flex; justify-content: space-between; }
 .btn-butique-doar { flex: 0 0 auto; margin-top: 0; }
 
+/* Estilo Final para os Endereços da Butique */
+.locations-dropdown .loc-item {
+    background: var(--paper); /* Fundo sutil para destaque */
+    border-radius: 8px;
+    padding: 12px;
+    font-size: 0.95rem;
+    margin-top: 10px;
+}
+.locations-dropdown .loc-item strong {
+    color: var(--roxo-escuro); /* Título do local com destaque */
+    display: block;
+    margin-bottom: 5px;
+}
+.locations-dropdown .loc-item p {
+    color: var(--text-light); /* Endereço com cor mais clara */
+    display: flex;
+    align-items: flex-start; /* Alinha o texto com o topo do ícone */
+    gap: 8px; /* Espaço entre o ícone e o texto */
+    margin: 0; /* Remove margens extras */
+}
+.locations-dropdown .loc-item i {
+    color: var(--jacarta); /* Ícone com cor de destaque (Jacarta) */
+    flex-shrink: 0; /* Impede que o ícone encolha no mobile */
+    font-size: 1.1rem;
+    margin-top: 1px; /* Ajuste visual fino */
+}
+
 /* RODAPÉ */
 .map-frame { width: 100%; height: 400px; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
 .footer { background: var(--jacarta); color: white; padding: 60px 0 0; font-size: 0.9rem; width: 100%; }
