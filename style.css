@@ -143,13 +143,18 @@ h4, .section-subtitle {
 .hero-img img { 
     max-height: 400px; 
     width: auto; 
-    margin-bottom: -1px; 
+    margin-bottom: -5px; /* MAIS ESPAÇO NEGATIVO PARA ENCOSTAR */
+    display: block;      /* ESSENCIAL: Tira a imagem da linha de texto */
 }
 
 @media(min-width: 768px) { 
     .hero-img { justify-content: flex-end; } 
-    /* Reduzimos o tamanho da imagem para caber no novo layout */
-    .hero-img img { max-height: 450px; margin-right: 20px; } 
+    .hero-img img { 
+        max-height: 450px; 
+        margin-right: 20px;
+        margin-bottom: -5px; /* Puxa para baixo */
+        display: block;      /* Garante a estabilidade */
+    } 
 }
 
 /* CARROSSEL */
