@@ -299,12 +299,14 @@ h4, .section-subtitle {
     display: block;
     margin-bottom: 5px;
 }
+
+/* Correção do Alinhamento dos Endereços */
 .locations-dropdown .loc-item p {
-    color: var(--text-light); /* Endereço com cor mais clara */
-    display: flex;
-    align-items: flex-start; /* Alinha o texto com o topo do ícone */
-    gap: 8px; /* Espaço entre o ícone e o texto */
-    margin: 0; /* Remove margens extras */
+    color: var(--text-light);
+    display: flex; /* Torna o parágrafo um contentor flexível */
+    align-items: flex-start; /* CRÍTICO: Garante que o ícone e o texto alinham pelo topo */
+    gap: 8px; 
+    margin: 0; 
 }
 .locations-dropdown .loc-item i {
     color: var(--jacarta); /* Ícone com cor de destaque (Jacarta) */
