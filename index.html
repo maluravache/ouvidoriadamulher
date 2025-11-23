@@ -51,7 +51,7 @@
         <div class="container">
             <h2 class="section-title">Quem Somos</h2>
             <p class="section-subtitle">
-                A Ouvidoria da Mulher é um canal da Câmara Municipal de Goiânia criado para integrar o poder público e a sociedade civil na defesa dos direitos de todas as mulheres e somar esforç[...]
+                A Ouvidoria da Mulher é um canal da Câmara Municipal de Goiânia criado para integrar o poder público e a sociedade civil na defesa dos direitos de todas as mulheres e somar esforços no combate à violência doméstica e de gênero.
             </p>
             
             <div class="info-badges">
@@ -273,7 +273,7 @@
                 
                 <div class="butique-info-text">
                     <h3>A Butique Solidária</h3>
-                    <p>A Butique Solidária Giselle Evangelista Gonçalves é uma parceria entre a Ouvidoria da Mulher da Câmara Municipal de Goiânia e da vereadora Aava Santiago para suprir necessi[...]
+                    <p>A Butique Solidária Giselle Evangelista Gonçalves é uma parceria entre a Ouvidoria da Mulher da Câmara Municipal de Goiânia e da vereadora Aava Santiago para suprir necessidades básicas de famílias vítimas de violência de gênero em situação de vulnerabilidade social. O projeto promove dignidade e autoestima.</p>
                 </div>
 
                 <div class="butique-actions-block">
@@ -363,23 +363,16 @@
     <a href="https://www.google.com" class="fab-sair" title="Sair Rápido">Sair Rápido <i class="bi bi-box-arrow-right"></i></a>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-            if (mobileMenuBtn) {
-                mobileMenuBtn.addEventListener('click', function() {
-                    const nav = document.querySelector('.nav-links');
-                    if (nav) nav.classList.toggle('active');
-                });
-            }
-
-            const track = document.querySelector('.campaign-track');
-            const prevBtn = document.querySelector('.prev-btn');
-            const nextBtn = document.querySelector('.next-btn');
-            if (track && prevBtn && nextBtn) {
-                nextBtn.addEventListener('click', () => { track.scrollBy({ left: 300, behavior: 'smooth' }); });
-                prevBtn.addEventListener('click', () => { track.scrollBy({ left: -300, behavior: 'smooth' }); });
-            }
+        document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
         });
+        const track = document.querySelector('.campaign-track');
+        const prevBtn = document.querySelector('.prev-btn');
+        const nextBtn = document.querySelector('.next-btn');
+        if(track && prevBtn && nextBtn) {
+            nextBtn.addEventListener('click', () => { track.scrollBy({ left: 300, behavior: 'smooth' }); });
+            prevBtn.addEventListener('click', () => { track.scrollBy({ left: -300, behavior: 'smooth' }); });
+        }
     </script>
 </body>
 </html>
