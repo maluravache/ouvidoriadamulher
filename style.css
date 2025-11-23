@@ -329,8 +329,10 @@ h4, .section-subtitle {
 /* Estilo da coluna de Texto */
 .butique-info-text {
     padding: 30px;
-    background: var(--paper); /* Fundo claro para contraste */
+    background: var(--paper);
     border-radius: var(--radius);
+    /* NOVO: Centraliza o título e o parágrafo */
+    text-align: center; 
 }
 
 /* Estilo da coluna de Ações */
@@ -346,12 +348,35 @@ h4, .section-subtitle {
     margin-bottom: 20px;
     display: flex; 
     align-items: center; 
-    gap: 10px; 
+    justify-content: center; /* Centraliza o ícone e o texto juntos */
+    gap: 10px;          /* Espaçamento entre o ícone e o texto (não fica colado) */
 }
 
 /* Dropdown de Pontos de Coleta (Ajuste para a setinha) */
+/* Correção para que o ícone do browser não apareça */
+.locations-dropdown--butique summary::marker, .locations-dropdown--butique summary::-webkit-details-marker {
+    content: ''; /* Garante que o marcador padrão é apagado */
+    display: none;
+}
+
+/* ATENÇÃO: Esta é a versão que deve ser usada, com as regras combinadas */
 .locations-dropdown--butique summary {
-    justify-content: space-between; /* Afasta o texto da seta */
+    cursor: pointer;
+    color: var(--roxo-escuro);
+    font-weight: 700;
+    padding: 15px;
+    background: var(--paper); 
+    border-radius: 10px;
+    margin-top: 10px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    
+    /* NOVO: Aqui garantimos o espaçamento de 10px */
+    gap: 10px; 
+    
+    /* Nota: Se a seta estiver no início, use flex-start para alinhar à esquerda */
+    justify-content: flex-start;
 }
 
 /* RODAPÉ */
