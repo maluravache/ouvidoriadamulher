@@ -897,8 +897,6 @@ h4, .section-subtitle {
 }
 
 h3 {
-  /*CORRIGIDO: Usa o Jacarta (roxo dos cartões);*/
-  font-weight: 800;
-  --bs-body-color: var(--jacarta);
-  color: var(--roxo-escuro);
+    font-weight: 800;
+    color: var(--jacarta);
 }
