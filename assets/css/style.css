@@ -1,0 +1,905 @@
+/* ============================================
+   ESTILO GERAL - VERSÃO CORRIGIDA FINAL
+   ============================================ */
+
+:root {
+  --roxo-escuro: #55214b;
+  --roxo-claro: #7e144f;
+  --jacarta: #422e6a;
+  --amarelo: #fbcf42;
+  --vermelho-discreto: #9e2a2b;
+  --text: #2B2B2B;
+  --white: #FFFFFF;
+  --paper: #F7F6F9;
+  --gradient-hero: linear-gradient(135deg, var(--roxo-escuro) 0%, var(--roxo-claro) 100%);
+  --container-width: 1280px;
+  --radius: 16px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: var(--text);
+  background: var(--paper);
+  line-height: 1.6;
+  padding: 0;
+  margin: 0;
+  padding-top: 90px;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: 0.3s;
+}
+
+/* Correção para menu fixo não cortar âncoras */
+
+html {
+  scroll-padding-top: 100px;
+}
+
+/* ============================================
+   TIPOGRAFIA (CORRIGIDA E SEPARADA)
+   ============================================ */
+
+/* H1: TÍTULO PRINCIPAL DO SITE (NO HERO) */
+
+h1 {
+  color: var(--amarelo);
+  /*CORRIGIDO: Volta a ser Amarelo no topo;*/
+  font-weight: 800;
+}
+
+/* H2 e SECTION-TITLE: TÍTULOS DE SECÇÃO (EX: QUEM SOMOS, SERVIÇOS) */
+
+h2, .section-title {
+  color: var(--roxo-escuro);
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* H3: SUBTÍTULOS DENTRO DOS CARDS (EX: ACOLHIMENTO PSICOLÓGICO, LEI MARIA DA PENHA) */
+
+/* H4 e SECTION-SUBTITLE: SUBTÍTULOS MENORES/TEXTO EXPLICATIVO GERAL */
+
+h4, .section-subtitle {
+  color: var(--text);
+  font-weight: 400;
+  max-width: 800px;
+  margin: 0 auto 40px;
+  text-align: center;
+}
+
+.container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* MENU */
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px 0;
+  z-index: 1000;
+  background: var(--jacarta);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__logo img {
+  height: 90px;
+  width: auto;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.nav-links a {
+  color: rgba(255,255,255,0.95);
+  font-weight: 500;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.nav-links a:hover {
+  color: var(--amarelo);
+}
+
+.mobile-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+@media (max-width: 900px) {
+  .mobile-menu-btn {
+    display: block;
+  }
+}
+
+@media (max-width: 900px) {
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: var(--roxo-escuro);
+    flex-direction: column;
+    padding: 20px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  }
+}
+
+@media (max-width: 900px) {
+  .nav-links.active {
+    display: flex;
+  }
+}
+
+@media (max-width: 900px) {
+  .header__logo img {
+    height: 60px;
+  }
+}
+
+/* HERO (FINAL: ALTURA COMPACTA, IMAGEM ALINHADA) */
+
+.hero {
+  background: var(--jacarta);
+  min-height: 450px;
+  padding-top: 60px;
+  padding-bottom: 0;
+  border-radius: 0;
+  color: white;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+}
+
+.hero-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  align-items: center;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .hero-content {
+    grid-template-columns: 1.2fr 0.8fr;
+  }
+}
+
+@media (min-width: 768px) {
+  .hero {
+    padding-top: 80px;
+  }
+}
+
+/* Espaçamento superior reduzido no PC */
+
+.hero-text {
+  padding-bottom: 0px;
+}
+
+/* CRÍTICO: Elimina o espaçamento extra */
+
+.hero-text h1 {
+  color: var(--amarelo);
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  line-height: 1.1;
+  margin-bottom: 15px;
+}
+
+.hero-text p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  margin-bottom: 25px;
+  max-width: 480px;
+  color: white;
+}
+
+.btn-cta {
+  background: var(--amarelo);
+  color: var(--jacarta);
+  padding: 12px 30px;
+  border-radius: 50px;
+  font-weight: 800;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+}
+
+.btn-cta:hover {
+  transform: translateY(-3px);
+  background: #fff;
+}
+
+.hero-img {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  width: 100%;
+  height: 100%;
+  align-self: stretch;
+}
+
+.hero-img img {
+  max-height: 400px;
+  width: auto;
+  margin-bottom: -10px;
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .hero-img {
+    justify-content: flex-end;
+  }
+}
+
+@media (min-width: 768px) {
+  .hero-img img {
+    max-height: 450px;
+    margin-right: 20px;
+    margin-bottom: -10px;
+    display: block;
+  }
+}
+
+/* CARROSSEL */
+
+.carousel-wrapper {
+  position: relative;
+  width: 100%;
+  margin-top: 30px;
+}
+
+.carousel-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.campaign-track {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding-bottom: 20px;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.campaign-track::-webkit-scrollbar {
+  display: none;
+}
+
+.nav-arrow {
+  position: absolute;
+  top: 45%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  background: white;
+  color: var(--jacarta);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  cursor: pointer;
+  z-index: 10;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+}
+
+.nav-arrow:hover {
+  background: var(--amarelo);
+}
+
+.prev-btn {
+  left: -10px;
+}
+
+.next-btn {
+  right: -10px;
+}
+
+@media (min-width: 768px) {
+  .nav-arrow {
+    display: flex;
+  }
+}
+
+.camp-card {
+  flex: 0 0 280px;
+  min-height: 180px;
+  padding: 25px;
+  position: relative;
+  border-radius: var(--radius);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  scroll-snap-align: start;
+}
+
+.card-top {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.camp-card i {
+  font-size: 2rem;
+  color: white;
+}
+
+/* Ícone Normal */
+
+.camp-card h3 {
+  color: inherit;
+  font-size: 1.2rem;
+  font-weight: 800;
+}
+
+.camp-card a {
+  color: inherit;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.camp-card--video a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+}
+
+.camp-card--video {
+  background: #222;
+  padding: 0;
+}
+
+.camp-card--video i.bi-play-circle {
+  font-size: 3rem;
+  color: var(--amarelo);
+  margin-bottom: 10px;
+}
+
+.drag-hint {
+  text-align: center;
+  font-size: 0.8rem;
+  color: #888;
+  margin-top: -10px;
+}
+
+@media (min-width: 768px) {
+  .drag-hint {
+    display: none;
+  }
+}
+
+/* SERVIÇOS */
+
+.section {
+  padding: 60px 0;
+}
+
+.section--bg {
+  background: white;
+}
+
+.info-badges {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.badge-item {
+  background: white;
+  border: 1px solid var(--roxo-claro);
+  color: var(--roxo-claro);
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: 0.3s;
+}
+
+.badge-item:hover {
+  background: var(--roxo-claro);
+  color: white;
+}
+
+.service-cards-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.denuncia-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+@media (min-width: 768px) {
+  .service-cards-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 768px) {
+  .denuncia-grid {
+    grid-template-columns: 1.2fr 0.8fr;
+    align-items: start;
+  }
+}
+
+/* Alinhamento consertado */
+
+.service-card-detailed, .content-box {
+  background: var(--white);
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  border-top: 5px solid var(--amarelo);
+}
+
+.service-card-detailed h3, .content-box h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--paper);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--jacarta);
+}
+
+.item-detalhe {
+  margin-bottom: 20px;
+}
+
+.item-detalhe strong {
+  display: block;
+  color: var(--roxo-claro);
+  font-weight: 700;
+  font-size: 0.95rem;
+  margin-bottom: 4px;
+}
+
+.item-detalhe p {
+  margin: 3px 0;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text);
+}
+
+.item-detalhe i {
+  color: var(--jacarta);
+  font-size: 1rem;
+}
+
+.item-detalhe a {
+  color: var(--text);
+  text-decoration: none !important;
+}
+
+.item-detalhe a:hover {
+  color: var(--jacarta);
+}
+
+/* Passo a Passo (Agora dentro do Card) */
+
+.passo-a-passo-box {
+  background: #fffdf2;
+  padding: 15px;
+  border-radius: 12px;
+  margin-top: 25px;
+  border: 1px solid var(--amarelo);
+}
+
+.passo-a-passo-box h4 {
+  color: var(--jacarta);
+  font-size: 1rem;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.passo-a-passo-box ul {
+  padding-left: 20px;
+  margin: 0;
+}
+
+.passo-a-passo-box li {
+  font-size: 0.9rem;
+  color: var(--text);
+  margin-bottom: 5px;
+}
+
+/* CANAIS EMERGÊNCIA */
+
+.emergency-disques-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.disque-btn {
+  background: var(--jacarta);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.9rem;
+  transition: 0.3s;
+  min-width: 200px;
+}
+
+.disque-btn:hover {
+  transform: translateY(-2px);
+  background: var(--roxo-escuro);
+}
+
+.disque-btn strong {
+  font-size: 1.1rem;
+}
+
+/* LEIS & BUTIQUE */
+
+.leis-grid {
+  display: grid;
+  gap: 15px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.lei-card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  border-left: 5px solid var(--amarelo);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+}
+
+.btn-cta-secondary {
+  display: inline-block;
+  margin-top: 30px;
+  border: 2px solid var(--jacarta);
+  color: var(--jacarta);
+  padding: 10px 25px;
+  border-radius: 50px;
+  font-weight: 700;
+}
+
+.butique-desc {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 40px;
+}
+
+.butique-wrapper {
+  background: white;
+  padding: 30px;
+  border-radius: var(--radius);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.donation-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.donation-list li {
+  background: #f0ebf3;
+  color: var(--jacarta);
+  padding: 5px 15px;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.butique-actions {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.locations-dropdown {
+  flex: 1;
+  border: 1px solid #eee;
+  padding: 15px;
+  border-radius: 12px;
+}
+
+.locations-dropdown summary {
+  font-weight: 700;
+  color: var(--jacarta);
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn-butique-doar {
+  flex: 0 0 auto;
+  margin-top: 0;
+}
+
+/* Estilo Final para os Endereços da Butique */
+
+.locations-dropdown .loc-item {
+  background: var(--paper);
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 0.95rem;
+  margin-top: 10px;
+}
+
+.locations-dropdown .loc-item strong {
+  color: var(--roxo-escuro);
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* Correção do Alinhamento dos Endereços */
+
+.locations-dropdown .loc-item p {
+  color: var(--text-light);
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin: 0;
+}
+
+.locations-dropdown .loc-item i {
+  color: var(--jacarta);
+  flex-shrink: 0;
+  font-size: 1.1rem;
+  margin-top: 1px;
+}
+
+/* Butique Solidária (LAYOUT E ESTILO) */
+
+.butique-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .butique-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Duas colunas no PC */
+
+/* Estilo da coluna de Texto */
+
+.butique-info-text {
+  padding: 30px;
+  background: var(--paper);
+  border-radius: var(--radius);
+  /*NOVO: Centraliza o título e o parágrafo;*/
+  text-align: center;
+}
+
+/* Estilo da coluna de Ações */
+
+.butique-actions-block {
+  padding: 30px;
+  border-radius: var(--radius);
+  background: var(--white);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+/* Padrão para ícones nos títulos (Centralizar ícone + texto) */
+
+.butique-actions-block h3 {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* Dropdown de Pontos de Coleta (Ajuste para a setinha) */
+
+/* Correção para que o ícone do browser não apareça */
+
+.locations-dropdown--butique summary::marker, .locations-dropdown--butique summary::-webkit-details-marker {
+  content: '';
+  display: none;
+}
+
+/* ATENÇÃO: Esta é a versão que deve ser usada, com as regras combinadas */
+
+.locations-dropdown--butique summary {
+  cursor: pointer;
+  color: var(--roxo-escuro);
+  font-weight: 700;
+  padding: 15px;
+  background: var(--paper);
+  border-radius: 10px;
+  margin-top: 10px;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  /*NOVO: Aqui garantimos o espaçamento de 10px;*/
+  gap: 10px;
+  /*Nota: Se a seta estiver no início, use flex-start para alinhar à esquerda;*/
+  justify-content: flex-start;
+}
+
+/* RODAPÉ */
+
+.map-frame {
+  width: 100%;
+  height: 400px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.footer {
+  background: var(--jacarta);
+  color: white;
+  padding: 60px 0 0;
+  font-size: 0.9rem;
+  width: 100%;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  text-align: center;
+}
+
+.footer-apoio-centered {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.apoio-label {
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 15px;
+  opacity: 0.8;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+.footer-logos {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer-logos img {
+  height: 50px;
+  width: auto;
+  filter: brightness(0) invert(1);
+  opacity: 0.9;
+}
+
+.copyright {
+  width: 100%;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding: 20px 0;
+  text-align: center;
+  font-size: 0.8rem;
+  opacity: 0.6;
+  margin-top: 20px;
+}
+
+.fab-whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 32px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+  z-index: 100;
+}
+
+.fab-sair {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background: var(--vermelho-discreto);
+  color: white;
+  padding: 12px 20px;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: 0.3s;
+}
+
+.fab-sair:hover {
+  transform: translateY(-3px);
+  background: #7a1e20;
+}
+
+h3 {
+  /*CORRIGIDO: Usa o Jacarta (roxo dos cartões);*/
+  font-weight: 800;
+  --bs-body-color: var(--jacarta);
+  color: var(--roxo-escuro);
+}
+
