@@ -790,7 +790,9 @@ h4, .section-subtitle {
   justify-content: flex-start;
 }
 
-/* RODAPÉ */
+/* ============================================
+   RODAPÉ FINAL (Versão Definitiva & Responsiva)
+   ============================================ */
 
 .map-frame {
   width: 100%;
@@ -801,61 +803,147 @@ h4, .section-subtitle {
 }
 
 .footer {
-  background: var(--jacarta);
+  background-color: var(--jacarta);
+  padding-top: 60px;
+  padding-bottom: 30px;
   color: white;
-  padding: 60px 0 0;
   font-size: 0.9rem;
-  width: 100%;
 }
 
-.footer-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 30px;
-  text-align: center;
+.footer a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.8);
+  transition: 0.3s;
 }
 
-.footer-apoio-centered {
-  width: 100%;
-  margin-bottom: 20px;
+.footer a:hover {
+  color: var(--amarelo);
+  opacity: 1;
 }
 
-.apoio-label {
-  display: block;
-  font-size: 1rem;
-  margin-bottom: 15px;
-  opacity: 0.8;
+/* Títulos do Rodapé */
+.footer-title {
+  color: white;
+  font-weight: 700;
   text-transform: uppercase;
+  margin-bottom: 20px;
+  font-size: 1rem;
   letter-spacing: 1px;
-  font-weight: 600;
 }
 
-.footer-logos {
+/* Logos e Descrição */
+.footer-logo-main {
+  height: 90px;
+  width: auto;
+  margin-bottom: 20px;
+  display: inline-block;
+}
+
+.footer-desc {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  max-width: 400px;
+  opacity: 0.9;
+  margin-bottom: 0;
+}
+
+/* Container de Apoio */
+.apoio-container {
   display: flex;
-  gap: 30px;
-  justify-content: center;
+  gap: 25px;
   align-items: center;
+  justify-content: flex-start; /* Alinhamento padrão desktop (esquerda) */
   flex-wrap: wrap;
 }
 
-.footer-logos img {
+.apoio-logo {
   height: 50px;
   width: auto;
-  filter: brightness(0) invert(1);
   opacity: 0.9;
+  transition: 0.3s;
 }
 
-.copyright {
-  width: 100%;
-  border-top: 1px solid rgba(255,255,255,0.1);
-  padding: 20px 0;
+.apoio-logo:hover {
+  opacity: 1;
+}
+
+/* Links do Menu */
+.footer-links {
+  line-height: 2.5;
+  font-size: 1rem;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+/* Copyright e Linha */
+.footer-copyright {
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  margin-top: 50px;
+  padding-top: 25px;
   text-align: center;
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   opacity: 0.6;
-  margin-top: 20px;
 }
 
+/* ============================================
+   RESPONSIVIDADE DO RODAPÉ (Mobile)
+   ============================================ */
+@media (max-width: 991px) {
+  .footer {
+    padding-top: 40px;
+    padding-bottom: 20px;
+    /* text-align: center; REMOVIDO: O HTML já usa classes Bootstrap para alinhar */
+  }
+
+  /* Reduz o tamanho do logo principal */
+  .footer-logo-main {
+    height: 60px;
+    margin-bottom: 15px;
+  }
+
+  /* Ajusta texto descritivo */
+  .footer-desc {
+    font-size: 0.85rem;
+    margin: 0 auto 30px auto; /* Centralizado horizontalmente */
+  }
+
+  /* Ajusta títulos */
+  .footer-title {
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+    /* Alinhamento controlado pelo HTML (text-center text-lg-start) */
+  }
+
+  /* Ajusta container de apoio para centralizar no mobile */
+  .apoio-container {
+    justify-content: center; /* Força centro no mobile */
+    gap: 15px;
+    margin-top: 10px;
+  }
+
+  .apoio-logo {
+    height: 40px; /* Logos menores */
+  }
+
+  /* Menu compacto */
+  .footer-links {
+    line-height: 2.2;
+    font-size: 0.85rem;
+  }
+
+  .footer-copyright {
+    margin-top: 30px;
+    font-size: 0.75rem;
+  }
+  
+  /* Pequeno espaçamento extra entre colunas empilhadas */
+  .row.gy-4 > * {
+    margin-bottom: 15px;
+  }
+}
+
+/* Botões Flutuantes (WhatsApp e Sair) - Mantidos e atualizados */
 .fab-whatsapp {
   position: fixed;
   bottom: 20px;
@@ -871,6 +959,13 @@ h4, .section-subtitle {
   font-size: 32px;
   box-shadow: 0 5px 20px rgba(0,0,0,0.2);
   z-index: 100;
+  transition: 0.3s;
+}
+
+.fab-whatsapp:hover {
+  transform: translateY(-5px);
+  background-color: #128C7E;
+  color: white;
 }
 
 .fab-sair {
@@ -889,14 +984,11 @@ h4, .section-subtitle {
   align-items: center;
   gap: 8px;
   transition: 0.3s;
+  text-decoration: none;
 }
 
 .fab-sair:hover {
   transform: translateY(-3px);
   background: #7a1e20;
-}
-
-h3 {
-    font-weight: 800;
-    color: var(--jacarta);
+  color: white;
 }
