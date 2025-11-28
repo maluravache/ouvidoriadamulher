@@ -334,6 +334,14 @@
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
+            // --- NOVO: Funcionalidade de Sair Rápido com a tecla ESC ---
+            document.addEventListener('keydown', function(event) {
+                if (event.key === 'Escape') {
+                    window.location.href = 'https://www.google.com';
+                }
+            });
+            // -----------------------------------------------------------
+            
             // Menu Mobile
             const menuBtn = document.querySelector('.mobile-menu-btn');
             const navLinks = document.querySelector('.nav-links');
