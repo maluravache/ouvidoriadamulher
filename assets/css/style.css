@@ -992,3 +992,185 @@ h4, .section-subtitle {
   background: #7a1e20;
   color: white;
 }
+
+/* ============================================
+   RODAPÉ DEFINITIVO (Mobile Compacto / Desktop Elegante)
+   ============================================ */
+
+.footer {
+  background-color: var(--jacarta);
+  padding-top: 60px;
+  padding-bottom: 30px;
+  color: white;
+  font-size: 0.9rem;
+}
+
+.footer a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.8);
+  transition: 0.3s;
+}
+
+.footer a:hover {
+  color: var(--amarelo);
+  opacity: 1;
+}
+
+/* --- VERSÃO DESKTOP (Padrão) --- */
+.footer-logo-main {
+  height: 90px;
+  width: auto;
+  margin-bottom: 20px;
+  display: inline-block;
+}
+
+.footer-desc {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  max-width: 400px;
+  opacity: 0.9;
+  margin-bottom: 0;
+}
+
+.footer-title {
+  color: white;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+}
+
+.footer-links {
+  line-height: 2.5;
+  font-size: 1rem;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.apoio-container {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.apoio-logo {
+  height: 55px;
+  width: auto;
+  opacity: 0.9;
+  transition: 0.3s;
+}
+
+.apoio-logo:hover {
+  opacity: 1;
+}
+
+.footer-copyright {
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  margin-top: 50px;
+  padding-top: 25px;
+  text-align: center;
+  font-size: 0.85rem;
+  opacity: 0.6;
+}
+
+/* --- VERSÃO MOBILE (Compacta) --- */
+@media (max-width: 991px) {
+  .footer {
+    padding-top: 40px !important;
+    padding-bottom: 20px !important;
+  }
+
+  .footer-logo-main {
+    height: 55px !important; /* Logo menor no celular */
+    margin-bottom: 15px !important;
+  }
+
+  .footer-desc {
+    font-size: 0.85rem !important;
+    margin: 0 auto 30px auto; /* Centralizado */
+  }
+
+  .footer-title {
+    font-size: 0.95rem !important;
+    margin-bottom: 15px !important;
+  }
+
+  .footer-links {
+    line-height: 2.2 !important;
+    font-size: 0.85rem !important;
+  }
+
+  .apoio-container {
+    justify-content: center !important; /* Centraliza logos */
+    gap: 15px !important;
+    margin-top: 10px;
+  }
+
+  .apoio-logo {
+    height: 35px !important; /* Logos de apoio menores */
+  }
+
+  .footer-copyright {
+    margin-top: 30px !important;
+    font-size: 0.75rem !important;
+  }
+  
+  /* Espaçamento entre colunas empilhadas */
+  .footer .row > div {
+    margin-bottom: 15px;
+  }
+}
+
+/* Botões Flutuantes */
+.fab-whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 32px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+  z-index: 100;
+  transition: 0.3s;
+}
+
+.fab-whatsapp:hover {
+  transform: translateY(-5px);
+  background-color: #128C7E;
+  color: white;
+}
+
+.fab-sair {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background: var(--vermelho-discreto);
+  color: white;
+  padding: 12px 20px;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.fab-sair:hover {
+  transform: translateY(-3px);
+  background: #7a1e20;
+  color: white;
+}
