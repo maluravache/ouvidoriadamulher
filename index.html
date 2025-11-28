@@ -24,7 +24,14 @@
 <body>
     <header class="header">
         <div class="container header-row"><a href="#inicio" class="header__logo"><img src="assets/img/logo-branco.png" alt="Logo Ouvidoria da Mulher"></a><button class="mobile-menu-btn" aria-label="Abrir Menu"><i class="bi bi-list"></i></button>
-            <nav class="nav-links"><a href="#inicio">Início</a><a href="#servicos">Serviços</a><a href="#denunciar">Denunciar</a><a href="#leis">Direitos</a><a href="#butique">Butique Solidária</a><a href="#mapa">Contato</a></nav>
+            <nav class="nav-links">
+                <a href="#inicio">Início</a>
+                <a href="#servicos">Serviços</a>
+                <a href="#denunciar">Denunciar</a>
+                <a href="#leis">Direitos</a>
+                <a href="#butique">Butique Solidária</a>
+                <a href="#mapa">Fale Conosco</a>
+            </nav>
         </div>
     </header>
     <section class="hero" id="inicio">
@@ -253,8 +260,9 @@
     </section>
 <section id="mapa" class="section section--bg">
         <div class="container">
-            <h2 class="section-title"><i class="bi bi-chat-text"></i> Fale Conosco</h2>
-            <p class="section-subtitle">Envie sua mensagem diretamente por aqui ou visite-nos.</p>
+            <h2 class="section-title" style="margin-bottom: 10px;">Fale Conosco</h2>
+            
+            <p class="section-subtitle" style="margin-bottom: 30px;">Envie sua mensagem diretamente por aqui ou visite-nos.</p>
 
             <div class="row g-4">
                 <div class="col-md-6">
@@ -267,7 +275,7 @@
                         <form>
                             <div class="mb-3">
                                 <label for="nome" class="form-label">Nome (Opcional)</label>
-                                <input type="text" class="form-control" id="nome" placeholder="Como prefere ser chamada?">
+                                <input type="text" class="form-control" id="nome" placeholder="Como prefere se identificar?">
                             </div>
                             <div class="mb-3">
                                 <label for="contato" class="form-label">Contato</label>
@@ -275,7 +283,7 @@
                             </div>
                             <div class="mb-3">
                                 <label for="mensagem" class="form-label">Mensagem</label>
-                                <textarea class="form-control" id="mensagem" rows="4" required placeholder="Escreva aqui seu relato ou dúvida..."></textarea>
+                                <textarea class="form-control" id="mensagem" rows="4" required placeholder="Escreva aqui sua dúvida ou relato."></textarea>
                             </div>
                             <button type="submit" class="btn-cta" style="width: 100%; justify-content: center; border:none; cursor: pointer;">
                                 Enviar <i class="bi bi-send"></i>
@@ -298,7 +306,6 @@
             </div>
         </div>
     </section>
-
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
