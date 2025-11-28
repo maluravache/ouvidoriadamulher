@@ -253,62 +253,34 @@
     </section>
 <section id="mapa" class="section section--bg">
         <div class="container">
-            
-            <h2 class="section-title" style="display: flex; align-items: center; justify-content: center; gap: 10px;">
-                <i class="bi bi-chat-square-text" style="font-size: 0.9em;"></i> 
-                Contato
-            </h2>
+            <h2 class="section-title"><i class="bi bi-chat-text"></i> Fale Conosco</h2>
+            <p class="section-subtitle">Envie sua mensagem diretamente por aqui ou visite-nos.</p>
 
-            <div class="row">
+            <div class="row g-4">
                 <div class="col-md-6">
-                    <div class="content-box">
-                        <h3><i class="bi bi-chat-text"></i> Fale Conosco</h3>
+                    <div class="content-box" style="height: 100%;">
+                        <h3><i class="bi bi-envelope"></i> Envie uma Mensagem</h3>
+                        <p style="font-size: 0.9rem; margin-bottom: 20px; color: #666;">
+                            Se preferir, preencha o formulário abaixo. Seus dados serão mantidos em total sigilo.
+                        </p>
                         
-                        <div class="item-detalhe">
-                            <strong style="color: #55214b; margin-bottom: 15px; display: block; font-size: 1.1rem;">
-                                Ouvidoria da Mulher
-                            </strong>
-
-                            <p>
-                                <a href="https://maps.app.goo.gl/seuLinkRealAqui" target="_blank" style="text-decoration: none; color: inherit; display: flex; gap: 12px; align-items: flex-start;">
-                                    <i class="bi bi-geo-alt" style="color: #422e6a; font-size: 1.2rem; margin-top: 2px;"></i> 
-                                    <span>Câmara Municipal, Av. Goiás, 2001, Setor Central</span>
-                                </a>
-                            </p>
-                            
-                            <p style="display: flex; gap: 12px; align-items: flex-start;">
-                                <i class="bi bi-clock" style="color: #422e6a; font-size: 1.2rem; margin-top: 2px;"></i> 
-                                <span>Segunda a sexta, das 8h às 18h</span>
-                            </p>
-                            
-                            <p>
-                                <a href="tel:62982222434" style="text-decoration: none; color: inherit; display: flex; gap: 12px; align-items: flex-start;">
-                                    <i class="bi bi-telephone" style="color: #422e6a; font-size: 1.2rem; margin-top: 2px;"></i> 
-                                    <span>(62) 98222-2434</span>
-                                </a>
-                            </p>
-                            
-                            <p>
-                                <a href="mailto:ouvidoriadamulhercamara@gmail.com" style="text-decoration: none; color: inherit; display: flex; gap: 12px; align-items: flex-start; word-break: break-all;">
-                                    <i class="bi bi-envelope" style="color: #422e6a; font-size: 1.2rem; margin-top: 2px;"></i> 
-                                    <span>ouvidoriadamulhercamara@gmail.com</span>
-                                </a>
-                            </p>
-
-                            <p>
-                                <a href="https://instagram.com/ouvidoriadamulher" target="_blank" style="text-decoration: none; color: inherit; display: flex; gap: 12px; align-items: flex-start;">
-                                    <i class="bi bi-instagram" style="color: #422e6a; font-size: 1.2rem; margin-top: 2px;"></i> 
-                                    <span>@ouvidoriadamulher</span>
-                                </a>
-                            </p>
-                        </div>
-                        
-                        <div style="margin-top: 30px; text-align: left;">
-                            <a href="https://wa.me/5562982222434" target="_blank" style="background-color: #fbcf42; color: #422e6a; padding: 12px 35px; border-radius: 50px; text-decoration: none; font-weight: 800; display: inline-flex; align-items: center; gap: 10px; transition: 0.3s; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
-                                <i class="bi bi-whatsapp" style="font-size: 1.3rem;"></i> 
-                                Fale com a Ouvidoria
-                            </a>
-                        </div>
+                        <form>
+                            <div class="mb-3">
+                                <label for="nome" class="form-label">Nome (Opcional)</label>
+                                <input type="text" class="form-control" id="nome" placeholder="Como prefere ser chamada?">
+                            </div>
+                            <div class="mb-3">
+                                <label for="contato" class="form-label">Contato</label>
+                                <input type="text" class="form-control" id="contato" required placeholder="E-mail ou Telefone para retorno">
+                            </div>
+                            <div class="mb-3">
+                                <label for="mensagem" class="form-label">Mensagem</label>
+                                <textarea class="form-control" id="mensagem" rows="4" required placeholder="Escreva aqui seu relato ou dúvida..."></textarea>
+                            </div>
+                            <button type="submit" class="btn-cta" style="width: 100%; justify-content: center; border:none; cursor: pointer;">
+                                Enviar <i class="bi bi-send"></i>
+                            </button>
+                        </form>
                     </div>
                 </div>
 
@@ -317,13 +289,15 @@
                         src="https://maps.google.com/maps?q=C%C3%A2mara+Municipal+de+Goi%C3%A2nia+Av.+Goi%C3%A1s+2001&t=&z=15&ie=UTF8&iwloc=&output=embed" 
                         width="100%" 
                         height="100%" 
-                        style="border:0; min-height: 400px; border-radius: 20px;" 
+                        style="border:0; min-height: 450px; border-radius: 20px;" 
                         allowfullscreen="" 
                         loading="lazy" 
                         referrerpolicy="no-referrer-when-downgrade">
                     </iframe>
                 </div>
-            </div> </div> </section>
+            </div>
+        </div>
+    </section>
 
     <footer class="footer">
         <div class="container">
