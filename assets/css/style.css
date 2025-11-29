@@ -735,6 +735,11 @@ h4, .section-subtitle {
   margin-top: 3px;
 }
 
+.locations-dropdown--butique summary .icon {
+    display: flex;
+    align-items: center;
+}
+
 /* Botão */
 .btn-butique-doar {
   margin-top: 15px;
