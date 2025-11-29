@@ -70,7 +70,20 @@ h2, .section-title {
   margin-bottom: 30px;
 }
 
-/* H3: SUBTÍTULOS DENTRO DOS CARDS (EX: ACOLHIMENTO PSICOLÓGICO, LEI MARIA DA PENHA) */
+/* H3: Títulos dentro dos cards (Leis, Serviços, etc.) */
+h3 {
+  color: var(--roxo-escuro);
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+/* Título menor (usado em "Canais de Emergência") */
+.section-title--small {
+  color: var(--roxo-escuro);
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
 
 /* H4 e SECTION-SUBTITLE: SUBTÍTULOS MENORES/TEXTO EXPLICATIVO GERAL */
 
