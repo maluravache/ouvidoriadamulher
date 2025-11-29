@@ -597,7 +597,9 @@ h4, .section-subtitle {
   font-size: 1.1rem;
 }
 
-/* LEIS & BUTIQUE */
+/* ============================================
+   SECÇÃO DIREITOS (LEIS)
+   ============================================ */
 
 .leis-grid {
   display: grid;
@@ -624,98 +626,9 @@ h4, .section-subtitle {
   font-weight: 700;
 }
 
-.butique-desc {
-  text-align: center;
-  max-width: 800px;
-  margin: 0 auto 40px;
-}
-
-.butique-wrapper {
-  background: white;
-  padding: 30px;
-  border-radius: var(--radius);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-}
-
-.donation-list {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-bottom: 30px;
-}
-
-.donation-list li {
-  background: #f0ebf3;
-  color: var(--jacarta);
-  padding: 5px 15px;
-  border-radius: 50px;
-  font-size: 0.9rem;
-  font-weight: 600;
-}
-
-.butique-actions {
-  display: flex;
-  gap: 20px;
-  align-items: flex-start;
-  flex-wrap: wrap;
-}
-
-.locations-dropdown {
-  flex: 1;
-  border: 1px solid #eee;
-  padding: 15px;
-  border-radius: 12px;
-}
-
-.locations-dropdown summary {
-  font-weight: 700;
-  color: var(--jacarta);
-  cursor: pointer;
-  list-style: none;
-  display: flex;
-  justify-content: space-between;
-}
-
-.btn-butique-doar {
-  flex: 0 0 auto;
-  margin-top: 0;
-}
-
-/* Estilo Final para os Endereços da Butique */
-
-.locations-dropdown .loc-item {
-  background: var(--paper);
-  border-radius: 8px;
-  padding: 12px;
-  font-size: 0.95rem;
-  margin-top: 10px;
-}
-
-.locations-dropdown .loc-item strong {
-  color: var(--roxo-escuro);
-  display: block;
-  margin-bottom: 5px;
-}
-
-/* Correção do Alinhamento dos Endereços */
-
-.locations-dropdown .loc-item p {
-  color: var(--text-light);
-  display: flex;
-  align-items: flex-start;
-  gap: 8px;
-  margin: 0;
-}
-
-.locations-dropdown .loc-item i {
-  color: var(--jacarta);
-  flex-shrink: 0;
-  font-size: 1.1rem;
-  margin-top: 1px;
-}
-
-/* Butique Solidária (LAYOUT E ESTILO) */
+/* ============================================
+   SECÇÃO BUTIQUE SOLIDÁRIA
+   ============================================ */
 
 .butique-grid {
   display: grid;
@@ -731,20 +644,15 @@ h4, .section-subtitle {
   }
 }
 
-/* Duas colunas no PC */
-
-/* Estilo da coluna de Texto */
-
+/* Coluna de Texto */
 .butique-info-text {
   padding: 30px;
   background: var(--paper);
   border-radius: var(--radius);
-  /*NOVO: Centraliza o título e o parágrafo;*/
   text-align: center;
 }
 
-/* Estilo da coluna de Ações */
-
+/* Coluna de Ações (Card Branco) */
 .butique-actions-block {
   padding: 30px;
   border-radius: var(--radius);
@@ -752,27 +660,44 @@ h4, .section-subtitle {
   box-shadow: 0 5px 15px rgba(0,0,0,0.05);
 }
 
-/* Padrão para ícones nos títulos (Centralizar ícone + texto) */
-
+/* Título "O que doar?" (Corrigido para Roxo) */
 .butique-actions-block h3 {
   margin-bottom: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
+  color: var(--roxo-escuro); /* CORRIGIDO */
 }
 
-/* Dropdown de Pontos de Coleta (Ajuste para a setinha) */
-
-/* Correção para que o ícone do browser não apareça */
-
-.locations-dropdown--butique summary::marker, .locations-dropdown--butique summary::-webkit-details-marker {
-  content: '';
-  display: none;
+/* Lista de Doações (Balões) */
+.donation-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 30px;
+  justify-content: center; /* CORRIGIDO: Centraliza os balões */
 }
 
-/* ATENÇÃO: Esta é a versão que deve ser usada, com as regras combinadas */
+.donation-list li {
+  background: #f0ebf3;
+  color: var(--jacarta);
+  padding: 5px 15px;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
 
+/* Dropdown de Endereços */
+.locations-dropdown {
+  flex: 1;
+  border: 1px solid #eee;
+  padding: 15px;
+  border-radius: 12px;
+}
+
+/* Título do Dropdown (Setinha e Texto) */
 .locations-dropdown--butique summary {
   cursor: pointer;
   color: var(--roxo-escuro);
@@ -784,10 +709,53 @@ h4, .section-subtitle {
   list-style: none;
   display: flex;
   align-items: center;
-  /*NOVO: Aqui garantimos o espaçamento de 10px;*/
   gap: 10px;
-  /*Nota: Se a seta estiver no início, use flex-start para alinhar à esquerda;*/
   justify-content: flex-start;
+}
+
+/* Remove a seta padrão feia do navegador */
+.locations-dropdown--butique summary::marker, 
+.locations-dropdown--butique summary::-webkit-details-marker {
+  content: '';
+  display: none;
+}
+
+/* Itens da Lista de Endereços */
+.locations-dropdown .loc-item {
+  background: var(--paper);
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 0.95rem;
+  margin-top: 10px;
+}
+
+.locations-dropdown .loc-item strong {
+  color: var(--roxo-escuro);
+  display: block;
+  margin-bottom: 5px;
+}
+
+.locations-dropdown .loc-item p {
+  color: var(--text-light); /* Nota: Verifica se tens esta variável, senão usa #666 */
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin: 0;
+}
+
+.locations-dropdown .loc-item i {
+  color: var(--jacarta);
+  flex-shrink: 0;
+  font-size: 1.1rem;
+  margin-top: 1px;
+}
+
+/* Botão Quero Doar (Com margem e alinhamento corrigidos) */
+.btn-butique-doar {
+  flex: 0 0 auto;
+  margin-top: 25px; /* CORRIGIDO: Margem que estava no HTML */
+  width: 100%;      /* Deixa o botão largo e bonito no card */
+  justify-content: center;
 }
 
 /* ============================================
