@@ -787,15 +787,15 @@ details[open] summary i {
 }
 
 /* ============================================
-   RODAPÉ DEFINITIVO (Mobile Compacto / Desktop Elegante)
+   RODAPÉ FINAL (Compacto, Logo Grande e Responsivo)
    ============================================ */
 
 .footer {
   background-color: var(--jacarta);
-  padding-top: 60px;
-  padding-bottom: 30px;
+  padding-top: 30px;    /* Reduzi de 60px para 30px */
+  padding-bottom: 15px; /* Reduzi de 30px para 15px */
   color: white;
-  font-size: 0.9rem;
+  font-size: 0.85rem;   /* Fonte ligeiramente menor */
 }
 
 .footer a {
@@ -811,9 +811,9 @@ details[open] summary i {
 
 /* --- VERSÃO DESKTOP (Padrão) --- */
 .footer-logo-main {
-  height: 90px;
+  height: 85px !important; /* Ajustado para 85px (Grande, mas poupa espaço) */
   width: auto;
-  margin-bottom: 20px;
+  margin-bottom: 10px;     /* Menos margem abaixo do logo */
   display: inline-block;
 }
 
@@ -829,14 +829,15 @@ details[open] summary i {
   color: white;
   font-weight: 700;
   text-transform: uppercase;
-  margin-bottom: 25px;
-  font-size: 1.1rem;
+  margin-bottom: 15px; /* Reduzi de 25px para 15px */
+  font-size: 1rem;
   letter-spacing: 1px;
+  margin-top: 10px;    /* Alinha com o topo do logo */
 }
 
 .footer-links {
-  line-height: 2.5;
-  font-size: 1rem;
+  line-height: 2.0; /* Reduzi de 2.5 para juntar os links */
+  font-size: 0.95rem;
   margin-bottom: 0;
   padding-left: 0;
   list-style: none;
@@ -851,7 +852,7 @@ details[open] summary i {
 }
 
 .apoio-logo {
-  height: 55px;
+  height: 50px; /* Reduzi levemente de 55px para 50px para acompanhar a harmonia */
   width: auto;
   opacity: 0.9;
   transition: 0.3s;
@@ -863,56 +864,55 @@ details[open] summary i {
 
 .footer-copyright {
   border-top: 1px solid rgba(255, 255, 255, 0.15);
-  margin-top: 50px;
-  padding-top: 25px;
+  margin-top: 25px;  /* Reduzi de 50px para 25px (muito mais compacto) */
+  padding-top: 15px; /* Reduzi de 25px para 15px */
   text-align: center;
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   opacity: 0.6;
 }
 
-/* --- VERSÃO MOBILE (Compacta) --- */
+/* --- VERSÃO MOBILE (Ajustada para o novo tamanho) --- */
 @media (max-width: 991px) {
   .footer {
-    padding-top: 40px !important;
+    padding-top: 30px !important;    /* Ajustado para ser igual ao Desktop */
     padding-bottom: 20px !important;
   }
 
   .footer-logo-main {
-    height: 55px !important; /* Logo menor no celular */
+    height: 60px !important; /* No telemóvel mantemos um pouco menor para não ocupar o ecrã todo */
     margin-bottom: 15px !important;
   }
 
   .footer-desc {
     font-size: 0.85rem !important;
-    margin: 0 auto 30px auto; /* Centralizado */
+    margin: 0 auto 20px auto;
   }
 
   .footer-title {
     font-size: 0.95rem !important;
-    margin-bottom: 15px !important;
+    margin-bottom: 10px !important;
   }
 
   .footer-links {
-    line-height: 2.2 !important;
+    line-height: 2.0 !important;
     font-size: 0.85rem !important;
   }
 
   .apoio-container {
-    justify-content: center !important; /* Centraliza logos */
+    justify-content: center !important;
     gap: 15px !important;
     margin-top: 10px;
   }
 
   .apoio-logo {
-    height: 35px !important; /* Logos de apoio menores */
+    height: 35px !important;
   }
 
   .footer-copyright {
-    margin-top: 30px !important;
+    margin-top: 20px !important;
     font-size: 0.75rem !important;
   }
   
-  /* Espaçamento entre colunas empilhadas */
   .footer .row > div {
     margin-bottom: 15px;
   }
