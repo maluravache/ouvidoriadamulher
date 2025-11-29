@@ -27,9 +27,8 @@ body {
   color: var(--text);
   background: var(--paper);
   line-height: 1.6;
-  padding: 0;
   margin: 0;
-  padding-top: 90px;
+  padding: 90px 0 0;
 }
 
 img {
@@ -71,6 +70,11 @@ h2, .section-title {
 }
 
 /* H3: SUBTÍTULOS DENTRO DOS CARDS (EX: ACOLHIMENTO PSICOLÓGICO, LEI MARIA DA PENHA) */
+
+h3 {
+  color: var(--roxo-escuro);
+  font-weight: 700;
+}
 
 /* H4 e SECTION-SUBTITLE: SUBTÍTULOS MENORES/TEXTO EXPLICATIVO GERAL */
 
