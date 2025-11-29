@@ -639,6 +639,13 @@ h4, .section-subtitle {
   font-weight: 700;
 }
 
+.lei-card h3 {
+  font-size: 1.25rem;        /* Tamanho da fonte ajustado */
+  color: var(--roxo-escuro); /* Alterado para Roxo Escuro */
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
 /* ============================================
    SECÇÃO BUTIQUE SOLIDÁRIA — VERSÃO FINAL
    ============================================ */
