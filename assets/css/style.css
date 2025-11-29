@@ -782,6 +782,30 @@ h4, .section-subtitle {
   box-shadow: 0 10px 20px rgba(251, 207, 66, 0.3);
 }
 
+/* --- Correções finais de layout da Butique --- */
+
+.butique-grid {
+  align-items: center !important; /* alinha texto e cartão na mesma altura */
+}
+
+.donation-list {
+  margin-bottom: 20px !important; /* ajusta espaço do botão */
+}
+
+.btn-butique-doar {
+  margin-top: 15px !important; /* evita colar no dropdown */
+}
+
+.locations-dropdown .loc-item p {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* garante alinhamento ícone + texto */
+}
+
+.locations-dropdown .loc-item i {
+  margin-top: 3px; /* corrige posição vertical do ícone */
+}
+
 /* ============================================
    RODAPÉ DEFINITIVO (Mobile Compacto / Desktop Elegante)
    ============================================ */
