@@ -156,9 +156,7 @@ h4, .section-subtitle {
   .mobile-menu-btn {
     display: block;
   }
-}
 
-@media (max-width: 900px) {
   .nav-links {
     display: none;
     position: absolute;
@@ -170,15 +168,11 @@ h4, .section-subtitle {
     padding: 20px;
     box-shadow: 0 10px 20px rgba(0,0,0,0.2);
   }
-}
 
-@media (max-width: 900px) {
   .nav-links.active {
     display: flex;
   }
-}
 
-@media (max-width: 900px) {
   .header__logo img {
     height: 60px;
   }
@@ -810,38 +804,6 @@ details[open] summary i {
 }
 
 /* --- VERSÃO DESKTOP (Padrão) --- */
-.footer-logo-main {
-  height: 85px !important; /* Ajustado para 85px (Grande, mas poupa espaço) */
-  width: auto;
-  margin-bottom: 10px;     /* Menos margem abaixo do logo */
-  display: inline-block;
-}
-
-.footer-desc {
-  font-size: 0.95rem;
-  line-height: 1.6;
-  max-width: 400px;
-  opacity: 0.9;
-  margin-bottom: 0;
-}
-
-.footer-title {
-  color: white;
-  font-weight: 700;
-  text-transform: uppercase;
-  margin-bottom: 15px; /* Reduzi de 25px para 15px */
-  font-size: 1rem;
-  letter-spacing: 1px;
-  margin-top: 10px;    /* Alinha com o topo do logo */
-}
-
-.footer-links {
-  line-height: 2.0; /* Reduzi de 2.5 para juntar os links */
-  font-size: 0.95rem;
-  margin-bottom: 0;
-  padding-left: 0;
-  list-style: none;
-}
 
 .apoio-container {
   display: flex;
@@ -849,73 +811,6 @@ details[open] summary i {
   align-items: center;
   justify-content: flex-start;
   flex-wrap: wrap;
-}
-
-.apoio-logo {
-  height: 50px; /* Reduzi levemente de 55px para 50px para acompanhar a harmonia */
-  width: auto;
-  opacity: 0.9;
-  transition: 0.3s;
-}
-
-.apoio-logo:hover {
-  opacity: 1;
-}
-
-.footer-copyright {
-  border-top: 1px solid rgba(255, 255, 255, 0.15);
-  margin-top: 25px;  /* Reduzi de 50px para 25px (muito mais compacto) */
-  padding-top: 15px; /* Reduzi de 25px para 15px */
-  text-align: center;
-  font-size: 0.8rem;
-  opacity: 0.6;
-}
-
-/* --- VERSÃO MOBILE (Ajustada para o novo tamanho) --- */
-@media (max-width: 991px) {
-  .footer {
-    padding-top: 30px !important;    /* Ajustado para ser igual ao Desktop */
-    padding-bottom: 20px !important;
-  }
-
-  .footer-logo-main {
-    height: 60px !important; /* No telemóvel mantemos um pouco menor para não ocupar o ecrã todo */
-    margin-bottom: 15px !important;
-  }
-
-  .footer-desc {
-    font-size: 0.85rem !important;
-    margin: 0 auto 20px auto;
-  }
-
-  .footer-title {
-    font-size: 0.95rem !important;
-    margin-bottom: 10px !important;
-  }
-
-  .footer-links {
-    line-height: 2.0 !important;
-    font-size: 0.85rem !important;
-  }
-
-  .apoio-container {
-    justify-content: center !important;
-    gap: 15px !important;
-    margin-top: 10px;
-  }
-
-  .apoio-logo {
-    height: 35px !important;
-  }
-
-  .footer-copyright {
-    margin-top: 20px !important;
-    font-size: 0.75rem !important;
-  }
-  
-  .footer .row > div {
-    margin-bottom: 15px;
-  }
 }
 
 /* Botões Flutuantes */
@@ -966,4 +861,159 @@ details[open] summary i {
   transform: translateY(-3px);
   background: #7a1e20;
   color: white;
+}
+
+/* ============================================
+   CLASSES UTILITÁRIAS E REFATORAÇÃO
+   ============================================ */
+
+.bg-roxo-escuro {
+  background: var(--roxo-escuro);
+}
+
+.bg-roxo-claro {
+  background: var(--roxo-claro);
+}
+
+.bg-amarelo-texto-roxo {
+  background: var(--amarelo);
+  color: var(--roxo-escuro);
+}
+
+.text-roxo-escuro {
+  color: var(--roxo-escuro) !important;
+}
+
+.mt-50-center {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.mb-10 {
+  margin-bottom: 10px;
+}
+
+.mb-30 {
+  margin-bottom: 30px;
+}
+
+.form-description {
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+  color: #666;
+}
+
+.btn-submit-full {
+  width: 100%;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.map-frame {
+  border: 0;
+  min-height: 450px;
+  border-radius: 20px;
+}
+
+.footer-logo-img {
+  height: 80px;
+  width: auto;
+  margin-bottom: 20px;
+}
+
+.footer-text {
+  font-size: 0.95rem;
+  opacity: 0.9;
+  line-height: 1.6;
+  max-width: 350px;
+}
+
+.footer-heart-icon {
+  font-size: 0.9rem;
+  color: white;
+}
+
+.footer-section-title {
+  color: white;
+  font-weight: 700;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.footer-list {
+  line-height: 2.2;
+}
+
+.footer-link {
+  text-decoration: none;
+  color: white;
+  opacity: 0.8;
+}
+
+.footer-partner-logo {
+  height: 50px;
+  width: auto;
+  opacity: 0.9;
+}
+
+.footer-divider {
+  border-color: rgba(255,255,255,0.15);
+  margin: 50px 0 25px;
+}
+
+.footer-copyright-text {
+  font-size: 0.85rem;
+  opacity: 0.6;
+}
+
+@media (max-width: 991px) {
+  .footer {
+    padding-top: 30px;
+    padding-bottom: 20px;
+  }
+
+  .footer-logo-img {
+    height: 60px;
+    margin-bottom: 15px;
+  }
+
+  .footer-text {
+    font-size: 0.85rem;
+    margin: 0 auto 20px auto;
+  }
+
+  .footer-section-title {
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+  }
+
+  .footer-list {
+    line-height: 2.0;
+    font-size: 0.85rem;
+  }
+
+  .apoio-container {
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+  }
+
+  .footer-partner-logo {
+    height: 35px;
+  }
+
+  .footer-copyright-text {
+    margin-top: 20px;
+    font-size: 0.75rem;
+  }
+  
+  .footer .row > div {
+    margin-bottom: 15px;
+  }
 }
