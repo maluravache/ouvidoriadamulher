@@ -1,5 +1,5 @@
 /* ============================================
-   ESTILO GERAL - VERSÃO CORRIGIDA FINAL
+   ESTILO GERAL
    ============================================ */
 
 :root {
@@ -31,6 +31,8 @@ body {
   margin: 0;
   padding-top: 90px;
   overflow-x: hidden;
+  width: 100%;
+  position: relative;
 }
 
 img {
@@ -44,10 +46,10 @@ a {
   transition: 0.3s;
 }
 
-/* Correção para menu fixo não cortar âncoras */
-
 html {
   scroll-padding-top: 100px;
+  overflow-x: hidden; /* TRAVA A TELA NO HTML */
+  width: 100%;
 }
 
 /* ============================================
