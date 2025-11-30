@@ -110,8 +110,12 @@ h4, .section-subtitle {
   width: 100%;
   padding: 15px 0;
   z-index: 1000;
-  background: var(--jacarta);
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  /* ALTERADO: Efeito Glassmorphism (Vidro) */
+  background: rgba(66, 46, 106, 0.95); /* Cor Jacarta com 95% de opacidade */
+  backdrop-filter: blur(10px);         /* Desfoque do fundo */
+  -webkit-backdrop-filter: blur(10px); /* Compatibilidade Safari */
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1); /* Sombra mais suave */
+  border-bottom: 1px solid rgba(255,255,255,0.05); /* Borda sutil */
 }
 
 .header-row {
@@ -491,8 +495,16 @@ h4, .section-subtitle {
   background: var(--white);
   padding: 25px;
   border-radius: 15px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
   border-top: 5px solid var(--amarelo);
+  /* ALTERADO: Sombras modernas e transição */
+  box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* NOVO: Efeito ao passar o mouse (Levantar) */
+.service-card-detailed:hover, .content-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px -5px rgba(0, 0, 0, 0.12);
 }
 
 .service-card-detailed h3, .content-box h3 {
@@ -620,7 +632,13 @@ h4, .section-subtitle {
   padding: 20px;
   border-radius: 12px;
   border-left: 5px solid var(--amarelo);
-  box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+  box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.lei-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px -5px rgba(0, 0, 0, 0.12);
 }
 
 .btn-cta-secondary {
