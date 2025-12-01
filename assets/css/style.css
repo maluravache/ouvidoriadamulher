@@ -65,13 +65,24 @@ h1 {
   font-weight: 800;
 }
 
-/* H2 e SECTION-TITLE: TÍTULOS DE SECÇÃO (EX: QUEM SOMOS, SERVIÇOS) */
+/* ============================================
+   ESTILO DOS TÍTULOS (H2) - V5 (LIMPO E ORIGINAL)
+   ============================================ */
 
 h2, .section-title {
   color: var(--jacarta);
-  font-weight: 800;
+  font-weight: 700;        /* Bold padrão, sem ser exagerado */
+  font-size: 2rem;         /* Tamanho bom para leitura */
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
+  text-transform: none;    /* Remove o CAPS LOCK (deixa a escrita normal) */
+  letter-spacing: normal;  /* Remove espaçamento forçado */
+  position: relative;
+}
+
+/* GARANTIA: Remove qualquer traço que tenha sobrado */
+.section-title::after {
+  display: none !important;
 }
 
 /* H3: Títulos dentro dos cards (Leis, Serviços, etc.) */
