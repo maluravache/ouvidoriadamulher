@@ -376,82 +376,107 @@
         </div>
     </section>
 
-    <section id="butique" class="section">
+   <section id="butique" class="section">
         <div class="container">
             <h2 class="section-title">Butique Solidária</h2>
-
-            <div class="butique-grid">
-                <!-- COLUNA ESQUERDA -->
-                <div class="butique-info-text">
-                    <p>
-                        A Butique Solidária Giselle Evangelista Gonçalves é uma parceria entre
-                        a Ouvidoria da Mulher da Câmara Municipal de Goiânia e da vereadora Aava
-                        Santiago para suprir necessidades básicas de famílias vítimas de violência
-                        de gênero em situação de vulnerabilidade social. O projeto promove dignidade
-                        e autoestima.
-                    </p>
-                </div>
-
-                <!-- COLUNA DIREITA -->
-                <div class="butique-actions-block">
-                    <h3 class="butique-title">
-                        <i class="bi bi-box2-heart"></i> O que doar?
-                    </h3>
-
-                    <ul class="donation-list">
-                        <li>Roupas femininas</li>
-                        <li>Calçados</li>
-                        <li>Bolsas</li>
-                        <li>Higiene</li>
-                        <li>Infantil</li>
-                    </ul>
-
-                    <details class="locations-dropdown locations-dropdown--butique">
-                        <summary>
-                            <i class="bi bi-chevron-right"></i> Ver Pontos de Coleta
-                        </summary>
-
-                        <div class="location-list">
-                            <div class="loc-item">
-                                <strong>Câmara Municipal de Goiânia – Ouvidoria da Mulher</strong>
-                                <p><i class="bi bi-geo-alt"></i> Av. Goiás, 2001, Setor Central</p>
+            
+            <div class="row g-5 align-items-start">
+                
+                <div class="col-lg-6">
+                    <div id="carouselButique" class="carousel slide shadow rounded-4 overflow-hidden" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselButique" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselButique" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselButique" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        </div>
+                        
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="https://placehold.co/600x350/55214b/FFF?text=Foto+Butique+1" class="d-block w-100" alt="Interior da Butique">
                             </div>
-
-                            <div class="loc-item">
-                                <strong>Clube de Costura</strong>
-                                <p><i class="bi bi-geo-alt"></i> Av. Contorno, 165, Piso G3</p>
+                            <div class="carousel-item">
+                                <img src="https://placehold.co/600x350/7e144f/FFF?text=Foto+Butique+2" class="d-block w-100" alt="Roupas Organizadas">
                             </div>
-
-                            <div class="loc-item">
-                                <strong>Orquidário Goiás</strong>
-                                <p><i class="bi bi-geo-alt"></i> Rua C-149, 1050, Jd. América</p>
-                            </div>
-
-                            <div class="loc-item">
-                                <strong>Sempre Bella</strong>
-                                <p><i class="bi bi-geo-alt"></i> Rua 122, 139, Setor Sul</p>
-                            </div>
-
-                            <div class="loc-item">
-                                <strong>Sol Cândido</strong>
-                                <p><i class="bi bi-geo-alt"></i> Rua S-5, 601, Setor Bela Vista</p>
-                            </div>
-
-                            <div class="loc-item">
-                                <strong>Gailê</strong>
-                                <p><i class="bi bi-geo-alt"></i> Rua 83F, 66, Setor Sul</p>
-                            </div>
-
-                            <div class="loc-item">
-                                <strong>Portal Sul Shopping</strong>
-                                <p><i class="bi bi-geo-alt"></i> Rodovia GO-040, Aparecida de Goiânia</p>
+                            <div class="carousel-item">
+                                <img src="https://placehold.co/600x350/422e6a/FFF?text=Foto+Butique+3" class="d-block w-100" alt="Atendimento">
                             </div>
                         </div>
-                    </details>
+                        
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselButique" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Anterior</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselButique" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Próximo</span>
+                        </button>
+                    </div>
+                </div>
 
-                    <a href="https://wa.me/5562999793080" class="btn-cta btn-butique-doar" target="_blank" rel="noopener noreferrer">
-                        <i class="bi bi-whatsapp"></i> Quero Doar
-                    </a>
+                <div class="col-lg-6">
+                    <div class="butique-content-wrapper">
+                        <div class="mb-4">
+                            <p class="butique-intro-text">
+                                A Butique Solidária Giselle Evangelista Gonçalves é uma parceria entre a Ouvidoria da Mulher e a vereadora Aava Santiago. O projeto supre necessidades básicas e promove dignidade para famílias em vulnerabilidade.
+                            </p>
+                        </div>
+
+                        <div class="butique-actions-block">
+                            <h3 class="butique-title text-center justify-content-center">
+                                <i class="bi bi-box2-heart"></i> O que doar?
+                            </h3>
+
+                            <ul class="donation-list">
+                                <li>Roupas femininas</li>
+                                <li>Calçados</li>
+                                <li>Bolsas</li>
+                                <li>Higiene</li>
+                                <li>Infantil</li>
+                            </ul>
+
+                            <details class="locations-dropdown locations-dropdown--butique">
+                                <summary>
+                                    <div class="d-flex align-items-center gap-2">
+                                        <i class="bi bi-chevron-right arrow-icon"></i> 
+                                        <span>Ver Pontos de Coleta</span>
+                                    </div>
+                                </summary>
+
+                                <div class="location-list">
+                                    <div class="loc-item">
+                                        <strong>Câmara Municipal de Goiânia</strong>
+                                        <p><i class="bi bi-geo-alt"></i> Av. Goiás, 2001, Setor Central</p>
+                                    </div>
+                                    <div class="loc-item">
+                                        <strong>Clube de Costura</strong>
+                                        <p><i class="bi bi-geo-alt"></i> Av. Contorno, 165, Piso G3</p>
+                                    </div>
+                                    <div class="loc-item">
+                                        <strong>Orquidário Goiás</strong>
+                                        <p><i class="bi bi-geo-alt"></i> Rua C-149, 1050, Jd. América</p>
+                                    </div>
+                                    <div class="loc-item">
+                                        <strong>Sempre Bella</strong>
+                                        <p><i class="bi bi-geo-alt"></i> Rua 122, 139, Setor Sul</p>
+                                    </div>
+                                    <div class="loc-item">
+                                        <strong>Sol Cândido</strong>
+                                        <p><i class="bi bi-geo-alt"></i> Rua S-5, 601, Setor Bela Vista</p>
+                                    </div>
+                                    <div class="loc-item">
+                                        <strong>Gailê</strong>
+                                        <p><i class="bi bi-geo-alt"></i> Rua 83F, 66, Setor Sul</p>
+                                    </div>
+                                    <div class="loc-item">
+                                        <strong>Portal Sul Shopping</strong>
+                                        <p><i class="bi bi-geo-alt"></i> Rodovia GO-040, Aparecida de Goiânia</p>
+                                    </div>
+                                </div>
+                            </details> <a href="https://wa.me/5562999793080" class="btn-cta btn-butique-doar mt-3" target="_blank" rel="noopener noreferrer">
+                                <i class="bi bi-whatsapp"></i> Quero Doar
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

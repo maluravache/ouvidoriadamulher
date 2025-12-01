@@ -689,143 +689,189 @@ h4, .section-subtitle {
 }
 
 /* ============================================
-   SECÇÃO BUTIQUE SOLIDÁRIA — VERSÃO FINAL
+   DESIGN REFORMULADO V2 - BUTIQUE SOLIDÁRIA
    ============================================ */
 
-.butique-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 50px;
-    max-width: 1100px;
-    margin: 0 auto;
-    align-items: center;
-}
-
-@media (max-width: 768px) {
-    .butique-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-        padding: 0 10px;
-    }
-}
-
-.butique-info-text {
-    padding: 20px;
-    text-align: center;
-}
-
-.butique-info-text p {
-    font-size: 1.05rem;
-    line-height: 1.8;
+/* Texto introdutório maior */
+.butique-intro-text {
+    font-size: 1.15rem; /* Aumentei o tamanho */
+    line-height: 1.7;
     color: var(--text);
-    opacity: 0.9;
+    margin-bottom: 20px;
 }
 
+/* Estilo do Carrossel - Reduzi altura */
+#carouselButique {
+    border: 4px solid #fff;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    max-width: 100%; /* Garante responsividade */
+}
+
+/* Imagens menores na altura */
+.carousel-item img {
+    height: 320px; /* Reduzido de 450px para 320px para ficar mais compacto */
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Card de Ações (Direita) */
 .butique-actions-block {
-    padding: 40px;
-    border-radius: 20px;
     background: var(--white);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
-    border: 1px solid rgba(0,0,0,0.02);
+    padding: 30px;
+    border-radius: 20px;
+    border: 1px solid rgba(0,0,0,0.03);
+    box-shadow: 0 10px 30px rgba(85, 33, 75, 0.05);
+    text-align: center; /* Centraliza tudo dentro do bloco */
 }
 
-@media (max-width: 768px) {
-    .butique-actions-block {
-        padding: 25px;
-    }
-}
-
-/* Título */
 .butique-title {
     font-weight: 800;
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     color: var(--roxo-escuro);
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 8px;
+    justify-content: center; /* Centraliza o título */
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+/* Lista de Itens (Pílulas) centralizada */
+.donation-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centraliza as pílulas */
+    gap: 10px;
     margin-bottom: 25px;
 }
 
-/* Lista */
-.donation-list {
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-bottom: 20px;
-    justify-content: center;
-}
-
 .donation-list li {
-    background: #f3eff5;
+    background: #fdf2f8;
     color: var(--roxo-escuro);
-    padding: 8px 18px;
+    padding: 6px 14px;
     border-radius: 50px;
     font-size: 0.9rem;
     font-weight: 600;
+    border: 1px solid rgba(85, 33, 75, 0.1);
+    transition: 0.3s;
+}
+
+.donation-list li:hover {
+    background: var(--roxo-escuro);
+    color: #fff;
 }
 
 /* Dropdown */
+.locations-dropdown {
+    width: 100%;
+    margin-bottom: 15px;
+    text-align: left; /* Mantém o texto dos endereços alinhado à esquerda para leitura */
+}
+
 .locations-dropdown summary {
     cursor: pointer;
     color: var(--roxo-escuro);
     font-weight: 700;
-    padding: 18px 0;
     list-style: none;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 1rem;
+    padding: 12px;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    transition: 0.3s;
+    user-select: none;
+}
+
+.locations-dropdown summary:hover {
+    background-color: #eee;
 }
 
 .locations-dropdown summary::-webkit-details-marker {
     display: none;
 }
 
-.locations-dropdown .location-list {
-    padding-top: 10px;
-    border-top: 1px solid rgba(0,0,0,0.05);
+/* Animação da seta */
+.locations-dropdown summary .arrow-icon {
+    transition: transform 0.3s ease;
+    font-size: 0.9rem;
+}
+
+/* Quando aberto, a seta gira */
+.locations-dropdown[open] summary .arrow-icon {
+    transform: rotate(90deg);
+}
+
+.location-list {
     margin-top: 10px;
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    padding: 15px;
+    max-height: 250px;
+    overflow-y: auto;
 }
 
 .loc-item {
-    padding: 10px 0;
-    border-bottom: 1px solid #eee;
+    margin-bottom: 12px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 0.9rem;
+}
+
+.loc-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
 }
 
 .loc-item strong {
     color: var(--roxo-escuro);
     display: block;
+    margin-bottom: 2px;
 }
 
 .loc-item p {
-    display: flex;
-    align-items: center;
-    gap: 8px;
+    font-size: 0.85rem;
+    color: #666;
     margin: 0;
-    color: #555;
+    display: flex; /* Alinha ícone e texto na mesma linha */
+    align-items: center; /* Centraliza verticalmente */
+    gap: 4px; /* Espaço entre o ícone e o texto */
 }
 
 .loc-item i {
-    color: var(--jacarta);
+    color: var(--jacarta); /* Cor roxa no ícone */
+    font-size: 1rem;
+    min-width: 16px; /* Garante que o ícone não esmague se o texto for longo */
 }
 
-/* Seta animada */
-.locations-dropdown summary i {
+/* Botão Quero Doar */
+.btn-butique-doar {
+    width: 100%;
+    justify-content: center;
+    background-color: var(--amarelo);
+    color: var(--jacarta);
+    font-weight: 800;
+    border: none;
     transition: 0.3s;
 }
 
-details[open] summary i {
-    transform: rotate(90deg);
+/* Efeito Hover Invertido (Fica Branco com texto Roxo/Jacarta) */
+.btn-butique-doar:hover {
+    background-color: #ffffff;
+    color: var(--jacarta);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
-/* Botão */
-.btn-butique-doar {
-    margin-top: 15px;
-    width: 100%;
-    justify-content: center;
-    border: none;
+@media (max-width: 768px) {
+    .carousel-item img {
+        height: 220px;
+    }
+    
+    .butique-intro-text {
+        font-size: 1rem;
+        text-align: center;
+    }
 }
 
 /* ============================================
