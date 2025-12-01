@@ -50,7 +50,7 @@ html {
   scroll-padding-top: 100px;
   overflow-x: hidden; /* TRAVA A TELA NO HTML */
   width: 100%;
-  font-size: 85%; /* Reduz a escala de todo o site para 85% (aprox 13.6px) */
+  font-size: 80%; /* Reduz a escala de todo o site para 80% (aprox 12.8px) */
 }
 
 /* ============================================
@@ -269,25 +269,37 @@ h4, .section-subtitle {
   align-self: stretch;
 }
 
+/* regra ajustada: limita largura e altura da imagem do hero para compactar */
 .hero-img img {
-  max-height: 400px;
-  width: auto;
+  max-width: 420px;   /* limita largura máxima para compactar visualmente */
+  width: 100%;
+  max-height: 320px;  /* altura máxima reduzida */
+  object-fit: contain;
   margin-bottom: -10px;
   display: block;
 }
 
+/* telas maiores: permite imagem um pouco maior, mas ainda compacta */
 @media (min-width: 768px) {
   .hero-img {
     justify-content: flex-end;
   }
-}
 
-@media (min-width: 768px) {
   .hero-img img {
-    max-height: 450px;
+    max-width: 520px;
+    max-height: 360px;
     margin-right: 20px;
     margin-bottom: -10px;
     display: block;
+  }
+}
+
+/* telas muito pequenas: reduzir ainda mais ou ocultar se necessário */
+@media (max-width: 576px) {
+  .hero-img img {
+    max-width: 260px;
+    max-height: 200px;
+    margin-bottom: 0;
   }
 }
 
