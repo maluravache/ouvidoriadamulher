@@ -482,6 +482,7 @@ h4, .section-subtitle {
 @media (min-width: 768px) {
   .service-cards-grid {
     grid-template-columns: repeat(3, 1fr);
+    align-items: start;
   }
 }
 
@@ -645,13 +646,27 @@ h4, .section-subtitle {
 }
 
 .btn-cta-secondary {
-  display: inline-block;
+ display: inline-flex; /* Alterado para flex para alinhar ícone */
+  align-items: center;
+  gap: 10px;
   margin-top: 30px;
-  border: 2px solid var(--jacarta);
+  
+  /* Estilo copiado do .btn-cta */
+  background: var(--amarelo);
   color: var(--jacarta);
-  padding: 10px 25px;
+  padding: 12px 30px;
   border-radius: 50px;
-  font-weight: 700;
+  font-weight: 800;
+  border: none; /* Remove a borda antiga */
+  box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+  transition: 0.3s;
+}
+
+.btn-cta-secondary:hover {
+  transform: translateY(-3px);
+  background: #fff;
+  color: var(--jacarta);
+  box-shadow: 0 12px 20px rgba(0,0,0,0.2);
 }
 
 .lei-card h3 {
