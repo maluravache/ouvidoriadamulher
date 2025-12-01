@@ -50,6 +50,7 @@ html {
   scroll-padding-top: 100px;
   overflow-x: hidden; /* TRAVA A TELA NO HTML */
   width: 100%;
+  font-size: 85%; /* Reduz a escala de todo o site para 85% (aprox 13.6px) */
 }
 
 /* ============================================
@@ -482,7 +483,6 @@ h4, .section-subtitle {
 @media (min-width: 768px) {
   .service-cards-grid {
     grid-template-columns: repeat(3, 1fr);
-    align-items: start;
   }
 }
 
@@ -646,7 +646,7 @@ h4, .section-subtitle {
 }
 
 .btn-cta-secondary {
- display: inline-flex; /* Alterado para flex para alinhar ícone */
+  display: inline-flex; /* Alterado para flex para alinhar ícone */
   align-items: center;
   gap: 10px;
   margin-top: 30px;
