@@ -69,15 +69,20 @@ h1 {
    ESTILO DOS TÍTULOS (H2) - V5 (LIMPO E ORIGINAL)
    ============================================ */
 
+/* --- TÍTULOS COM O DEGRADÉ "MARAVILHOSO" --- */
 h2, .section-title {
-  color: var(--jacarta);
-  font-weight: 700;        /* Bold padrão, sem ser exagerado */
-  font-size: 2rem;         /* Tamanho bom para leitura */
+  /* A magia do degradé */
+  background: linear-gradient(135deg, var(--roxo-escuro) 0%, var(--jacarta) 100%);
+  -webkit-background-clip: text; /* Recorta o fundo no formato do texto */
+  -webkit-text-fill-color: transparent; /* Deixa o texto transparente para mostrar o fundo */
+  background-clip: text;
+  
+  font-weight: 800; /* Mais grosso fica mais bonito no degradé */
+  font-size: 2.2rem;
   text-align: center;
   margin-bottom: 40px;
-  text-transform: none;    /* Remove o CAPS LOCK (deixa a escrita normal) */
-  letter-spacing: normal;  /* Remove espaçamento forçado */
-  position: relative;
+  display: inline-block; /* Importante para o recorte funcionar bem */
+  width: 100%; /* Garante que mantém a centralização */
 }
 
 /* GARANTIA: Remove qualquer traço que tenha sobrado */
@@ -1115,4 +1120,108 @@ h4, .section-subtitle {
   border: 0;
   min-height: 450px;
   border-radius: 20px;
+}
+
+/* --- ESTILOS VISUAIS BUTIQUE --- */
+
+/* Novo Card Visual (Citação) */
+.quote-card-visual {
+    background: linear-gradient(135deg, var(--roxo-escuro) 0%, var(--jacarta) 100%);
+    color: white;
+    padding: 30px;
+    border-radius: 20px;
+    position: relative;
+    margin-top: 20px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(66, 46, 106, 0.15);
+}
+
+.quote-icon {
+    font-size: 2.5rem;
+    color: var(--amarelo);
+    opacity: 0.5;
+    display: block;
+    margin-bottom: 10px;
+    line-height: 1;
+}
+
+.quote-card-visual p {
+    font-size: 1.1rem;
+    font-style: italic;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.quote-card-visual span {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--amarelo);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Ajuste de Altura do Carrossel */
+/* No PC (telas grandes), as imagens ficam mais altas */
+@media (min-width: 992px) {
+    .carousel-item img {
+        height: 400px; /* Mais alto para equilibrar com o texto */
+    }
+}
+
+/* No Telemóvel, mantém compacto e esconde a citação se quiseres poupar espaço */
+@media (max-width: 768px) {
+    .carousel-item img {
+        height: 250px;
+    }
+    
+    /* Se achares que fica muita coisa no telemóvel, podes descomentar a linha abaixo para esconder a citação */
+    /* .quote-card-visual { display: none; } */
+}
+
+/* --- AJUSTES FINAIS DE ALINHAMENTO BUTIQUE --- */
+
+/* 1. Reduzir altura do Carrossel no PC para alinhar com o lado direito */
+@media (min-width: 992px) {
+    .carousel-item img {
+        height: 280px; /* Reduzi de 350px para 280px */
+        object-fit: cover;
+    }
+}
+
+/* 2. Reduzir o Card de Citação (Esquerda baixo) */
+.quote-card-visual {
+    background: linear-gradient(135deg, var(--roxo-escuro) 0%, var(--jacarta) 100%);
+    color: white;
+    padding: 20px 25px; /* Reduzi o enchimento (era 30px) */
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(66, 46, 106, 0.15);
+    margin-top: 0; /* Garante que não empurra muito */
+}
+
+.quote-icon {
+    font-size: 2rem; /* Ícone ligeiramente menor */
+    color: var(--amarelo);
+    opacity: 0.5;
+    display: block;
+    margin-bottom: 5px;
+    line-height: 1;
+}
+
+.quote-card-visual p {
+    font-size: 1rem; /* Fonte ligeiramente menor para compactar */
+    font-style: italic;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+/* 3. Centralizar o Texto Explicativo (Direita cima) */
+.butique-intro-text {
+    text-align: center; /* Centraliza o texto como pediste */
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--text);
+    margin-bottom: 20px;
 }
