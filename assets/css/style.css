@@ -506,6 +506,7 @@ h4, .section-subtitle {
   grid-template-columns: 1fr;
   gap: 30px;
   margin-bottom: 50px;
+  align-items: stretch;
 }
 
 @media (min-width: 768px) {
@@ -516,7 +517,7 @@ h4, .section-subtitle {
 
 @media (min-width: 768px) {
   .denuncia-grid {
-    grid-template-columns: 1.2fr 0.8fr;
+    grid-template-columns: 1fr 1fr;
     align-items: start;
   }
 }
@@ -626,26 +627,37 @@ h4, .section-subtitle {
   margin-top: 20px;
 }
 
+/* ============================================
+   NOVOS BOTÕES DE EMERGÊNCIA (DEGRADÉ)
+   ============================================ */
+
 .disque-btn {
-  background: var(--jacarta);
+  /* MUDANÇA: Agora usa o degradé roxo */
+  background: linear-gradient(135deg, var(--roxo-escuro) 0%, var(--jacarta) 100%); 
   color: white;
-  padding: 10px 20px;
+  padding: 12px 25px; /* Aumentei um pouco para ficar mais elegante */
   border-radius: 50px;
   display: flex;
   align-items: center;
+  justify-content: center; /* Garante texto centralizado */
   gap: 10px;
-  font-size: 0.9rem;
-  transition: 0.3s;
-  min-width: 200px;
+  font-size: 0.95rem;
+  transition: 0.3s ease;
+  min-width: 220px;
+  border: none; /* Remove bordas antigas se houver */
+  box-shadow: 0 4px 15px rgba(85, 33, 75, 0.2); /* Sombra suave roxa */
+}
+
+.disque-btn i {
+  font-size: 1.1rem; /* Ícone um pouco maior */
 }
 
 .disque-btn:hover {
-  transform: translateY(-2px);
-  background: var(--roxo-escuro);
-}
-
-.disque-btn strong {
-  font-size: 1.1rem;
+  transform: translateY(-3px);
+  /* MUDANÇA: Em vez de mudar a cor de fundo, aumentamos o brilho */
+  filter: brightness(1.2); 
+  box-shadow: 0 8px 25px rgba(85, 33, 75, 0.4);
+  color: white;
 }
 
 /* ============================================
