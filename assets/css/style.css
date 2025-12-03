@@ -404,6 +404,11 @@ h4, .section-subtitle {
   color: white;
 }
 
+/* CORREÇÃO: Garante que ícones no card amarelo sejam escuros para leitura */
+.camp-card.bg-amarelo-texto-roxo i {
+  color: var(--roxo-escuro);
+}
+
 /* Ícone Normal */
 
 .camp-card h3 {
@@ -434,6 +439,7 @@ h4, .section-subtitle {
 .camp-card--video {
   background: #222;
   padding: 0;
+  overflow: hidden; /* Substitui o estilo inline do HTML */
 }
 
 .camp-card--video i.bi-play-circle {
