@@ -1041,6 +1041,17 @@ h4, .section-subtitle {
   }
 }
 
+/* --- DESKTOP AJUSTES (Garante alinhamento à esquerda na Web) --- */
+@media (min-width: 992px) {
+  .footer-section-title {
+    text-align: left;
+  }
+  
+  .apoio-container {
+    justify-content: flex-start;
+  }
+}
+
 /* Botões Flutuantes */
 .fab-whatsapp {
   position: fixed;
