@@ -961,11 +961,9 @@ h4, .section-subtitle {
 /* Títulos */
 .footer-section-title {
   color: var(--white);
-  font-weight: 700;
-  font-size: 0.95rem;
+  font-weight: 400; /* Alterado: Remove o negrito */
+  font-size: 1rem;
   margin-bottom: 15px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
 }
 
 /* Listas */
