@@ -1212,6 +1212,21 @@ h4, .section-subtitle {
     margin-bottom: 20px;
 }
 
+/* --- Ajuste de Alinhamento para os Cards de Serviço --- */
+
+/* Transforma o cartão numa coluna flexível para ocupar a altura total */
+.service-card-detailed {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* Empurra a caixa informativa para o fundo do cartão */
+.service-card-detailed .passo-a-passo-box {
+  margin-top: auto;
+  /* As cores mantêm-se as originais (fundo amarelo claro) */
+}
+
 /* ============================================
    FIM DO ARQUIVO
    ============================================ */
