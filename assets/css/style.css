@@ -1185,19 +1185,22 @@ h4, .section-subtitle {
     letter-spacing: 1px;
 }
 
+/* Ajuste consolidado das imagens do carrossel */
 .carousel-item img {
     object-fit: cover;
+    object-position: center;
+    height: 320px; /* Altura padrão */
 }
 
 @media (min-width: 992px) {
     .carousel-item img {
-        height: 280px;
+        height: 320px; /* Mantém altura em desktop */
     }
 }
 
 @media (max-width: 768px) {
     .carousel-item img {
-        height: 250px;
+        height: 220px; /* Altura reduzida em mobile */
     }
 }
 
