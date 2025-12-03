@@ -761,10 +761,6 @@ h4, .section-subtitle {
     font-weight: 800;
     font-size: 1.3rem;
     color: var(--roxo-escuro);
-    display: flex;
-    align-items: center;
-    justify-content: center; /* Centraliza o título */
-    gap: 10px;
     margin-bottom: 20px;
 }
 
