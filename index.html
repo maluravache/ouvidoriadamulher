@@ -26,6 +26,8 @@
 </head>
 
 <body>
+    <a href="#main-content" class="skip-to-content">Pular para o conteúdo principal</a>
+    
     <header class="header">
         <div class="container header-row">
             <a href="#inicio" class="header__logo">
@@ -45,7 +47,7 @@
         </div>
     </header>
 
-    <main>
+    <main id="main-content">
         <section class="hero" id="inicio">
             <div class="container hero-content">
                 <div class="hero-text">
@@ -442,25 +444,25 @@
                         
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <img src="assets/img/butique1.jpeg" class="d-block w-100" alt="Interior da Butique">
+                                <img src="assets/img/butique1.jpeg" class="d-block w-100" alt="Interior da Butique" loading="lazy">
                             </div>
                             <div class="carousel-item">
-                                <img src="assets/img/butique3.jpeg" class="d-block w-100" alt="Roupas Organizadas">
+                                <img src="assets/img/butique3.jpeg" class="d-block w-100" alt="Roupas Organizadas" loading="lazy">
                             </div>
                             <div class="carousel-item">
-                                <img src="assets/img/butique4.jpeg" class="d-block w-100" alt="Atendimento">
+                                <img src="assets/img/butique4.jpeg" class="d-block w-100" alt="Atendimento" loading="lazy">
                             </div>
                             <div class="carousel-item">
-                                <img src="assets/img/butique5.jpeg" class="d-block w-100" alt="Espaço da Butique">
+                                <img src="assets/img/butique5.jpeg" class="d-block w-100" alt="Espaço da Butique" loading="lazy">
                             </div>
                             <div class="carousel-item">
-                                <img src="assets/img/butique6.jpeg" class="d-block w-100" alt="Produtos Disponíveis">
+                                <img src="assets/img/butique6.jpeg" class="d-block w-100" alt="Produtos Disponíveis" loading="lazy">
                             </div>
                             <div class="carousel-item">
-                                <img src="assets/img/butique7.jpeg" class="d-block w-100" alt="Voluntárias">
+                                <img src="assets/img/butique7.jpeg" class="d-block w-100" alt="Voluntárias" loading="lazy">
                             </div>
                             <div class="carousel-item">
-                                <img src="assets/img/butique8.jpeg" class="d-block w-100" alt="Ambiente Acolhedor">
+                                <img src="assets/img/butique8.jpeg" class="d-block w-100" alt="Ambiente Acolhedor" loading="lazy">
                             </div>
                         </div>
                         
@@ -572,18 +574,18 @@ Adolescência vítima de feminicídio, em 2018.
                                 Se preferir, preencha o formulário abaixo. Seus dados serão mantidos em total sigilo.
                             </p>
 
-                            <form>
+                            <form id="formContato" action="https://formspree.io/f/xnnqknng" method="POST">
                                 <div class="mb-3">
                                     <label for="nome" class="form-label">Nome (Opcional)</label>
-                                    <input type="text" class="form-control" id="nome" placeholder="Como prefere se identificar?">
+                                    <input type="text" class="form-control" id="nome" name="nome" placeholder="Como prefere se identificar?">
                                 </div>
                                 <div class="mb-3">
                                     <label for="contato" class="form-label">Contato</label>
-                                    <input type="text" class="form-control" id="contato" required placeholder="E-mail ou Telefone para retorno">
+                                    <input type="text" class="form-control" id="contato" name="contato" required placeholder="E-mail ou Telefone para retorno">
                                 </div>
                                 <div class="mb-3">
                                     <label for="mensagem" class="form-label">Mensagem</label>
-                                    <textarea class="form-control" id="mensagem" rows="4" required placeholder="Escreva aqui sua dúvida ou relato."></textarea>
+                                    <textarea class="form-control" id="mensagem" name="mensagem" rows="4" required placeholder="Escreva aqui sua dúvida ou relato."></textarea>
                                 </div>
 
                                 <button type="submit" class="btn-cta btn-submit-full">
@@ -678,45 +680,6 @@ Adolescência vítima de feminicídio, em 2018.
     </aside>
 
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Sair rápido com ESC
-            document.addEventListener('keydown', function(event) {
-                if (event.key === 'Escape') {
-                    window.location.href = 'https://www.google.com';
-                }
-            });
-
-            // Menu Mobile
-            const menuBtn = document.querySelector('.mobile-menu-btn');
-            const navLinks = document.querySelector('.nav-links');
-
-            if (menuBtn && navLinks) {
-                menuBtn.addEventListener('click', function() {
-                    navLinks.classList.toggle('active');
-                });
-
-                document.querySelectorAll('.nav-links a').forEach(link => {
-                    link.addEventListener('click', () => {
-                        navLinks.classList.remove('active');
-                    });
-                });
-            }
-
-            // Carrossel
-            const track = document.querySelector('.campaign-track');
-            const prevBtn = document.querySelector('.prev-btn');
-            const nextBtn = document.querySelector('.next-btn');
-
-            if (track && prevBtn && nextBtn) {
-                nextBtn.addEventListener('click', () => {
-                    track.scrollBy({ left: 300, behavior: 'smooth' });
-                });
-                prevBtn.addEventListener('click', () => {
-                    track.scrollBy({ left: -300, behavior: 'smooth' });
-                });
-            }
-        });
-    </script>
+    <script src="assets/js/main.js"></script>
 </body>
 </html>
