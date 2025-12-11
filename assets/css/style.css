@@ -2,11 +2,22 @@
    ESTILO GERAL
    ============================================ */
 
+/* ============================================
+   PALETA OFICIAL DE CORES - OUVIDORIA DA MULHER
+   ============================================ */
+
 :root {
-  --roxo-escuro: #55214b;
-  --roxo-claro: #7e144f;
-  --jacarta: #422e6a;
-  --amarelo: #fbcf42;
+  /* Paleta Oficial Mapeada */
+  --roxo-vibrante: #591A91;   /* NOVO: Roxo Vibrante */
+  --roxo-escuro: #55214B;      /* Roxo Escuro (mantém nome) */
+  --vinho: #7E144F;            /* NOVO: Vinho (era roxo-claro) */
+  --amarelo: #FBCF42;          /* Amarelo (mantém) */
+  
+  /* Cores Antigas Mapeadas (para compatibilidade) */
+  --roxo-claro: #7E144F;       /* Agora é igual ao vinho */
+  --jacarta: #422e6a;          /* Mantém temporariamente */
+  
+  /* Cores Auxiliares */
   --vermelho-discreto: #9e2a2b;
   --text: #2B2B2B;
   --white: #FFFFFF;
@@ -128,12 +139,11 @@ h4, .section-subtitle {
   width: 100%;
   padding: 15px 0;
   z-index: 1000;
-  /* ALTERADO: Efeito Glassmorphism (Vidro) */
-  background: rgba(66, 46, 106, 0.95); /* Cor Jacarta com 95% de opacidade */
-  backdrop-filter: blur(10px);         /* Desfoque do fundo */
-  -webkit-backdrop-filter: blur(10px); /* Compatibilidade Safari */
-  box-shadow: 0 4px 20px rgba(0,0,0,0.1); /* Sombra mais suave */
-  border-bottom: 1px solid rgba(255,255,255,0.05); /* Borda sutil */
+  background: rgba(85, 33, 75, 0.95);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  border-bottom: 1px solid rgba(255,255,255,0.05);
 }
 
 .header-row {
@@ -203,7 +213,7 @@ h4, .section-subtitle {
 /* HERO (FINAL: ALTURA COMPACTA, IMAGEM ALINHADA) */
 
 .hero {
-  background: var(--jacarta);
+  background: var(--roxo-escuro);
   min-height: 450px;
   padding-top: 60px;
   padding-bottom: 0;
@@ -549,8 +559,7 @@ h4, .section-subtitle {
 
 /* NOVO: Efeito ao passar o mouse (Levantar) */
 .service-card-detailed:hover, .content-box:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 20px 40px -5px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.08);
 }
 
 .service-card-detailed h3, .content-box h3 {
@@ -703,7 +712,6 @@ h4, .section-subtitle {
 }
 
 .lei-card:hover {
-  transform: translateY(-5px);
   box-shadow: 0 15px 40px -5px rgba(0, 0, 0, 0.12);
 }
 
@@ -923,10 +931,10 @@ h4, .section-subtitle {
    ============================================ */
 
 .footer {
-  background-color: var(--jacarta);
+  background-color: var(--roxo-escuro);
   padding-top: 40px;
   padding-bottom: 20px;
-  color: rgba(255, 255, 255, 0.9); /* Aumentado de 0.8 para 0.9 para melhor contraste */
+  color: rgba(255, 255, 255, 0.9);
   font-size: 0.85rem;
   border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
@@ -1334,18 +1342,18 @@ img[loading="lazy"].loaded {
 .carousel-item img {
     object-fit: cover;
     object-position: center;
-    height: 320px; /* Altura padrão */
+    height: 320px;
 }
 
 @media (min-width: 992px) {
     .carousel-item img {
-        height: 320px; /* Mantém altura em desktop */
+        height: 320px;
     }
 }
 
 @media (max-width: 768px) {
     .carousel-item img {
-        height: 220px; /* Altura reduzida em mobile */
+        height: 220px;
     }
 }
 
@@ -1358,20 +1366,28 @@ img[loading="lazy"].loaded {
 }
 
 /* --- Ajuste de Alinhamento para os Cards de Serviço --- */
-
-/* Transforma o cartão numa coluna flexível para ocupar a altura total */
 .service-card-detailed {
   display: flex;
   flex-direction: column;
   height: 100%;
 }
 
-/* Empurra a caixa informativa para o fundo do cartão */
 .service-card-detailed .passo-a-passo-box {
   margin-top: auto;
-  /* As cores mantêm-se as originais (fundo amarelo claro) */
 }
 
 /* ============================================
-   FIM DO ARQUIVO
+   CLASSES NOVAS DA PALETA OFICIAL
    ============================================ */
+
+.bg-vinho {
+  background: var(--vinho);
+  color: white;
+}
+
+.bg-roxo-vibrante {
+  background: var(--roxo-vibrante);
+  color: white;
+}
+
+/* FIM DO ARQUIVO */
