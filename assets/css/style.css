@@ -22,7 +22,7 @@
   --text: #2B2B2B;
   --white: #FFFFFF;
   --paper: #F7F6F9;
-  --gradient-hero: linear-gradient(135deg, var(--roxo-escuro) 0%, var(--roxo-claro) 100%);
+  --gradient-hero: linear-gradient(135deg, var(--roxo-escuro) 0%, var(--vinho) 100%);
   --container-width: 1280px;
   --radius: 16px;
 }
@@ -991,16 +991,16 @@ h4, .section-subtitle {
 }
 
 .footer-partner-logo {
-  height: 30px; /* Pequenas */
+  height: 40px; /* Pequenas */
   width: auto;
-  opacity: 0.4; /* Bem discretas */
+  opacity: 0.7; /* Bem discretas */
   filter: brightness(0) invert(1); /* Força ficarem brancas */
   /* Sem hover effect, como pedido */
 }
 
 /* Copyright */
 .footer-divider {
-  border-color: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.323);
   margin: 30px 0 15px;
 }
 
