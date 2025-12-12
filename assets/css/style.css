@@ -500,8 +500,8 @@ h4, .section-subtitle {
 
 .badge-item {
   background: white;
-  border: 1px solid var(--roxo-claro);
-  color: var(--roxo-claro);
+  border: 1px solid var(--vinho);
+  color: var(--vinho);
   padding: 10px 20px;
   border-radius: 50px;
   font-size: 0.9rem;
@@ -513,7 +513,7 @@ h4, .section-subtitle {
 }
 
 .badge-item:hover {
-  background: var(--roxo-claro);
+  background: var(--vinho);
   color: white;
 }
 
@@ -589,7 +589,7 @@ h4, .section-subtitle {
 
 .item-detalhe strong {
   display: block;
-  color: var(--roxo-claro);
+  color: var(--vinho);
   font-weight: 700;
   font-size: 0.95rem;
   margin-bottom: 4px;
@@ -1119,7 +1119,7 @@ h4, .section-subtitle {
 }
 
 .bg-roxo-claro {
-  background: var(--roxo-claro);
+  background: var(--vinho);
 }
 
 .bg-amarelo-texto-roxo {
