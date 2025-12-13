@@ -1001,18 +1001,12 @@ img[loading="lazy"].loaded {
    15. MEDIA QUERIES (MOBILE FIRST)
    ========================================================================= */
 
-/* --- Tablet e Maiores (sm: 576px) --- */
-@media (min-width: 576px) {
-  .hero-img img { 
-    max-width: 260px; /* Mantém menor em telas muito pequenas */
-    max-height: 200px;
-    margin-bottom: 0;
-  }
-  
-  /* Ajustes específicos que antes eram max-width: 575px
-     Como estamos mobile-first, o padrão já é o "mobile". 
-     Aqui colocamos o que muda quando CRESCE. */
-}
+/* 
+   ESTRATÉGIA DE BREAKPOINTS:
+   1. Mobile (Default): < 768px
+   2. Tablet (md): >= 768px
+   3. Desktop (lg): >= 992px
+*/
 
 /* --- Tablet (md: 768px) --- */
 @media (min-width: 768px) {
@@ -1040,24 +1034,37 @@ img[loading="lazy"].loaded {
 @media (min-width: 992px) {
   body { padding-top: 120px; }
 
-  /* Header Desktop */
+  /* Header & Navigation (Web Version Fix) */
   .mobile-menu-btn { display: none; }
+  
   .nav-links {
-    display: flex;
+    display: flex !important; /* Garante exibição no desktop */
     position: static;
     flex-direction: row;
+    align-items: center;
     padding: 0;
+    gap: 30px; /* Espaçamento entre itens do menu */
     box-shadow: none;
     border-top: none;
     background: transparent;
     width: auto;
+    height: auto;
   }
+  
   .nav-links a {
     width: auto;
     padding: 0;
     border-bottom: none;
     display: inline-block;
+    font-size: 0.95rem;
+    opacity: 0.9;
   }
+  
+  .nav-links a:hover {
+    opacity: 1;
+    transform: translateY(-2px);
+  }
+
   .header__logo img { height: 90px; }
 
   /* Footer Desktop */
