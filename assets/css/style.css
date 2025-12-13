@@ -7,7 +7,7 @@
   --roxo-escuro: #55214B;
   --vinho: #7E144F;
   --amarelo: #FBCF42;
-  --jacarta: #422e6a; /* Cor secundária de apoio */
+  --jacarta: #422e6a;
   
   /* Cores Auxiliares */
   --vermelho-discreto: #9e2a2b;
@@ -32,8 +32,8 @@ html {
   scroll-padding-top: 100px;
   overflow-x: hidden;
   width: 100%;
-  font-size: 85%; /* Ajuste global de escala */
-  -webkit-text-size-adjust: 100%; /* Previne zoom indesejado no iOS */
+  font-size: 85%;
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
@@ -41,7 +41,7 @@ body {
   color: var(--text);
   background: var(--paper);
   line-height: 1.6;
-  padding-top: 120px; /* Compensação do header fixo (Desktop) */
+  padding-top: 90px; /* Padrão Mobile */
   width: 100%;
   position: relative;
 }
@@ -116,13 +116,11 @@ h4, .section-subtitle {
   background: white;
 }
 
-/* Utilitários de Espaçamento e Alinhamento */
 .mt-50-center { margin-top: 50px; text-align: center; }
 .mb-10 { margin-bottom: 10px; }
 .mb-30 { margin-bottom: 30px; }
 .text-center { text-align: center; }
 
-/* Utilitários de Cor */
 .bg-roxo-escuro { background: var(--roxo-escuro); }
 .bg-vinho { background: var(--vinho); color: white; }
 .bg-roxo-vibrante { background: var(--roxo-vibrante); color: white; }
@@ -130,9 +128,8 @@ h4, .section-subtitle {
 .text-roxo-escuro { color: var(--roxo-escuro); }
 
 /* ============================================
-   4. COMPONENTES (BOTÕES, CARDS, BADGES)
+   4. COMPONENTES
    ============================================ */
-/* Botões */
 .btn-cta {
   background: var(--amarelo);
   color: var(--jacarta);
@@ -208,7 +205,6 @@ h4, .section-subtitle {
   color: white;
 }
 
-/* Badges */
 .info-badges {
   display: flex;
   justify-content: center;
@@ -236,7 +232,6 @@ h4, .section-subtitle {
   color: white;
 }
 
-/* Cards Gerais */
 .service-card-detailed, .content-box, .lei-card {
   background: var(--white);
   padding: 25px;
@@ -289,15 +284,34 @@ h4, .section-subtitle {
 }
 
 .header__logo img {
-  height: 90px;
+  height: 60px; /* Padrão Mobile */
   width: auto;
 }
 
-.nav-links {
-  display: flex;
-  gap: 30px;
-  align-items: center;
+/* Menu Mobile (Padrão) */
+.mobile-menu-btn {
+  display: block;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
 }
+
+.nav-links {
+  display: none; /* Escondido por padrão no mobile */
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: var(--roxo-escuro);
+  flex-direction: column;
+  padding: 20px 0;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.nav-links.active { display: flex; }
 
 .nav-links a {
   color: rgba(255,255,255,0.95);
@@ -305,19 +319,15 @@ h4, .section-subtitle {
   font-size: 1rem;
   text-transform: uppercase;
   letter-spacing: 0.5px;
+  width: 100%;
+  text-align: center;
+  padding: 15px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  display: block;
 }
 
 .nav-links a:hover {
   color: var(--amarelo);
-}
-
-.mobile-menu-btn {
-  display: none;
-  background: none;
-  border: none;
-  color: white;
-  font-size: 2rem;
-  cursor: pointer;
 }
 
 /* ============================================
@@ -370,11 +380,11 @@ h4, .section-subtitle {
 }
 
 .hero-img img {
-  max-width: 420px;
+  max-width: 260px; /* Padrão Mobile */
   width: 100%;
-  max-height: 320px;
+  max-height: 200px;
   object-fit: contain;
-  margin-bottom: -10px;
+  margin-bottom: 0;
   display: block;
 }
 
@@ -403,6 +413,7 @@ h4, .section-subtitle {
 
 .campaign-track::-webkit-scrollbar { display: none; }
 
+/* Botões de Navegação do Carrossel */
 .nav-arrow {
   position: absolute;
   top: 45%;
@@ -416,7 +427,7 @@ h4, .section-subtitle {
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
   cursor: pointer;
   z-index: 10;
-  display: none; /* Exibido via media query */
+  display: none; /* Padrão Mobile (sem setas) */
   align-items: center;
   justify-content: center;
   font-size: 1.2rem;
@@ -448,7 +459,6 @@ h4, .section-subtitle {
 .camp-card i { font-size: 2rem; color: white; }
 .camp-card.bg-amarelo-texto-roxo i { color: var(--roxo-escuro); }
 
-/* Correção de contraste para o card amarelo */
 .camp-card.bg-amarelo-texto-roxo,
 .camp-card.bg-amarelo-texto-roxo h3,
 .camp-card.bg-amarelo-texto-roxo a {
@@ -488,6 +498,7 @@ h4, .section-subtitle {
   font-size: 0.8rem;
   color: #888;
   margin-top: -10px;
+  display: block; /* Padrão Mobile */
 }
 
 /* ============================================
@@ -535,7 +546,7 @@ h4, .section-subtitle {
   background: #fffdf2;
   padding: 15px;
   border-radius: 12px;
-  margin-top: auto; /* Empurra para o fundo no flex container */
+  margin-top: auto;
   border: 1px solid var(--amarelo);
 }
 
@@ -585,10 +596,11 @@ h4, .section-subtitle {
    10. BUTIQUE SOLIDÁRIA
    ============================================ */
 .butique-intro-text {
-  font-size: 1.15rem;
+  font-size: 1rem; /* Padrão Mobile */
   line-height: 1.7;
   color: var(--text);
   margin-bottom: 20px;
+  text-align: center; /* Padrão Mobile */
 }
 
 #carouselButique {
@@ -598,7 +610,7 @@ h4, .section-subtitle {
 }
 
 .carousel-item img {
-  height: 320px;
+  height: 220px; /* Padrão Mobile */
   object-fit: cover;
   object-position: center;
 }
@@ -777,7 +789,6 @@ h4, .section-subtitle {
   border-radius: 20px;
 }
 
-/* Validação */
 .mb-3.error .form-control { border-color: #dc3545; background-color: #fff5f5; }
 .mb-3.success .form-control { border-color: #28a745; background-color: #f0fff4; }
 .error-message { color: #dc3545; font-size: 0.85rem; margin-top: 5px; display: block; }
@@ -799,15 +810,16 @@ h4, .section-subtitle {
 .form-feedback-message i { font-size: 1.3rem; }
 
 /* ============================================
-   12. FOOTER
+   12. FOOTER (MOBILE DEFAULT)
    ============================================ */
 .footer {
   background-color: var(--roxo-escuro);
-  padding-top: 40px;
+  padding-top: 30px; /* Padrão Mobile */
   padding-bottom: 20px;
   color: rgba(255, 255, 255, 0.9);
   font-size: 0.85rem;
   border-top: 1px solid rgba(255, 255, 255, 0.05);
+  text-align: center; /* Padrão Mobile */
 }
 
 .footer a {
@@ -819,24 +831,27 @@ h4, .section-subtitle {
 .footer a:hover { color: var(--amarelo); opacity: 1; }
 
 .footer-logo-img {
-  height: 50px;
+  height: 45px; /* Padrão Mobile */
   width: auto;
   margin-bottom: 15px;
+  margin-left: auto; margin-right: auto; /* Centralizado Mobile */
 }
 
 .footer-text {
   font-size: 0.8rem;
   line-height: 1.5;
   max-width: 300px;
-  margin-bottom: 20px;
+  margin: 0 auto 25px auto; /* Centralizado Mobile */
   opacity: 0.9;
 }
 
 .footer-section-title {
   color: var(--white);
   font-weight: 400;
-  font-size: 1rem;
-  margin-bottom: 15px;
+  font-size: 0.9rem; /* Padrão Mobile */
+  margin-bottom: 10px;
+  margin-top: 10px;
+  text-align: center; /* Padrão Mobile */
 }
 
 .footer-list {
@@ -846,11 +861,16 @@ h4, .section-subtitle {
   line-height: 2;
 }
 
+.footer .row .col-6 { text-align: center !important; }
+.footer .row { margin-bottom: 0; }
+
 .apoio-container {
   display: flex;
-  gap: 15px;
+  gap: 20px;
   align-items: center;
   flex-wrap: wrap;
+  justify-content: center; /* Padrão Mobile */
+  margin-top: 15px;
 }
 
 .footer-partner-logo {
@@ -871,7 +891,7 @@ h4, .section-subtitle {
 }
 
 /* ============================================
-   13. ELEMENTOS FLUTUANTES E ACESSIBILIDADE
+   13. ELEMENTOS FLUTUANTES
    ============================================ */
 .fab-whatsapp {
   position: fixed;
@@ -935,7 +955,6 @@ h4, .section-subtitle {
 
 .skip-to-content:focus { top: 0; }
 
-/* Foco Acessível */
 a:focus, button:focus, input:focus, textarea:focus, select:focus {
   outline: 3px solid var(--amarelo);
   outline-offset: 2px;
@@ -957,9 +976,6 @@ a:focus, button:focus, input:focus, textarea:focus, select:focus {
   box-shadow: 0 0 0 3px var(--amarelo);
 }
 
-/* ============================================
-   14. ANIMAÇÕES E PERFORMANCE
-   ============================================ */
 @keyframes slideDown {
   from { opacity: 0; transform: translateY(-10px); }
   to { opacity: 1; transform: translateY(0); }
@@ -981,74 +997,74 @@ img[loading="lazy"].loaded {
   background: none;
 }
 
-/* ============================================
-   15. MEDIA QUERIES (RESPONSIVIDADE)
-   ============================================ */
+/* =========================================================================
+   15. MEDIA QUERIES (MOBILE FIRST)
+   ========================================================================= */
+
+/* --- Tablet e Maiores (sm: 576px) --- */
+@media (min-width: 576px) {
+  .hero-img img { 
+    max-width: 260px; /* Mantém menor em telas muito pequenas */
+    max-height: 200px;
+    margin-bottom: 0;
+  }
+  
+  /* Ajustes específicos que antes eram max-width: 575px
+     Como estamos mobile-first, o padrão já é o "mobile". 
+     Aqui colocamos o que muda quando CRESCE. */
+}
+
+/* --- Tablet (md: 768px) --- */
 @media (min-width: 768px) {
   .hero { padding-top: 80px; }
   .hero-content { grid-template-columns: 1.2fr 0.8fr; }
   .hero-img { justify-content: flex-end; }
-  .hero-img img { max-width: 520px; max-height: 360px; margin-right: 20px; margin-bottom: -10px; }
+  .hero-img img { 
+    max-width: 520px; 
+    max-height: 360px; 
+    margin-right: 20px; 
+    margin-bottom: -10px; 
+  }
   
-  .nav-arrow { display: flex; }
-  .drag-hint { display: none; }
+  .nav-arrow { display: flex; } /* Mostra setas */
+  .drag-hint { display: none; } /* Esconde dica de arrastar */
   
   .service-cards-grid { grid-template-columns: repeat(3, 1fr); }
   .denuncia-grid { grid-template-columns: 1fr 1fr; align-items: start; }
+
+  .carousel-item img { height: 320px; }
+  .butique-intro-text { font-size: 1.15rem; text-align: left; }
 }
 
+/* --- Desktop (lg: 992px) --- */
 @media (min-width: 992px) {
-  .footer-section-title { text-align: left; }
-  .apoio-container { justify-content: flex-start; }
-}
+  body { padding-top: 120px; }
 
-/* Unificado: Regras para telas menores que Desktop (Bootstrap lg < 992px) */
-@media (max-width: 991px) {
-  /* --- Header e Navegação (Antigo 900px) --- */
-  .mobile-menu-btn { display: block; }
+  /* Header Desktop */
+  .mobile-menu-btn { display: none; }
   .nav-links {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    background: var(--roxo-escuro);
-    flex-direction: column;
-    padding: 20px 0;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-    border-top: 1px solid rgba(255,255,255,0.1);
+    display: flex;
+    position: static;
+    flex-direction: row;
+    padding: 0;
+    box-shadow: none;
+    border-top: none;
+    background: transparent;
+    width: auto;
   }
-  .nav-links.active { display: flex; }
-  
   .nav-links a {
-    width: 100%;
-    text-align: center;
-    padding: 15px 0;
-    border-bottom: 1px solid rgba(255,255,255,0.05);
-    display: block;
+    width: auto;
+    padding: 0;
+    border-bottom: none;
+    display: inline-block;
   }
+  .header__logo img { height: 90px; }
 
-  .header__logo img { height: 60px; }
-  
-  body { padding-top: 90px; } /* Ajuste para mobile */
-
-  /* --- Footer e Layout Geral --- */
-  .footer { text-align: center; padding-top: 30px; }
-  .footer-logo-img { height: 45px; margin: 0 auto 15px auto; }
-  .footer-text { margin: 0 auto 25px auto; font-size: 0.8rem; }
-  .footer .row .col-6 { text-align: center !important; }
-  .footer-section-title { font-size: 0.9rem; margin-bottom: 10px; margin-top: 10px; }
-  .apoio-container { justify-content: center; margin-top: 15px; gap: 20px; }
-  .footer .row { margin-bottom: 0; }
-}
-
-/* Ajustado para padrão Bootstrap (md-down: < 768px) */
-@media (max-width: 767px) {
-  .carousel-item img { height: 220px; }
-  .butique-intro-text { font-size: 1rem; text-align: center; }
-}
-
-/* Ajustado para padrão Bootstrap (sm-down: < 576px) */
-@media (max-width: 575px) {
-  .hero-img img { max-width: 260px; max-height: 200px; margin-bottom: 0; }
+  /* Footer Desktop */
+  .footer { text-align: left; padding-top: 40px; }
+  .footer-logo-img { height: 50px; margin-left: 0; margin-right: 0; }
+  .footer-text { margin-left: 0; margin-right: 0; font-size: 0.8rem; }
+  .footer-section-title { text-align: left; font-size: 1rem; margin-top: 0; }
+  .footer .row .col-6 { text-align: left !important; }
+  .apoio-container { justify-content: flex-start; margin-top: 0; }
 }
