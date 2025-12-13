@@ -1,0 +1,861 @@
+/* ============================================
+   OUVIDORIA DA MULHER - PREVIEW MODELO
+   Interactive Hero + Parallax + Carousel
+   Instagram-aligned aesthetic
+   ============================================ */
+
+/* ============================================
+   CSS VARIABLES - Color Palette
+   ============================================ */
+:root {
+  /* Purple shades - Instagram inspired */
+  --rox-1: #521f46;
+  --rox-2: #6b2a5a;
+  --rox-3: #7e3666;
+  --lavanda-bg: #f5f0f7;
+  
+  /* Yellow accents - Mustard tones */
+  --amarelo: #E7C24D;
+  --amarelo-contraste: #D1AD40;
+  
+  /* Neutrals */
+  --bg: #ffffff;
+  --bg-alt: #f9f9f9;
+  --txt: #1b1b1b;
+  --txt-light: #5f6368;
+  --linha: #ececec;
+  
+  /* Spacings */
+  --spacing-xs: 8px;
+  --spacing-sm: 16px;
+  --spacing-md: 24px;
+  --spacing-lg: 40px;
+  --spacing-xl: 60px;
+  
+  /* Borders & shadows */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --radius-full: 999px;
+  --shadow: 0 2px 12px rgba(0,0,0,.08);
+  --shadow-lg: 0 8px 28px rgba(0,0,0,.12);
+  
+  /* Container */
+  --container-max: 1160px;
+  
+  /* Transitions */
+  --transition: all 0.3s ease;
+  --transition-slow: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ============================================
+   RESET & BASE
+   ============================================ */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Metropolis', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  line-height: 1.6;
+  color: var(--txt);
+  background: var(--bg);
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+/* ============================================
+   FONT FACES - Placeholders
+   ============================================ */
+@font-face {
+  font-family: 'Amsi Pro';
+  font-weight: 700 900;
+  font-style: normal;
+  font-display: swap;
+  /* src: url('/fonts/AmsiBold.woff2') format('woff2'); */
+}
+
+@font-face {
+  font-family: 'Metropolis';
+  font-weight: 400 700;
+  font-style: normal;
+  font-display: swap;
+  /* src: url('/fonts/Metropolis-Regular.woff2') format('woff2'); */
+}
+
+/* ============================================
+   CONTAINER
+   ============================================ */
+.container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--spacing-sm);
+}
+
+/* ============================================
+   SKIP LINK (Accessibility)
+   ============================================ */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--rox-1);
+  color: white;
+  padding: 8px 16px;
+  z-index: 100;
+  border-radius: 0 0 var(--radius-sm) 0;
+  font-weight: 700;
+}
+
+.skip-link:focus {
+  top: 0;
+  outline: 3px solid var(--amarelo);
+  outline-offset: 2px;
+}
+
+/* ============================================
+   INTERACTIVE HERO - Purple with parallax
+   ============================================ */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--rox-1) 0%, var(--rox-2) 40%, var(--rox-3) 100%);
+  color: white;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-lg) 0;
+}
+
+/* Decorative background layers with SVG curves */
+.hero__bg-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.hero__curve-1 {
+  position: absolute;
+  bottom: -50px;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  fill: rgba(255, 255, 255, 0.05);
+}
+
+.hero__curve-2 {
+  position: absolute;
+  top: -50px;
+  right: 0;
+  width: 60%;
+  height: 300px;
+  fill: rgba(0, 0, 0, 0.1);
+}
+
+/* Floating decorative shapes - keyframe animations */
+.hero__shapes {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.hero__shape {
+  position: absolute;
+  opacity: 0.15;
+  will-change: transform;
+}
+
+.hero__shape--1 {
+  top: 15%;
+  left: 10%;
+  width: 80px;
+  height: 80px;
+  background: var(--amarelo);
+  border-radius: 50%;
+  animation: float-1 8s ease-in-out infinite;
+}
+
+.hero__shape--2 {
+  top: 60%;
+  right: 15%;
+  width: 120px;
+  height: 120px;
+  background: white;
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  animation: float-2 10s ease-in-out infinite;
+}
+
+.hero__shape--3 {
+  bottom: 20%;
+  left: 20%;
+  width: 60px;
+  height: 60px;
+  background: var(--amarelo);
+  transform: rotate(45deg);
+  animation: float-3 7s ease-in-out infinite;
+}
+
+.hero__shape--4 {
+  top: 30%;
+  right: 25%;
+  width: 40px;
+  height: 40px;
+  background: white;
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+  animation: float-4 9s ease-in-out infinite;
+}
+
+/* Floating animations */
+@keyframes float-1 {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(20px, -30px) scale(1.1);
+  }
+}
+
+@keyframes float-2 {
+  0%, 100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate(-30px, 20px) rotate(10deg);
+  }
+}
+
+@keyframes float-3 {
+  0%, 100% {
+    transform: translate(0, 0) rotate(45deg);
+  }
+  50% {
+    transform: translate(15px, -20px) rotate(135deg);
+  }
+}
+
+@keyframes float-4 {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(-15px, 25px) scale(1.2);
+  }
+}
+
+/* Small floating icons (decorative) */
+.hero__icons {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 3;
+}
+
+.hero__icon {
+  position: absolute;
+  color: var(--amarelo);
+  opacity: 0.2;
+  font-size: 1.5rem;
+  animation: icon-float 6s ease-in-out infinite;
+}
+
+.hero__icon--1 {
+  top: 20%;
+  left: 8%;
+  animation-delay: 0s;
+}
+
+.hero__icon--2 {
+  top: 70%;
+  right: 10%;
+  animation-delay: 1s;
+}
+
+.hero__icon--3 {
+  bottom: 25%;
+  left: 15%;
+  animation-delay: 2s;
+}
+
+.hero__icon--4 {
+  top: 40%;
+  right: 20%;
+  animation-delay: 1.5s;
+}
+
+@keyframes icon-float {
+  0%, 100% {
+    transform: translateY(0);
+    opacity: 0.2;
+  }
+  50% {
+    transform: translateY(-15px);
+    opacity: 0.3;
+  }
+}
+
+/* Parallax layer - controlled by JS */
+.hero__parallax {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transition: transform 0.3s ease-out;
+  will-change: transform;
+}
+
+/* Hero content */
+.hero__content {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  max-width: 800px;
+  padding: 0 var(--spacing-md);
+}
+
+.hero__logo {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto var(--spacing-md);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 16px;
+  object-fit: contain;
+}
+
+.hero__title {
+  font-family: 'Amsi Pro', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: white;
+  margin-bottom: var(--spacing-sm);
+  line-height: 1.1;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+  letter-spacing: -0.02em;
+}
+
+.hero__subtitle {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.95);
+  margin-bottom: var(--spacing-lg);
+  line-height: 1.5;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Dual CTAs */
+.hero__ctas {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--spacing-lg);
+}
+
+.hero__cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 16px 32px;
+  border-radius: var(--radius-full);
+  font-weight: 800;
+  font-size: 1.05rem;
+  transition: var(--transition);
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+  min-width: 240px;
+}
+
+.hero__cta--primary {
+  background: var(--amarelo);
+  color: #3a2a00;
+}
+
+.hero__cta--primary:hover,
+.hero__cta--primary:focus {
+  background: var(--amarelo-contraste);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(231, 194, 77, 0.4);
+}
+
+.hero__cta--secondary {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+  box-shadow: none;
+}
+
+.hero__cta--secondary:hover,
+.hero__cta--secondary:focus {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(255, 255, 255, 0.2);
+}
+
+.hero__cta i {
+  font-size: 1.3rem;
+}
+
+/* Scroll indicator */
+.hero__scroll {
+  position: absolute;
+  bottom: var(--spacing-lg);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  animation: scroll-bounce 2s ease-in-out infinite;
+}
+
+.hero__scroll i {
+  font-size: 1.5rem;
+  animation: scroll-arrow 2s ease-in-out infinite;
+}
+
+@keyframes scroll-bounce {
+  0%, 100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  50% {
+    transform: translateX(-50%) translateY(-10px);
+  }
+}
+
+@keyframes scroll-arrow {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+}
+
+/* ============================================
+   MAIN CONTENT
+   ============================================ */
+.main {
+  position: relative;
+  z-index: 5;
+  background: white;
+}
+
+/* ============================================
+   CAROUSEL - Campanhas & Notícias
+   ============================================ */
+.carousel-section {
+  padding: var(--spacing-xl) 0;
+  background: var(--lavanda-bg);
+}
+
+.carousel-section__header {
+  text-align: center;
+  margin-bottom: var(--spacing-lg);
+}
+
+.carousel-section__title {
+  font-family: 'Amsi Pro', sans-serif;
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--rox-1);
+  margin-bottom: var(--spacing-xs);
+}
+
+.carousel-section__subtitle {
+  color: var(--txt-light);
+  font-size: 1.1rem;
+}
+
+/* Carousel container */
+.carousel {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+}
+
+.carousel__wrapper {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+}
+
+.carousel__track {
+  display: flex;
+  gap: var(--spacing-md);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  /* Scrollbar hidden for cleaner UI, but keyboard navigation is available (Arrow keys, Home, End) */
+  scrollbar-width: none; /* Firefox */
+  -webkit-overflow-scrolling: touch;
+  padding: var(--spacing-sm);
+}
+
+.carousel__track::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+.carousel__item {
+  flex: 0 0 300px;
+  scroll-snap-align: center;
+  background: white;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+}
+
+.carousel__item:hover,
+.carousel__item:focus-within {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.carousel__item-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  background: linear-gradient(135deg, var(--rox-2), var(--rox-3));
+}
+
+.carousel__item-content {
+  padding: var(--spacing-md);
+}
+
+.carousel__item-badge {
+  display: inline-block;
+  background: var(--amarelo-contraste);
+  color: #3a2a00;
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: var(--spacing-xs);
+}
+
+.carousel__item-title {
+  font-family: 'Amsi Pro', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--rox-1);
+  margin-bottom: var(--spacing-xs);
+  line-height: 1.3;
+}
+
+.carousel__item-desc {
+  color: var(--txt-light);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-bottom: var(--spacing-sm);
+}
+
+.carousel__item-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--rox-2);
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: var(--transition);
+}
+
+.carousel__item-link:hover {
+  color: var(--rox-1);
+  gap: 10px;
+}
+
+/* Carousel navigation buttons */
+.carousel__nav {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-sm);
+  margin-top: var(--spacing-lg);
+}
+
+.carousel__btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--rox-1);
+  color: white;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  transition: var(--transition);
+  box-shadow: var(--shadow);
+}
+
+.carousel__btn:hover,
+.carousel__btn:focus {
+  background: var(--rox-2);
+  transform: scale(1.1);
+  box-shadow: var(--shadow-lg);
+}
+
+.carousel__btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.carousel__btn:disabled:hover {
+  transform: none;
+}
+
+/* ============================================
+   FABs - Floating Action Buttons
+   ============================================ */
+.fab-container {
+  position: fixed;
+  bottom: var(--spacing-lg);
+  right: var(--spacing-md);
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.fab {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: var(--transition);
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+}
+
+.fab:hover,
+.fab:focus {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.fab--whatsapp {
+  background: #25d366;
+  color: #083c17;
+}
+
+.fab--whatsapp:hover {
+  background: #20c05a;
+}
+
+.fab--exit {
+  background: #000;
+  color: white;
+  font-size: 1.3rem;
+}
+
+.fab--exit:hover {
+  background: #333;
+}
+
+/* Tooltip for FABs */
+.fab__tooltip {
+  position: absolute;
+  right: 70px;
+  background: #333;
+  color: white;
+  padding: 6px 12px;
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: var(--transition);
+}
+
+.fab:hover .fab__tooltip,
+.fab:focus .fab__tooltip {
+  opacity: 1;
+}
+
+/* ============================================
+   SECTIONS
+   ============================================ */
+.section {
+  padding: var(--spacing-xl) 0;
+}
+
+.section--bg {
+  background: var(--bg-alt);
+}
+
+.section__title {
+  font-family: 'Amsi Pro', sans-serif;
+  font-size: 1.75rem;
+  font-weight: 900;
+  color: var(--rox-1);
+  text-align: center;
+  margin-bottom: var(--spacing-lg);
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+.footer {
+  background: var(--rox-1);
+  color: white;
+  padding: var(--spacing-lg) 0 var(--spacing-md);
+  text-align: center;
+}
+
+.footer__logo {
+  max-width: 180px;
+  margin: 0 auto var(--spacing-md);
+}
+
+.footer__text {
+  opacity: 0.9;
+  margin-bottom: var(--spacing-sm);
+}
+
+.footer__bottom {
+  padding-top: var(--spacing-md);
+  margin-top: var(--spacing-md);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  opacity: 0.8;
+  font-size: 0.9rem;
+}
+
+/* ============================================
+   RESPONSIVE - Tablet (768px+)
+   ============================================ */
+@media (min-width: 768px) {
+  .hero__title {
+    font-size: 3rem;
+  }
+  
+  .hero__subtitle {
+    font-size: 1.35rem;
+  }
+  
+  .hero__ctas {
+    flex-direction: row;
+  }
+  
+  .carousel__track {
+    gap: var(--spacing-lg);
+  }
+  
+  .carousel__item {
+    flex: 0 0 350px;
+  }
+  
+  .fab-container {
+    bottom: var(--spacing-xl);
+    right: var(--spacing-lg);
+  }
+}
+
+/* ============================================
+   RESPONSIVE - Desktop (1024px+)
+   ============================================ */
+@media (min-width: 1024px) {
+  .hero__title {
+    font-size: 3.5rem;
+  }
+  
+  .carousel__item {
+    flex: 0 0 380px;
+  }
+}
+
+/* ============================================
+   ACCESSIBILITY - Focus states
+   ============================================ */
+*:focus-visible {
+  outline: 3px solid var(--amarelo);
+  outline-offset: 2px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  :root {
+    --linha: #000;
+    --txt-light: #000;
+  }
+  
+  .hero__shape {
+    opacity: 0.3;
+  }
+}
+
+/* ============================================
+   REDUCED MOTION - Disable animations
+   ============================================ */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  
+  /* Disable parallax when reduced motion is preferred */
+  .hero__parallax {
+    transform: none !important;
+  }
+  
+  .hero__shape,
+  .hero__icon {
+    animation: none !important;
+  }
+}
