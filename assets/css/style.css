@@ -1002,17 +1002,9 @@ img[loading="lazy"].loaded {
   .apoio-container { justify-content: flex-start; }
 }
 
+/* Unificado: Regras para telas menores que Desktop (Bootstrap lg < 992px) */
 @media (max-width: 991px) {
-  .footer { text-align: center; padding-top: 30px; }
-  .footer-logo-img { height: 45px; margin: 0 auto 15px auto; }
-  .footer-text { margin: 0 auto 25px auto; font-size: 0.8rem; }
-  .footer .row .col-6 { text-align: center !important; }
-  .footer-section-title { font-size: 0.9rem; margin-bottom: 10px; margin-top: 10px; }
-  .apoio-container { justify-content: center; margin-top: 15px; gap: 20px; }
-  .footer .row { margin-bottom: 0; }
-}
-
-@media (max-width: 900px) {
+  /* --- Header e Navegação (Antigo 900px) --- */
   .mobile-menu-btn { display: block; }
   .nav-links {
     display: none;
@@ -1039,13 +1031,24 @@ img[loading="lazy"].loaded {
   .header__logo img { height: 60px; }
   
   body { padding-top: 90px; } /* Ajuste para mobile */
+
+  /* --- Footer e Layout Geral --- */
+  .footer { text-align: center; padding-top: 30px; }
+  .footer-logo-img { height: 45px; margin: 0 auto 15px auto; }
+  .footer-text { margin: 0 auto 25px auto; font-size: 0.8rem; }
+  .footer .row .col-6 { text-align: center !important; }
+  .footer-section-title { font-size: 0.9rem; margin-bottom: 10px; margin-top: 10px; }
+  .apoio-container { justify-content: center; margin-top: 15px; gap: 20px; }
+  .footer .row { margin-bottom: 0; }
 }
 
-@media (max-width: 768px) {
+/* Ajustado para padrão Bootstrap (md-down: < 768px) */
+@media (max-width: 767px) {
   .carousel-item img { height: 220px; }
   .butique-intro-text { font-size: 1rem; text-align: center; }
 }
 
-@media (max-width: 576px) {
+/* Ajustado para padrão Bootstrap (sm-down: < 576px) */
+@media (max-width: 575px) {
   .hero-img img { max-width: 260px; max-height: 200px; margin-bottom: 0; }
 }
