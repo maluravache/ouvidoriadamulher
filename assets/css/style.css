@@ -448,6 +448,13 @@ h4, .section-subtitle {
 .camp-card i { font-size: 2rem; color: white; }
 .camp-card.bg-amarelo-texto-roxo i { color: var(--roxo-escuro); }
 
+/* Correção de contraste para o card amarelo */
+.camp-card.bg-amarelo-texto-roxo,
+.camp-card.bg-amarelo-texto-roxo h3,
+.camp-card.bg-amarelo-texto-roxo a {
+  color: var(--roxo-escuro);
+}
+
 .camp-card h3 {
   color: inherit;
   font-size: 1.2rem;
