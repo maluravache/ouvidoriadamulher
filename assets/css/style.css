@@ -1391,3 +1391,17 @@ img[loading="lazy"].loaded {
 }
 
 /* FIM DO ARQUIVO */
+/* Ajuste para ícones das leis ficarem proporcionais */
+.lei-card h3 {
+    display: flex;
+    align-items: center;
+    gap: 12px; /* Aumentei um pouco o espaço */
+}
+
+.lei-card h3 i {
+    font-size: 1.6em; /* Aumentado de 1.2em para 1.6em */
+    line-height: 1;
+    display: flex;
+    align-items: center;
+}
+
