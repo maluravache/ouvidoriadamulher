@@ -39,6 +39,7 @@ ouvidoriadamulher/
 │       └── main.js             # Scripts principais
 ├── index.html                  # Página principal
 ├── CNAME                       # Configuração de domínio
+├── robots.txt                  # Configuração para crawlers
 └── README.md                   # Este arquivo
 ```
 
