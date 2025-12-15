@@ -130,15 +130,25 @@ h4, .section-subtitle {
 /* ============================================
    4. COMPONENTES
    ============================================ */
+/* Estilos Base de Botões */
+.btn-cta, .btn-cta-secondary, .disque-btn, .btn-submit-full {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease;
+  text-decoration: none;
+}
+
+/* Botão CTA Principal (Amarelo) */
 .btn-cta {
   background: var(--amarelo);
   color: var(--jacarta);
   padding: 12px 30px;
-  border-radius: 50px;
   font-weight: 800;
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
   box-shadow: 0 4px 12px rgba(85, 33, 75, 0.2);
 }
 
@@ -147,62 +157,37 @@ h4, .section-subtitle {
   background: #fff;
 }
 
-.btn-cta-secondary {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  margin-top: 30px;
+/* Botão CTA Secundário e Disque (Gradiente) */
+.btn-cta-secondary, .disque-btn {
   background: var(--gradient-title);
   color: white;
-  padding: 12px 30px;
-  border-radius: 50px;
-  font-weight: 600;
-  border: none;
   box-shadow: 0 4px 15px rgba(85, 33, 75, 0.2);
-  transition: 0.3s ease;
 }
 
-.btn-cta-secondary:hover {
+.btn-cta-secondary:hover, .disque-btn:hover {
   transform: translateY(-3px);
   filter: brightness(1.2);
   box-shadow: 0 8px 25px rgba(85, 33, 75, 0.4);
   color: white;
 }
 
-.btn-submit-full {
-  width: 100%;
-  justify-content: center;
-  border: none;
-  cursor: pointer;
-  transition: 0.3s;
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
+/* Especificidades */
+.btn-cta-secondary {
+  margin-top: 30px;
+  padding: 12px 30px;
+  font-weight: 600;
 }
 
 .disque-btn {
-  background: var(--gradient-title);
-  color: white;
   padding: 12px 25px;
-  border-radius: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
   font-size: 0.95rem;
-  transition: 0.3s ease;
   min-width: 220px;
-  border: none;
-  box-shadow: 0 4px 15px rgba(85, 33, 75, 0.2);
 }
 
 .disque-btn i { font-size: 1.1rem; }
 
-.disque-btn:hover {
-  transform: translateY(-3px);
-  filter: brightness(1.2);
-  box-shadow: 0 8px 25px rgba(85, 33, 75, 0.4);
-  color: white;
+.btn-submit-full {
+  width: 100%;
 }
 
 .info-badges {
@@ -903,7 +888,9 @@ h4, .section-subtitle {
 }
 
 .footer-divider {
-  border-color: rgba(255, 255, 255, 0.323);
+  border: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.323);
+  width: 100%;
   margin: 30px 0 15px;
 }
 
@@ -974,6 +961,9 @@ h4, .section-subtitle {
   color: white;
 }
 
+/* ============================================
+   14. ACESSIBILIDADE E ANIMAÇÕES
+   ============================================ */
 .skip-to-content {
   position: absolute;
   top: -40px;
