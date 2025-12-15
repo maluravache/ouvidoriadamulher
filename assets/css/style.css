@@ -353,7 +353,7 @@ h4, .section-subtitle {
   display: grid;
   grid-template-columns: 1fr;
   gap: 30px;
-  align-items: center;
+  align-items: end;
   width: 100%;
 }
 
@@ -379,8 +379,6 @@ h4, .section-subtitle {
   justify-content: flex-end;
   align-items: flex-end;
   width: 100%;
-  height: 100%;
-  align-self: stretch;
 }
 
 .hero-img img {
